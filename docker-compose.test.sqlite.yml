@@ -1,0 +1,7 @@
+services:
+  app:
+    build:
+      context: ./django
+      target: development
+    command: ./run_tests_with_sqlite.sh
+    entrypoint: /bin/bash

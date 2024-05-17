@@ -1,0 +1,54 @@
+# This docker-compose file is to load up the GREN project in development mode
+
+version: '3.7'
+
+services:
+  app:
+    # Mount the entire django directory so that code edits are reflected in the container
+    volumes:
+      - ./django/:/home/grenmapadmin/web/
+    build:
+      target: development
+    command: gunicorn base_app.wsgi:application --bind 0.0.0.0:8080 --reload --log-level=debug --threads 4
+    env_file:
+      - ./env/.env.dev
+    restart: unless-stopped
+
+  task_runner:
+    # Mount the entire django directory so that code edits are reflected in the container
+    volumes:
+      - ./django/:/home/grenmapadmin/web/
+    build:
+      target: development
+    env_file:
+      - ./env/.env.dev
+    restart: unless-stopped
+
+  app_static_collector:
+    # Mount the entire django directory so that code edits are reflected in the container
+    volumes:
+      - ./django/:/home/grenmapadmin/web/
+    build:
+      context: ./django
+      target: development
+    entrypoint: ./collect_static.sh
+    env_file:
+      - ./env/.env.dev
+    restart: unless-stopped
+    image: grenmap-django
+
+  db:
+    env_file:
+      - ./env/.env.dev
+
+  websp:
+    hostname: ${MAP2_HOST_NAME}
+    environment:
+      - MAP_HOST_NAME=${MAP2_HOST_NAME}
+      - MAP_HOST_PORT=${MAP2_HOST_PORT}
+    ports:
+      - "${MAP2_HOST_PORT}:8443"
+    volumes:
+      - ./django/staticfiles/:/home/grenmapadmin/web/staticfiles
+    env_file:
+      - ./env/.env.dev

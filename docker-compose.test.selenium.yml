@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+  nodefirefox:
+    image: selenium/node-firefox:latest
+    container_name: nodefirefox
+    shm_size: 2gb
+    depends_on:
+      - seleniumhub
+    environment:
+      - SE_EVENT_BUS_HOST=seleniumhub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_SESSION_TIMEOUT=500
+    healthcheck:
+      test: curl --fail http://localhost:5555/status || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    ports:
+      - "7900:7900"
+
+  seleniumhub:
+    image: selenium/hub:latest
+    container_name: seleniumhub
+    environment:
+      - SE_SESSION_REQUEST_TIMEOUT=500
+      - SE_SESSION_RETRY_INTERVAL=2
+    healthcheck:
+      test: curl --fail http://localhost:4444/status || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"

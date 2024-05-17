@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="849eda4efcad69d8e91a0df47f2830331889c5222bf64f0645ce0d307f447227"
+				 xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml"
+				 xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+	<grenml:name>GREN GRENML Topology</grenml:name>
+	<grenml:owner>urn:ogf:networking:global</grenml:owner>
+	<grenml:Institution id="a9af48fd-2332-462d-9584-0f83abbf64de" version="2022-03-15T14:54:03+00:00">
+		<grenml:name>test-institution-1</grenml:name>
+		<grenml:Location>
+			<grenml:long>10.0</grenml:long>
+			<grenml:lat>10.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+		<grenml:Property name="institution url">institution-url.com</grenml:Property>
+		<grenml:Property name="tag">institution value sample</grenml:Property>
+		<grenml:Property name="tag">institution tag 1</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="8a79f8e1-1b38-4b1b-989c-be6adb326464" version="2022-03-15T14:54:36+00:00">
+		<grenml:name>test-institution-2</grenml:name>
+		<grenml:Location>
+			<grenml:long>11.0</grenml:long>
+			<grenml:lat>11.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="549a6e56-1eef-4d11-8602-5e8d694e3cbd" version="2022-03-15T14:54:48+00:00">
+		<grenml:name>test-institution-replace</grenml:name>
+		<grenml:Location>
+			<grenml:long>12.0</grenml:long>
+			<grenml:lat>12.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+		<grenml:Property name="tag">institution tag 2</grenml:Property>
+		<grenml:Property name="institution url">institution-url.com</grenml:Property>
+		<grenml:Property name="tag">institution value sample</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="urn:ogf:networking:global">
+		<grenml:name>GREN</grenml:name>
+		<grenml:Property name="tag">global</grenml:Property>
+	</grenml:Institution>
+	<grenml:Link id="14b209b2-fecb-4239-9698-3e900270b9ef">
+		<grenml:name>test-link-2</grenml:name>
+		<grenml:owner>8a79f8e1-1b38-4b1b-989c-be6adb326464</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="link url">link-url.com</grenml:Property>
+		<grenml:Property name="tag">link value sample</grenml:Property>
+		<grenml:Property name="tag">link tag 1</grenml:Property>
+		<grenml:node>ba435a0b-425f-4933-b113-9da546f9fdc9</grenml:node>
+		<grenml:node>55ff5edf-9fcf-4aa3-b7e5-b0bcb92bae9e</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="890adec5-a530-48fe-9875-415a06ee4b1e">
+		<grenml:name>test-link-1</grenml:name>
+		<grenml:owner>a9af48fd-2332-462d-9584-0f83abbf64de</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="link url">link-url.com</grenml:Property>
+		<grenml:Property name="tag">link value sample</grenml:Property>
+		<grenml:Property name="tag">link tag 2</grenml:Property>
+		<grenml:node>14bdb1f4-c226-48ef-84f2-c907b3c149b9</grenml:node>
+		<grenml:node>9f220271-b951-45c8-9f63-59a8749ddf4b</grenml:node>
+	</grenml:Link>
+	<grenml:Node id="55ff5edf-9fcf-4aa3-b7e5-b0bcb92bae9e">
+		<grenml:name>test-node-3</grenml:name>
+		<grenml:owner>8a79f8e1-1b38-4b1b-989c-be6adb326464</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>13.0</grenml:long>
+			<grenml:lat>13.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="665a5cf4-87f3-4334-bd9f-9eb28ac89a8b">
+		<grenml:name>test-node-replace</grenml:name>
+		<grenml:owner>549a6e56-1eef-4d11-8602-5e8d694e3cbd</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>12.0</grenml:long>
+			<grenml:lat>12.0</grenml:lat>
+		</grenml:Location>
+		<grenml:Property name="node url">node-url.com</grenml:Property>
+		<grenml:Property name="tag">node value sample</grenml:Property>
+		<grenml:Property name="tag">node tag replace</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="9f220271-b951-45c8-9f63-59a8749ddf4b">
+		<grenml:name>test-node-1</grenml:name>
+		<grenml:owner>a9af48fd-2332-462d-9584-0f83abbf64de</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>10.0</grenml:long>
+			<grenml:lat>10.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+		<grenml:Property name="node url">node-url.com</grenml:Property>
+		<grenml:Property name="tag">node value sample</grenml:Property>
+		<grenml:Property name="tag">node tag 1</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="ba435a0b-425f-4933-b113-9da546f9fdc9">
+		<grenml:name>test-node-4</grenml:name>
+		<grenml:owner>8a79f8e1-1b38-4b1b-989c-be6adb326464</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>14.0</grenml:long>
+			<grenml:lat>14.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="14bdb1f4-c226-48ef-84f2-c907b3c149b9">
+		<grenml:name>test-node-2</grenml:name>
+		<grenml:owner>a9af48fd-2332-462d-9584-0f83abbf64de</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>12.0</grenml:long>
+			<grenml:lat>12.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+</grenml:Topology>

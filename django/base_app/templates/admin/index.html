@@ -1,0 +1,27 @@
+{% extends "admin/index.html" %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="/staticfiles/admin/css/index_override.css">
+{% endblock %}
+
+
+{% block content %}
+{{ block.super }}
+{% if request.path == "/admin/" %}
+<!--
+    Any content added to the main index page with the class 'extra-content'
+    will be added to the content-main div when the page loads.
+-->
+<script nonce="{{ request.csp_nonce }}">
+    var insertContent = function(){
+        var extraContent = document.getElementsByClassName('extra-content');
+        extraContent.forEach(element => {
+            document.getElementById('content-main').appendChild(element);
+        });
+    }
+    if (window.addEventListener) window.addEventListener("load", insertContent, false);
+    else if (window.attachEvent) window.attachEvent("onload", insertContent);
+</script>
+{% endif %}
+{% endblock %}

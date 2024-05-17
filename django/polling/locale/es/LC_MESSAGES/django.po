@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-12 21:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: polling/admin.py:104
+msgid "Collect GRENML Data"
+msgstr ""
+
+#: polling/admin.py:106
+#: polling/templates/entities/polling_source_change_form.html:5
+msgid "Test Connection"
+msgstr ""
+
+#: polling/admin.py:109
+msgid "Polling Source Actions"
+msgstr ""
+
+#: polling/admin.py:158
+msgid "Check the Status of Selected Sources"
+msgstr ""
+
+#: polling/admin.py:159
+msgid "Poll the Selected Sources"
+msgstr ""
+
+#: polling/app_configurations.py:42
+msgid "Schedule value must use crontab format"
+msgstr ""
+
+#: polling/app_configurations.py:68
+msgid "Value must be 'True' or 'False' (Case sensitive)"
+msgstr ""
+
+#: polling/apps.py:24
+msgid "GRENML Polling"
+msgstr ""
+
+#: polling/management/commands/setup_polling.py:36
+msgid "Registers/updates the polling task"
+msgstr ""
+
+#: polling/models/logging.py:78
+#, python-brace-format
+msgid "Scheduled poll at {timestamp}"
+msgstr ""
+
+#: polling/models/logging.py:82
+#, python-brace-format
+msgid "Scheduled poll at {timestamp} encountered problems"
+msgstr ""
+
+#: polling/models/logging.py:87
+#, python-brace-format
+msgid "Poll at {timestamp}"
+msgstr ""
+
+#: polling/models/logging.py:91
+#, python-brace-format
+msgid "Poll at {timestamp} encountered problems"
+msgstr ""
+
+#: polling/models/logging.py:96
+msgid "Batch Poll Event Log"
+msgstr ""
+
+#: polling/models/logging.py:97
+msgid "Batch Poll Event Logs"
+msgstr ""
+
+#: polling/models/logging.py:132
+#, python-brace-format
+msgid "Scheduled poll of {source} at {timestamp}"
+msgstr ""
+
+#: polling/models/logging.py:137
+#, python-brace-format
+msgid "Scheduled poll of {source} at {timestamp} encountered problems"
+msgstr ""
+
+#: polling/models/logging.py:143
+#, python-brace-format
+msgid "Poll of {source} at {timestamp}"
+msgstr ""
+
+#: polling/models/logging.py:148
+#, python-brace-format
+msgid "Poll of {source} at {timestamp} encountered problems"
+msgstr ""
+
+#: polling/models/logging.py:154
+msgid "Source Poll Event Log"
+msgstr ""
+
+#: polling/models/logging.py:155
+msgid "Source Poll Event Logs"
+msgstr ""
+
+#: polling/models/polling.py:45
+msgid "name"
+msgstr ""
+
+#: polling/models/polling.py:46
+msgid ""
+"An easy to remember name for this connection. i.e. The organization this is "
+"for."
+msgstr ""
+
+#: polling/models/polling.py:56
+msgid "protocol"
+msgstr ""
+
+#: polling/models/polling.py:60
+msgid "host name"
+msgstr ""
+
+#: polling/models/polling.py:65
+msgid "port"
+msgstr ""
+
+#: polling/models/polling.py:73
+msgid "path"
+msgstr ""
+
+#: polling/models/polling.py:74
+msgid ""
+"The path to the GRENML DB node at this URL. Must end with a forward slash. "
+"(/)"
+msgstr ""
+
+#: polling/models/polling.py:80
+msgid "active"
+msgstr ""
+
+#: polling/models/polling.py:87
+msgid "Access token provided by the peer node adminsitrator."
+msgstr ""
+
+#: polling/models/polling.py:98
+msgid "status path"
+msgstr ""
+
+#: polling/models/polling.py:102
+msgid "polling path"
+msgstr ""
+
+#: polling/models/polling.py:156
+msgid "Error with polling source [{}] status code {}"
+msgstr ""
+
+#: polling/models/polling.py:175
+msgid "GRENML Polling Source"
+msgstr ""
+
+#: polling/models/polling.py:176
+msgid "GRENML Polling Sources"
+msgstr ""
+
+#: polling/templates/entities/polling_source_list.html:5
+msgid "Collect All Active Sources' GRENML Data"
+msgstr ""
+
+#: polling/templates/entities/polling_source_list.html:7
+msgid "Check All Sources' Connection Statuses"
+msgstr ""
+
+#: polling/views/api.py:60
+msgid "Polling is currently disabled"
+msgstr ""
+
+#: polling/views/api.py:81
+msgid "Polled {} sources and encountered {} failures"
+msgstr ""

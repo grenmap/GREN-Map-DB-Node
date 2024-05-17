@@ -1,0 +1,73 @@
+#header {
+    background: #fff;
+    border-bottom: 1px solid black;
+}
+
+#branding h1,
+#branding h1 a:link,
+#branding h1 a:visited {
+    color: #2779be;
+    font-weight: 600;
+    font-size: 28px;
+    font-family: Roboto;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+    background: #2779be;
+}
+
+#user-tools {
+    color: #2779be;
+}
+
+#header a:link,
+#header a:visited {
+    color: #2a2d7c;
+}
+.module .section{
+    font-weight: 700;
+}
+.breadcrumbs{
+    background: #2779be !important;
+}
+.object-tools {
+    margin-top: -52px;
+}
+
+.rtext-align{
+    text-align: right !important;
+}
+
+a.button {
+    color: #fff;
+}
+a.button {
+    padding: 4px 10px;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button,
+.button.default, input[type="submit"].default, .submit-row input.default {
+    background: #2779be;
+}
+
+.object-tools a:link, .object-tools a:visited {
+    background: #2a2d7c;
+    background-image: url(../img/tooltag-add.svg);
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    padding-right: 26px;
+}
+
+#view_map_link {
+    color: #2779be
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --message-success-bg: #2a2d7c;
+      --message-warning-bg: #583305;
+      --message-error-bg: #570808;
+    }
+  }
+  

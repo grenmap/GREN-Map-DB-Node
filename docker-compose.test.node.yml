@@ -1,0 +1,54 @@
+version: '3.7'
+
+services:
+
+  websp1:
+    build:
+      context: ./websp
+    environment:
+      - MAP_HOST_NAME=${MAP1_HOST_NAME}
+      - MAP_HOST_PORT=${MAP1_HOST_PORT}
+      - IDP_HOST_NAME=${IDP_HOST_NAME}
+      - METADATA_PROVIDERS=${METADATA_PROVIDERS:-}
+    secrets:
+      - websp-host-key
+      - websp-host-cert
+      - websp-sp-key
+      - websp-sp-cert
+    volumes:
+      - static_volume:/home/grenmapadmin/web/staticfiles
+    expose:
+      - "8443"
+    image: grenmap-websp
+
+  websp2:
+    build:
+      context: ./websp
+    environment:
+      - MAP_HOST_NAME=${MAP1_HOST_NAME}
+      - MAP_HOST_PORT=${MAP1_HOST_PORT}
+      - IDP_HOST_NAME=${IDP_HOST_NAME}
+      - METADATA_PROVIDERS=${METADATA_PROVIDERS:-}
+    secrets:
+      - websp-host-key
+      - websp-host-cert
+      - websp-sp-key
+      - websp-sp-cert
+    volumes:
+      - static_volume:/home/grenmapadmin/web/staticfiles
+    expose:
+      - "8443"
+    image: grenmap-websp
+
+volumes:
+  static_volume:
+
+secrets:
+  websp-host-key:
+    file: ./websp/configs_and_secrets/host-key.pem
+  websp-host-cert:
+    file: ./websp/configs_and_secrets/host-cert.pem
+  websp-sp-key:
+    file: ./websp/configs_and_secrets/sp-key.pem
+  websp-sp-cert:
+    file: ./websp/configs_and_secrets/sp-cert.pem

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Swagger</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'swagger-ui.css' %}">
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+    <script src="{% static 'swagger-ui-bundle.js' %}"></script>
+    <script nonce="{{ request.csp_nonce }}">
+        const ui = SwaggerUIBundle({
+            url: "{% url 'api-schema' %}",
+            dom_id: '#swagger-ui',
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIBundle.SwaggerUIStandalonePreset
+            ],
+            layout: "BaseLayout",
+            requestInterceptor: (request) => {
+                request.headers['X-CSRFToken'] = "{{ csrf_token }}"  <!-- nosemgrep : var-in-script-tag -->
+                return request;
+            }
+        })
+    </script>
+</body>
+
+</html>

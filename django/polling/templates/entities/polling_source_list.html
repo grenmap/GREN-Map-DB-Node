@@ -1,0 +1,8 @@
+{% extends 'admin/change_list.html' %}
+{% load i18n %}
+{% block content %}
+    {{ block.super }}
+    <a href="{% url 'admin:poll-all' %}" class="button btn-high btn-success">{% trans "Collect All Active Sources' GRENML Data" %}</a>
+    &nbsp;
+    <a href="{% url 'admin:status-all' %}" class="button btn-high btn-success">{% trans "Check All Sources' Connection Statuses" %}</a>
+{% endblock %}

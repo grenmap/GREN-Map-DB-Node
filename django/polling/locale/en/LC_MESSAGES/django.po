@@ -1,0 +1,354 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-23 15:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Translators: {} is the name of a machine on the network (polling peer)  # noqa
+#: polling/admin.py:41
+msgid "{} was successfully pinged"
+msgstr ""
+
+#. Translators: first {} is the name of a machine on the network (polling peer), second is a number  # noqa
+#: polling/admin.py:45
+msgid "Was able to connect to {} but got status code {}."
+msgstr ""
+
+#. Translators: {} is the name of a machine on the network (polling peer)  # noqa
+#: polling/admin.py:49
+msgid "Was unable to connect to {}.  Please review your configuration."
+msgstr ""
+
+#. Translators: {}'s are numbers  # noqa
+#: polling/admin.py:54
+msgid "Contacted {} source(s). Got {} successful response(s)."
+msgstr ""
+
+#. Translators: first {} is a number, second is a comma-separated list of names of machines in the network  # noqa
+#: polling/admin.py:58
+msgid " Got {} error(s). Please check the configuration on source(s): {}"
+msgstr ""
+
+#: polling/admin.py:116
+msgid "Collect GRENML Data"
+msgstr ""
+
+#: polling/admin.py:118
+#: polling/templates/entities/polling_source_change_form.html:5
+msgid "Test Connection"
+msgstr ""
+
+#: polling/admin.py:121
+msgid "Polling Source Actions"
+msgstr ""
+
+#: polling/admin.py:166
+msgid "Batch poll initiated; imports in progress."
+msgstr ""
+
+#: polling/admin.py:169
+msgid "Check the Status of Selected Sources"
+msgstr ""
+
+#: polling/admin.py:170
+msgid "Poll the Selected Sources"
+msgstr ""
+
+#: polling/admin.py:200
+msgid "Poll and import initiated."
+msgstr ""
+
+#: polling/admin.py:215
+msgid "Full batch poll and import for all active sources initiated."
+msgstr ""
+
+#: polling/admin.py:313
+msgid "poll start"
+msgstr ""
+
+#: polling/admin.py:317
+msgid "import start"
+msgstr ""
+
+#: polling/admin.py:321
+msgid "GRENML data"
+msgstr ""
+
+#: polling/admin.py:374
+msgid "number of sources"
+msgstr ""
+
+#: polling/admin.py:378
+msgid "poll import status"
+msgstr ""
+
+#: polling/admin.py:388
+msgid "running duration (seconds)"
+msgstr ""
+
+#: polling/admin.py:395
+msgid "status synopsis"
+msgstr ""
+
+#: polling/admin.py:427
+msgid "Batch status: Complete"
+msgstr ""
+
+#: polling/admin.py:429
+msgid "Batch status: Running"
+msgstr ""
+
+#. Translators: {} is a placeholder for a number  # noqa
+#: polling/admin.py:435
+msgid "{} source total"
+msgstr ""
+
+#. Translators: {} is a placeholder for a number  # noqa
+#: polling/admin.py:440
+msgid "{} sources total"
+msgstr ""
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:447
+msgid "✅ Complete: {}"
+msgstr ""
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:454
+msgid "🚧 In progress: {}"
+msgstr ""
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:461
+msgid "🕑 Pending: {}"
+msgstr ""
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:468
+msgid "❗️ Aborted due to error: {}"
+msgstr ""
+
+#: polling/app_configurations.py:35
+msgid ""
+"Schedule value must use croniter crontab format (See https://github.com/"
+"kiorky/croniter)"
+msgstr ""
+
+#. Translators: 'True' and 'False' should remain in English, do not translate  # noqa
+#: polling/app_configurations.py:63
+msgid "Value must be 'True' or 'False' (Case sensitive)"
+msgstr ""
+
+#. Translators: 'Live' and 'Published' should remain in English, do not translate  # noqa
+#: polling/app_configurations.py:82
+msgid "Value must be 'Live' or 'Published' (Case sensitive)"
+msgstr ""
+
+#: polling/apps.py:24
+msgid "GRENML Polling"
+msgstr ""
+
+#: polling/management/commands/setup_polling.py:36
+msgid "Registers/updates the polling task"
+msgstr ""
+
+#. Translators: (polling) was scheduled
+#: polling/models/control.py:108
+msgid "was scheduled"
+msgstr ""
+
+#: polling/models/control.py:113
+msgid "timestamp"
+msgstr ""
+
+#: polling/models/control.py:118
+msgid "duration seconds"
+msgstr ""
+
+#: polling/models/control.py:124 polling/models/control.py:301
+msgid "status"
+msgstr ""
+
+#. Translators: {} is a placeholder for a date-time  # noqa
+#: polling/models/control.py:251
+msgid "Poll and import batch at {}"
+msgstr ""
+
+#: polling/models/control.py:255
+msgid "Poll+Import Event"
+msgstr ""
+
+#: polling/models/control.py:256
+msgid "Poll+Import Events"
+msgstr ""
+
+#: polling/models/control.py:273
+msgid "Aborted"
+msgstr ""
+
+#: polling/models/control.py:274
+msgid "Pending"
+msgstr ""
+
+#: polling/models/control.py:275
+msgid "Polling"
+msgstr ""
+
+#: polling/models/control.py:276
+msgid "Polled; awaiting import"
+msgstr ""
+
+#: polling/models/control.py:277
+msgid "Importing"
+msgstr ""
+
+#: polling/models/control.py:278
+msgid "Complete"
+msgstr ""
+
+#: polling/models/control.py:286
+msgid "batch poll import"
+msgstr ""
+
+#: polling/models/control.py:294
+msgid "polling source"
+msgstr ""
+
+#: polling/models/control.py:306
+msgid "status message"
+msgstr ""
+
+#: polling/models/control.py:314
+msgid "GRENML data import"
+msgstr ""
+
+#: polling/models/control.py:323
+msgid "poll duration seconds"
+msgstr ""
+
+#: polling/models/control.py:332
+msgid "import duration seconds"
+msgstr ""
+
+#: polling/models/control.py:388
+msgid "total time seconds"
+msgstr ""
+
+#: polling/models/control.py:397
+msgid "running time seconds"
+msgstr ""
+
+#: polling/models/control.py:412
+msgid "poll"
+msgstr ""
+
+#: polling/models/control.py:419
+msgid "Polling error: "
+msgstr ""
+
+#: polling/models/control.py:456
+msgid "Import aborted: "
+msgstr ""
+
+#. Translators: first {} is the name of a machine on the network, second is a date-time  # noqa
+#: polling/models/control.py:463
+msgid "Poll and import from {} at {}"
+msgstr ""
+
+#: polling/models/sources.py:53
+msgid "name"
+msgstr ""
+
+#: polling/models/sources.py:54
+msgid ""
+"An easy to remember name for this connection. i.e. The organization this is "
+"for."
+msgstr ""
+
+#: polling/models/sources.py:64
+msgid "protocol"
+msgstr ""
+
+#: polling/models/sources.py:68
+msgid "host name"
+msgstr ""
+
+#: polling/models/sources.py:73
+msgid "port"
+msgstr ""
+
+#: polling/models/sources.py:81
+msgid "path"
+msgstr ""
+
+#: polling/models/sources.py:82
+msgid ""
+"The path to the GRENML DB node at this URL. Must end with a forward slash. "
+"(/)"
+msgstr ""
+
+#: polling/models/sources.py:88
+msgid "active"
+msgstr ""
+
+#: polling/models/sources.py:95
+msgid "Access token provided by the peer node adminsitrator."
+msgstr ""
+
+#: polling/models/sources.py:96
+msgid "Token"
+msgstr ""
+
+#: polling/models/sources.py:107
+msgid "status path"
+msgstr ""
+
+#: polling/models/sources.py:111
+msgid "polling path"
+msgstr ""
+
+#. Translators: first {} is an error message, second is a URL (network address)  # noqa
+#: polling/models/sources.py:165
+msgid "Connection error {} with polling source [{}]"
+msgstr ""
+
+#: polling/models/sources.py:184
+msgid "Access denied. Token missing or invalid."
+msgstr ""
+
+#: polling/models/sources.py:200
+msgid "GRENML Polling Source"
+msgstr ""
+
+#: polling/models/sources.py:201
+msgid "GRENML Polling Sources"
+msgstr ""
+
+#: polling/templates/entities/polling_source_list.html:5
+msgid "Collect All Active Sources' GRENML Data"
+msgstr ""
+
+#: polling/templates/entities/polling_source_list.html:7
+msgid "Check All Sources' Connection Statuses"
+msgstr ""
+
+#: polling/views/api.py:63
+msgid "Polling is currently disabled"
+msgstr ""
+
+#: polling/views/api.py:76
+msgid "No active polling sources."
+msgstr ""

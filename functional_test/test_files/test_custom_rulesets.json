@@ -1,0 +1,82 @@
+{
+    "rulesets": [
+                    {
+        "name": "Custom ID Collision Resolution",
+        "rules": [
+            {
+                "name": "keep preferred version inst",
+                "actions": [
+                    {
+                        "action_type": "Delete Institution",
+                        "actioninfo_set": []
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Institutions by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "child topology"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Institutions by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "Test-Institution-1"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": 5000
+            },
+            {
+                "name": "merge rule inst",
+                "actions": [
+                    {
+                        "action_type": "Merge into Institution",
+                        "actioninfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "child topology"
+                            },
+                            {
+                                "key": "ID",
+                                "value": "Test-Institution-3"
+                            }
+                        ]
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Institutions by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "test-topology-1"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Institutions by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "Test-Institution-3"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": -1
+            }
+        ],
+        "enabled": true,
+        "priority": -1
+    }
+                ]
+}

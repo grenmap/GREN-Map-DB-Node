@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  app:
+    env_file:
+      - ./env/.env.prod
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: "${APP_MEMORY_LIMIT:-300M}"
+
+  db:
+    env_file:
+      - ./env/.env.prod
+    restart: always
+
+  task_runner:
+    env_file:
+      - ./env/.env.prod
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: "${TASK_RUNNER_MEMORY_LIMIT:-300M}"
+
+  websp:
+    environment:
+      - MAP_HOST_NAME=${MAP1_HOST_NAME}
+      - MAP_HOST_PORT=${MAP1_HOST_PORT}
+    ports:
+      - "${MAP1_HOST_PORT}:8443"
+    restart: always

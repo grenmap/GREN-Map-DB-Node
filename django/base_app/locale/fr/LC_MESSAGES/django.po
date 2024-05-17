@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 14:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: base_app/admin.py:48
+msgid "The setting has been reset to its default value successfully"
+msgstr "La configuration a été réinitialisée avec succès."
+
+#: base_app/apps.py:13
+msgid "Base App"
+msgstr "Appli de base"
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep it between the two sentences.  # noqa
+#: base_app/constants.py:31
+msgid ""
+"Requires a \"polling\" token. <br>Navigate to Home > Base App > Tokens in "
+"the admin site to obtain one."
+msgstr ""
+"Nécessite un jeton \"interrogation\". <br>Allez à Accueil > Appli de base > "
+"Jetons sur le site Admin pour en obtenir un."
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep it between the two sentences.  # noqa
+#: base_app/constants.py:38
+msgid ""
+"Requires an \"import\" token. <br>Navigate to Home > Base App > Tokens in "
+"the admin site to obtain one."
+msgstr ""
+"Nécessite un jeton \"importation\". <br>Allez à Accueil > Appli de base > "
+"Jetons sur le site Admin pour en obtenir un."
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep both tags at the end of the message.  # noqa
+#: base_app/constants.py:45
+msgid ""
+"To create a snapshot, open the admin site and navigate to Home > Published "
+"Network Data. <br> <br>"
+msgstr ""
+"Pour créer un instantané, ouvrez le site \"Admin\" et allez à Accueil > "
+"Appli de base > Jetons puis obtenez un jeton."
+
+#: base_app/management/commands/initialisesettings.py:14
+msgid ""
+"Creates default values for custom app defined settings and cleans unused "
+"settings"
+msgstr ""
+"Donne une valeur par défaut aux paramètres de l'appli spéciale et efface les "
+"paramètres inutilisés"
+
+#: base_app/models/app_configurations.py:56
+msgid "name"
+msgstr "nom"
+
+#: base_app/models/app_configurations.py:61
+msgid "display name"
+msgstr "nom à afficher"
+
+#: base_app/models/app_configurations.py:66
+msgid "value"
+msgstr "valeur"
+
+#: base_app/models/app_configurations.py:71
+msgid "description"
+msgstr "description"
+
+#: base_app/models/app_configurations.py:78
+msgid "App Configuration Setting"
+msgstr "Paramètre de configuration de l'appli"
+
+#: base_app/models/app_configurations.py:79
+msgid "App Configuration Settings"
+msgstr "Paramètres de configuration de l'appli"
+
+#: base_app/models/app_configurations.py:100
+msgid "This identifies the client which will be using this token."
+msgstr "Identifie le client qui utilisera ce jeton"
+
+#: base_app/models/app_configurations.py:101
+msgid "client name"
+msgstr "nom du client"
+
+#: base_app/models/app_configurations.py:109
+msgid ""
+"The access token, a random string. Use the regenerate button to populate "
+"this field in case it is empty. Send it to the peer's administrator to have "
+"this node accept the peer's requests."
+msgstr ""
+"Jeton d'accès, une chaîne aléatoire. Utilisez le bouton "
+"\"rafraîchir\" (regenerate) pour remplir le champ, s'il est vide. Envoyez le "
+"jeton à l'autre administrateur pour que le nœud accepte ses demandes. "
+
+#: base_app/models/app_configurations.py:114
+#: base_app/models/app_configurations.py:142
+msgid "Token"
+msgstr "Jeton"
+
+#: base_app/models/app_configurations.py:123
+msgid "token type"
+msgstr "type de jeton"
+
+#: base_app/models/app_configurations.py:143
+msgid "Tokens"
+msgstr "Jetons"
+
+#: base_app/serializers.py:69
+msgid "ID of an existing topology."
+msgstr "ID d'une topologie existante"
+
+#: base_app/serializers.py:74
+msgid ""
+"Name to be given to the file's root topology once the server imports it."
+msgstr ""
+"Nom à attribuer à la topologie racine du fichier après son importation par "
+"le serveur"
+
+#: base_app/serializers.py:86
+msgid "Source server does not have a root topology."
+msgstr "Le serveur d'origine n'a pas de topologie racine."
+
+#: base_app/serializers.py:90
+msgid ""
+"Root topology in source server does not have an owner.\n"
+"On the source server, go to Home › Network Topology › Network Topologies, "
+"then click on the root topology to see an edit page.\n"
+"Click on the plus button in the \"Owner\" row to add an owner institution."
+msgstr ""
+"La topologie racine du serveur d'origine n'a pas de propriétaire. Sur le "
+"serveur d'origine, allez à Accueil > Topologie du réseau > Topologie des "
+"réseaux, puis cliquez la topologie du réseau pour que s'affiche la page "
+"\"Modifier\" (edit). Cliquez le bouton \"plus\" dans la rangée "
+"\"Propriétaire\" (Owner) pour ajouter l'institution propriétaire du réseau."
+
+#: base_app/serializers.py:99
+msgid "Topology in source server does not have an owner."
+msgstr "Le serveur d'origine n'a pas de topologie racine."
+
+#: base_app/serializers.py:103
+msgid "Internal server error."
+msgstr "Erreur du serveur interne"
+
+#: base_app/settings.py:88
+msgid "Import"
+msgstr "Importer"
+
+#: base_app/settings.py:89
+msgid "Polling"
+msgstr "Interrogation de GRENML"
+
+#: base_app/settings.py:175
+msgid "French"
+msgstr "Français"
+
+#: base_app/settings.py:176
+msgid "English"
+msgstr "Anglais"
+
+#: base_app/settings.py:177
+msgid "Spanish"
+msgstr "Espagnol"
+
+#: base_app/settings.py:178
+msgid "Portuguese"
+msgstr "Portugais"
+
+#: base_app/templates/admin/base.html:27
+msgid "Documentation"
+msgstr "Documentation"
+
+#: base_app/templates/admin/base.html:31
+msgid "Change password"
+msgstr "Modifier le mot de passe"
+
+#: base_app/templates/admin/base.html:33 base_app/templates/admin/base.html:96
+#: base_app/templates/admin/base.html:99
+msgid "Log out"
+msgstr "Fermer la séance"
+
+#: base_app/templates/admin/base.html:35
+msgid "View map"
+msgstr "Voir la carte"
+
+#: base_app/templates/admin/base.html:37
+msgid "API docs"
+msgstr "Documentation sur les API"
+
+#. Translators: 'build' here is a noun. It indicates the date the software component was built and the version of the source code used.
+#: base_app/templates/admin/base.html:40
+msgid "build:"
+msgstr "construit :"
+
+#: base_app/templates/admin/base.html:50
+msgid "build information"
+msgstr "information sur le construit"
+
+#: base_app/templates/admin/base.html:58
+msgid "build date"
+msgstr "date du construit"
+
+#: base_app/templates/admin/base.html:62
+msgid "GRENMap DB Node commit hash"
+msgstr "empreinte de commit du nœud de la BD GRENMap"
+
+#: base_app/templates/admin/base.html:66
+msgid "GRENMap DB Node git tag"
+msgstr "balise git du nœud de la BD GRENMap"
+
+#: base_app/templates/admin/base.html:70
+msgid "GRENML library"
+msgstr "bibliothèque GRENMap"
+
+#: base_app/templates/admin/base.html:74
+msgid "GRENMap visualization"
+msgstr "visualisation de GRENMap"
+
+#: base_app/templates/admin/base.html:81
+msgid "Close"
+msgstr "Fermer"
+
+#: base_app/templates/admin/base.html:95
+msgid "Admin"
+msgstr "Admin"
+
+#: base_app/templates/admin/base.html:102
+msgid "Login"
+msgstr "Ouvrir une séance"
+
+#: base_app/templates/admin/base_site.html:16
+msgid "Map administration"
+msgstr "Administration de la carte"
+
+#: base_app/templates/entities/app_configuration_changeform.html:5
+msgid "Save"
+msgstr "Enregistrer"
+
+#: base_app/templates/entities/app_configuration_changeform.html:6
+msgid "Reset to default value"
+msgstr "Rétablir les valeurs par défaut"
+
+#: base_app/urls.py:65
+msgid "Administration"
+msgstr "Administration"

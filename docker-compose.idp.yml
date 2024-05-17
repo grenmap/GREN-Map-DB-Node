@@ -1,0 +1,33 @@
+
+version: "3.7"
+
+services:
+  idp:
+    hostname: ${IDP_HOST_NAME}
+    build:
+      context: ./idp/
+      args:
+        TOMCFG: ./container_files/config/tomcat
+        TOMCERT: ./container_files/credentials/tomcat
+        TOMWWWROOT: ./container_files/wwwroot
+        SHBCFG: ./container_files/config/shib-idp/conf
+        SHBCREDS: ./container_files/credentials/shib-idp
+        SHBVIEWS: ./container_files/config/shib-idp/views
+        SHBEDWAPP: ./container_files/config/shib-idp/edit-webapp
+        SHBMSGS: ./container_files/config/shib-idp/messages
+        SHBMD: ./container_files/config/shib-idp/metadata
+    depends_on:
+     - openldap
+    ports:
+     - "443:443"
+
+  openldap:
+    image: bitnami/openldap:latest
+    environment:
+      - LDAP_PORT_NUMBER=1389
+      - LDAP_ADMIN_PASSWORD=${LDAPPWD}
+      - LDAP_ROOT=dc=example,dc=org
+      - LDAP_CUSTOM_SCHEMA_FILE=/bitnami/openldap/custom/schema/openLdapEduperson.ldif
+      - LDAP_CUSTOM_LDIF_DIR=/bitnami/openldap/custom/ldif
+    volumes:
+      - ./openldap/container_files:/bitnami/openldap/custom

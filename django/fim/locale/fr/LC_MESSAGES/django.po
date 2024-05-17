@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 14:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: fim/apps.py:25
+msgid "Federated Identity Management"
+msgstr "Gestion fédérée des identités"
+
+#: fim/models/rs_identity.py:43
+msgid "User"
+msgstr "Utilisateur"
+
+#: fim/models/rs_identity.py:48
+msgid "eduPerson Principal Name"
+msgstr "Nom principal de l'eduPerson"
+
+#: fim/models/rs_identity.py:52
+msgid "A R&S Identity with that eppn already exists."
+msgstr "L'eppn a déjà une identité R&S."
+
+#: fim/models/rs_identity.py:57
+msgid "email"
+msgstr "courriel"
+
+#: fim/models/rs_identity.py:62
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#: fim/models/rs_identity.py:68
+msgid "First Name"
+msgstr "Prénom"
+
+#: fim/models/rs_identity.py:74
+msgid "Last Name"
+msgstr "Nom"
+
+#: fim/models/rs_identity.py:130
+msgid "RS Identity"
+msgstr "Identité RS"
+
+#: fim/models/rs_identity.py:131
+msgid "RS Identities"
+msgstr "Identités RS"
+
+#: fim/views/auth.py:134
+msgid ""
+"Something has gone wrong with your FIM identity. Please contact the site "
+"administrator for further assistance."
+msgstr ""
+"Votre identité GFI pose un problème. Veuillez communiquer avec "
+"l'administrateur du site pour obtenir de l'aide."
+
+#. Translators: do not translate user.first_name and user.last_name  # noqa
+#: fim/views/auth.py:155
+#, python-format
+msgid "Welcome %(first_name)s %(last_name)s. You are now logged in."
+msgstr "Bienvenue %(first_name)s %(last_name)s. Vous êtes connecté."
+
+#: fim/views/auth.py:171
+msgid ""
+"You are logged out.  Your identity credentials may still be stored in your "
+"browser; if you are using a public computer, please fully exit your browser "
+"to completely log out."
+msgstr ""
+"La séance est terminée. Il se peut que vos identifiants soient toujours "
+"enregistrés dans le navigateur. Si vous utilisez un ordinateur public, "
+"fermez le navigateur pour mettre fin complètement à la séance."

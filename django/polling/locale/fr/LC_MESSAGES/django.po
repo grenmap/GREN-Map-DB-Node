@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 14:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Translators: {} is the name of a machine on the network (polling peer)  # noqa
+#: polling/admin.py:41
+msgid "{} was successfully pinged"
+msgstr "{} a été sondé avec succès."
+
+#. Translators: first {} is the name of a machine on the network (polling peer), second is a number  # noqa
+#: polling/admin.py:45
+msgid "Was able to connect to {} but got status code {}."
+msgstr ""
+"La connexion avec {} a été établie, mais un code d'état {} a été obtenu en "
+"retour. "
+
+#. Translators: {} is the name of a machine on the network (polling peer)  # noqa
+#: polling/admin.py:49
+msgid "Was unable to connect to {}.  Please review your configuration."
+msgstr ""
+"La connexion avec {} n’a pu être établie. Veuillez vérifier la configuration."
+
+#. Translators: {}'s are numbers  # noqa
+#: polling/admin.py:54
+msgid "Contacted {} source(s). Got {} successful response(s)."
+msgstr "{} source(s) a (ont) été contactée(s). {} réponse(s) obtenue(s)."
+
+#. Translators: first {} is a number, second is a comma-separated list of names of machines in the network  # noqa
+#: polling/admin.py:58
+msgid " Got {} error(s). Please check the configuration on source(s): {}"
+msgstr ""
+"{} erreur(s) reçue(s). Vérifiez la configuration de la (des) source(s) : {},"
+
+#: polling/admin.py:116
+msgid "Collect GRENML Data"
+msgstr "Obtenir les données GRENML"
+
+#: polling/admin.py:118
+#: polling/templates/entities/polling_source_change_form.html:5
+msgid "Test Connection"
+msgstr "Vérifier la connexion"
+
+#: polling/admin.py:121
+msgid "Polling Source Actions"
+msgstr "Actions de la source d'interrogation"
+
+#: polling/admin.py:166
+msgid "Batch poll initiated; imports in progress."
+msgstr "Interrogation en lot lancée; importations en cours."
+
+#: polling/admin.py:169
+msgid "Check the Status of Selected Sources"
+msgstr "Vérifier l'état des sources sélectionnées."
+
+#: polling/admin.py:170
+msgid "Poll the Selected Sources"
+msgstr "Interroger les sources sélectionnées"
+
+#: polling/admin.py:200
+msgid "Poll and import initiated."
+msgstr "Interrogation et importation lancées"
+
+#: polling/admin.py:215
+msgid "Full batch poll and import for all active sources initiated."
+msgstr ""
+"Interrogation du lot complet et importation des sources actives lancées"
+
+#: polling/admin.py:313
+msgid "poll start"
+msgstr "début de l'interrogation"
+
+#: polling/admin.py:317
+msgid "import start"
+msgstr "début de l'importation"
+
+#: polling/admin.py:321
+msgid "GRENML data"
+msgstr "importation des données GRENML"
+
+#: polling/admin.py:374
+msgid "number of sources"
+msgstr "nombre de sources"
+
+#: polling/admin.py:378
+msgid "poll import status"
+msgstr "état de l'importation de l'interrogation"
+
+#: polling/admin.py:388
+msgid "running duration (seconds)"
+msgstr "durée de l'exécution (secondes)"
+
+#: polling/admin.py:395
+msgid "status synopsis"
+msgstr "résumé de l'état"
+
+#: polling/admin.py:427
+msgid "Batch status: Complete"
+msgstr "État du lot : terminé"
+
+#: polling/admin.py:429
+msgid "Batch status: Running"
+msgstr "État du lot : en cours"
+
+#. Translators: {} is a placeholder for a number  # noqa
+#: polling/admin.py:435
+msgid "{} source total"
+msgstr "Total de la source {}"
+
+#. Translators: {} is a placeholder for a number  # noqa
+#: polling/admin.py:440
+msgid "{} sources total"
+msgstr "Total des sources {}"
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:447
+msgid "✅ Complete: {}"
+msgstr "✅ terminé : {}"
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:454
+msgid "🚧 In progress: {}"
+msgstr "🚧 en cours : {}"
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:461
+msgid "🕑 Pending: {}"
+msgstr "🕑 en attente : {}"
+
+#. Translators: {} is a placeholder for a number. The icon is part of the message.  # noqa
+#: polling/admin.py:468
+msgid "❗️ Aborted due to error: {}"
+msgstr "❗️ avorté à cause d'une erreur : {}"
+
+#: polling/app_configurations.py:35
+msgid ""
+"Schedule value must use croniter crontab format (See https://github.com/"
+"kiorky/croniter)"
+msgstr ""
+"La valeur prévue doit utiliser le format croniter crontab (voir https://"
+"github.com/kiorky/croniter). "
+
+#. Translators: 'True' and 'False' should remain in English, do not translate  # noqa
+#: polling/app_configurations.py:63
+msgid "Value must be 'True' or 'False' (Case sensitive)"
+msgstr ""
+"La valeur doit être 'True' (vrai) ou 'False' (faux). (Respecter la casse)"
+
+#. Translators: 'Live' and 'Published' should remain in English, do not translate  # noqa
+#: polling/app_configurations.py:82
+msgid "Value must be 'Live' or 'Published' (Case sensitive)"
+msgstr ""
+"La valeur doit être 'Live' (actif) ou 'Pubished' (affiché). (Respecter la "
+"casse)"
+
+#: polling/apps.py:24
+msgid "GRENML Polling"
+msgstr "Interrogation de GRENML"
+
+#: polling/management/commands/setup_polling.py:36
+msgid "Registers/updates the polling task"
+msgstr "Inscrit/actualise la tâche d'interrogation"
+
+#. Translators: (polling) was scheduled
+#: polling/models/control.py:108
+msgid "was scheduled"
+msgstr "a été programmée"
+
+#: polling/models/control.py:113
+msgid "timestamp"
+msgstr "référence temporelle"
+
+#: polling/models/control.py:118
+msgid "duration seconds"
+msgstr "durée en secondes"
+
+#: polling/models/control.py:124 polling/models/control.py:301
+msgid "status"
+msgstr "état"
+
+#. Translators: {} is a placeholder for a date-time  # noqa
+#: polling/models/control.py:251
+msgid "Poll and import batch at {}"
+msgstr "Interroger et importer le lot à {}"
+
+#: polling/models/control.py:255
+msgid "Poll+Import Event"
+msgstr "Activité Interrogation+Importation"
+
+#: polling/models/control.py:256
+msgid "Poll+Import Events"
+msgstr "Activités Interrogation+Importation"
+
+#: polling/models/control.py:273
+msgid "Aborted"
+msgstr "Avorté"
+
+#: polling/models/control.py:274
+msgid "Pending"
+msgstr "En attente"
+
+#: polling/models/control.py:275
+#, fuzzy
+#| msgid "GRENML Polling"
+msgid "Polling"
+msgstr "Interrogation de GRENML"
+
+#: polling/models/control.py:276
+msgid "Polled; awaiting import"
+msgstr "Interrogation terminée; en attente de l'importation"
+
+#: polling/models/control.py:277
+msgid "Importing"
+msgstr "En importation"
+
+#: polling/models/control.py:278
+msgid "Complete"
+msgstr "Terminé"
+
+#: polling/models/control.py:286
+msgid "batch poll import"
+msgstr "importation d'interrogations en lot"
+
+#: polling/models/control.py:294
+msgid "polling source"
+msgstr "source de l'interrogation"
+
+#: polling/models/control.py:306
+msgid "status message"
+msgstr "message d'état"
+
+#: polling/models/control.py:314
+msgid "GRENML data import"
+msgstr "importation des données GRENML"
+
+#: polling/models/control.py:323
+msgid "poll duration seconds"
+msgstr "durée de l'interrogation en secondes"
+
+#: polling/models/control.py:332
+msgid "import duration seconds"
+msgstr "durée de l'importation en secondes"
+
+#: polling/models/control.py:388
+msgid "total time seconds"
+msgstr "durée totale en secondes"
+
+#: polling/models/control.py:397
+msgid "running time seconds"
+msgstr "durée d'exécution en secondes"
+
+#: polling/models/control.py:412
+msgid "poll"
+msgstr "interroger"
+
+#: polling/models/control.py:419
+msgid "Polling error: "
+msgstr "Erreur d'interrogation :"
+
+#: polling/models/control.py:456
+msgid "Import aborted: "
+msgstr "Importation avortée :"
+
+#. Translators: first {} is the name of a machine on the network, second is a date-time  # noqa
+#: polling/models/control.py:463
+msgid "Poll and import from {} at {}"
+msgstr "Interroger et importer de {} à {}"
+
+#: polling/models/sources.py:53
+#, fuzzy
+#| msgid "host name"
+msgid "name"
+msgstr "nom de l'hôte"
+
+#: polling/models/sources.py:54
+msgid ""
+"An easy to remember name for this connection. i.e. The organization this is "
+"for."
+msgstr ""
+"Un nom facile à retenir pour cette connexion, par exemple celui de "
+"l'organisation concernée"
+
+#: polling/models/sources.py:64
+msgid "protocol"
+msgstr "protocole"
+
+#: polling/models/sources.py:68
+msgid "host name"
+msgstr "nom de l'hôte"
+
+#: polling/models/sources.py:73
+msgid "port"
+msgstr "port"
+
+#: polling/models/sources.py:81
+msgid "path"
+msgstr "chemin"
+
+#: polling/models/sources.py:82
+msgid ""
+"The path to the GRENML DB node at this URL. Must end with a forward slash. "
+"(/)"
+msgstr ""
+"Chemin vers le nœud de la BD GRENML à cet URL. Doit se terminer par une "
+"barre oblique (/)."
+
+#: polling/models/sources.py:88
+msgid "active"
+msgstr "actif"
+
+#: polling/models/sources.py:95
+msgid "Access token provided by the peer node adminsitrator."
+msgstr "Jeton d'accès fourni par l'administrateur du nœud apparié."
+
+#: polling/models/sources.py:96
+msgid "Token"
+msgstr "Jeton"
+
+#: polling/models/sources.py:107
+msgid "status path"
+msgstr "chemin de l'état"
+
+#: polling/models/sources.py:111
+msgid "polling path"
+msgstr "chemin de l'interrogation"
+
+#. Translators: first {} is an error message, second is a URL (network address)  # noqa
+#: polling/models/sources.py:165
+msgid "Connection error {} with polling source [{}]"
+msgstr "Erreur de connexion {} avec la source de l'interrogation {}"
+
+#: polling/models/sources.py:184
+msgid "Access denied. Token missing or invalid."
+msgstr "Accès refusé. Jeton manquant ou invalide."
+
+#: polling/models/sources.py:200
+msgid "GRENML Polling Source"
+msgstr "Source d'interrogation GRENML"
+
+#: polling/models/sources.py:201
+msgid "GRENML Polling Sources"
+msgstr "Sources d'interrogation GRENML"
+
+#: polling/templates/entities/polling_source_list.html:5
+msgid "Collect All Active Sources' GRENML Data"
+msgstr "Recueillir toutes les données GRENML des sources actives"
+
+#: polling/templates/entities/polling_source_list.html:7
+msgid "Check All Sources' Connection Statuses"
+msgstr "Vérifier l'état des connexions de toutes les sources"
+
+#: polling/views/api.py:63
+msgid "Polling is currently disabled"
+msgstr "Interrogation impossible pour l'instant"
+
+#: polling/views/api.py:76
+msgid "No active polling sources."
+msgstr "Aucune source d'interrogation active"

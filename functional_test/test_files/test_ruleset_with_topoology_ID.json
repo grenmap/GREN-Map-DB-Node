@@ -1,0 +1,224 @@
+{
+    "rulesets": [
+        {
+        "name": "topology ID ruleset",
+        "rules": [
+            {
+                "name": "Merge institution rule",
+                "actions": [
+                    {
+                        "action_type": "Merge into Institution",
+                        "actioninfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "Test-Institution-1"
+                            },
+                            {
+                                "key": "Topology ID",
+                                "value": "child-topology"
+                            }
+                        ]
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Institutions by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "Test-Institution-1"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Institutions by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "test-topology-1"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": 1000
+            },
+            {
+                "name": "delete link from a topology",
+                "actions": [
+                    {
+                        "action_type": "Delete Link",
+                        "actioninfo_set": []
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Links by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "third-topology"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Links by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "child-topo-link"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": 1
+            },
+            {
+                "name": "merge link",
+                "actions": [
+                    {
+                        "action_type": "Merge into Link",
+                        "actioninfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "child-topo-link"
+                            },
+                            {
+                                "key": "Topology ID",
+                                "value": "test-topology-1"
+                            }
+                        ]
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Links by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "child-topo-link"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Links by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "child-topology"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": 2
+            },
+            {
+                "name": "replace node across topology",
+                "actions": [
+                    {
+                        "action_type": "Replace with Node",
+                        "actioninfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "child-node-1"
+                            },
+                            {
+                                "key": "Topology ID",
+                                "value": "child-topology"
+                            }
+                        ]
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Nodes by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "node:1"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Nodes by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "test-topology-1"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": 1000
+            },
+            {
+                "name": "delete using incorrect topology ID",
+                "actions": [
+                    {
+                        "action_type": "Delete Institution",
+                        "actioninfo_set": []
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Institutions by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "Test Institution 2"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Institutions by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "third-topology"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": 1000
+            },
+            {
+                "name": "delete using non existant topology ID",
+                "actions": [
+                    {
+                        "action_type": "Delete Node",
+                        "actioninfo_set": []
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Nodes by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "node:3"
+                            }
+                        ]
+                    },
+                    {
+                        "match_type": "Match Nodes by Topology",
+                        "matchinfo_set": [
+                            {
+                                "key": "Topology ID",
+                                "value": "fake-topology"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": 1000
+            }
+        ],
+        "enabled": true,
+        "priority": -1
+    }
+    ]
+}

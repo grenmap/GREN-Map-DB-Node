@@ -1,0 +1,7 @@
+{
+  "name": "gren-map-db-node",
+  "version": "1.0.0",
+  "dependencies": {
+    "@grenmap/gren-map-visualization": "1.0.0"
+  }
+}

@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 14:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: grenml_import/admin.py:51
+msgid "File size must not exceed 20 MB"
+msgstr "Le fichier ne doit pas dépasser 20 Mo."
+
+#: grenml_import/admin.py:62
+msgid "Please provide a topology name while importing."
+msgstr "Veuiller donner un nom à la topologie pendant son importation."
+
+#: grenml_import/admin.py:69
+msgid "Please upload .xlsx or .xml extension files only"
+msgstr "Veuiller ne télécharger que des fichiers à extension .xlsx ou .xml."
+
+#: grenml_import/admin.py:160
+msgid "(Empty!  GRENML data may have been purged to save database space.)"
+msgstr ""
+"(Vide! Il se peut que les données de GRENML ait été supprimées pour libérer "
+"de l'espace.)"
+
+#: grenml_import/apps.py:25
+msgid "Network Topology Import"
+msgstr "Importation de la topologie du réseau"
+
+#: grenml_import/importer.py:103
+msgid "Circular parent reference detected and avoided."
+msgstr "Référence en boucle repérée et évitée"
+
+#: grenml_import/models.py:127
+msgid "Imported at"
+msgstr "Importé à"
+
+#: grenml_import/models.py:134
+msgid "import status"
+msgstr "état de l'importation"
+
+#: grenml_import/models.py:136
+msgid "import message"
+msgstr "message concernant l'importation"
+
+#: grenml_import/models.py:144
+msgid ""
+"The imported file's root Topology will be added as a child of the selected "
+"Topology. To add a file's contents as a top-level Topology, select the blank "
+"entry here."
+msgstr ""
+"La Topologie racine du fichier importé sera ajoutée à la descendance de la "
+"Topologie sélectionnée. Pour que le contenu du fichier soit enregistré comme "
+"une Topologie du niveau supérieur, sélectionner l'inscription en blanc que "
+"voici."
+
+#: grenml_import/models.py:147
+msgid "Parent topology"
+msgstr "Topologie mère"
+
+#: grenml_import/models.py:153
+msgid "Import state"
+msgstr "État de l'importation"
+
+#: grenml_import/models.py:170 grenml_import/models.py:258
+msgid "Source"
+msgstr "Source"
+
+#: grenml_import/models.py:172
+msgid "GRENML data"
+msgstr "Données GRENML"
+
+#: grenml_import/models.py:180
+msgid "No GRENML data to import."
+msgstr "Aucune donnée GRENML à importer"
+
+#. Translators: do not translate between the curly brackets.
+#: grenml_import/models.py:209
+#, python-brace-format
+msgid "{import_data_verbose_name} from {source} at {timestamp}"
+msgstr "{import_data_verbose_name} de {source} à {timestamp}"
+
+#: grenml_import/models.py:217
+msgid "GRENML Data Import"
+msgstr "Importation de données GRENML"
+
+#: grenml_import/models.py:218
+msgid "GRENML Data Imports"
+msgstr "Importations de données GRENML"
+
+#: grenml_import/models.py:231
+msgid "File"
+msgstr "Fichier"
+
+#: grenml_import/models.py:233
+msgid "Name"
+msgstr "Nom"
+
+#: grenml_import/models.py:239
+msgid ""
+"Equal to the client name associated to the access token in the import "
+"request. Imports done through the admin interface will use the null value."
+msgstr ""
+"Correspond au nom du client associé au jeton d'accès dans la demande "
+"d'importation. Les importations effectuées à partir de l'interface Admin "
+"utiliseront la valeur nulle."
+
+#: grenml_import/models.py:243
+msgid "Token client name"
+msgstr "nom de client du Jeton"
+
+#: grenml_import/models.py:255
+msgid "We can import files using the admin interface or the API endpoint."
+msgstr ""
+"Les fichiers peuvent être importés à partir de l'interface Admin ou du point "
+"terminal de l'API."
+
+#: grenml_import/models.py:265
+msgid ""
+"New name for the imported topology. Required for Excel .xlsx files. Not "
+"applicable for .grenml or .xml files. "
+msgstr ""
+"Nouveau nom pour la topologie importée. Nécessaire pour les fichiers .xlsx "
+"d'Excel. Ne s'applique pas aux fichiers .grenml ou .xml."
+
+#: grenml_import/models.py:269
+msgid "Topology name"
+msgstr "Nom de la topologie"
+
+#: grenml_import/models.py:292
+msgid "GRENML File Import"
+msgstr "Importation de fichiers GRENML"
+
+#: grenml_import/models.py:293
+msgid "GRENML File Imports"
+msgstr "Importations de fichiers GRENML"
+
+#: grenml_import/models.py:330
+msgid "Topology name is not applicable to GRENML/XML files."
+msgstr "Ce nom de topologie ne peut s'appliquer aux fichiers GRENML/XML."
+
+#: grenml_import/models.py:332
+msgid "Topology name is required for Excel files."
+msgstr "Les fichiers Excel doivent avoir un nom de topologie."
+
+#: grenml_import/models.py:343
+msgid "Error importing XML file."
+msgstr "Erreur lors de l'importation du fichier XML."
+
+#: grenml_import/models.py:358
+msgid "Error importing Excel file.\n"
+msgstr "Erreur lors de l'importation du fichier Excel.\n"
+
+#: grenml_import/models.py:360
+msgid "Unsupported file. Supported types: .grenml, .xml, .xlsx"
+msgstr "Fichier non accepté. Fichiers acceptés : .grenml, .xml, .xlsx"
+
+#: grenml_import/templates/admin/submit_line.html:20
+msgid "Save"
+msgstr ""
+
+#: grenml_import/templates/admin/submit_line.html:29
+msgid "Delete"
+msgstr ""
+
+#: grenml_import/templates/admin/submit_line.html:37
+msgid "Save as new"
+msgstr ""
+
+#: grenml_import/templates/admin/submit_line.html:44
+msgid "Save and add another"
+msgstr ""
+
+#: grenml_import/templates/admin/submit_line.html:51
+msgid "Save and continue editing"
+msgstr ""
+
+#: grenml_import/templates/admin/submit_line.html:51
+msgid "Save and view"
+msgstr ""
+
+#: grenml_import/templates/admin/submit_line.html:57
+msgid "Close"
+msgstr ""
+
+#. Translators: {} is one of the translated messages: "import in progress", "import complete", "import completed with warnings", "import aborted"  # noqa
+#: grenml_import/utils/import_log.py:245
+msgid "Status: {}\n"
+msgstr "État : {}\n"
+
+#. Translators: {}'s are numbers of topologies  # noqa
+#: grenml_import/utils/import_log.py:249
+msgid "Topologies: {} parsed, {} imported\n"
+msgstr "Topologies : {} analysées, {} importées\n"
+
+#: grenml_import/utils/import_log.py:256 grenml_import/utils/import_log.py:267
+#: grenml_import/utils/import_log.py:278 grenml_import/utils/import_log.py:289
+msgid "WARNING: "
+msgstr "ATTENTION :"
+
+#. Translators: {}'s are numbers of institutions  # noqa
+#: grenml_import/utils/import_log.py:260
+msgid "Institutions: {} parsed, {} imported\n"
+msgstr "Institutions : {} analysées, {} importées\n"
+
+#. Translators: {}'s are numbers of nodes  # noqa
+#: grenml_import/utils/import_log.py:271
+msgid "Nodes: {} parsed, {} imported\n"
+msgstr "Nœuds : {} analysés, {} importés\n"
+
+#. Translators: {}'s are numbers of links  # noqa
+#: grenml_import/utils/import_log.py:282
+msgid "Links: {} parsed, {} imported\n"
+msgstr "Liens : {} analysés, {} importés\n"
+
+#: grenml_import/utils/import_log.py:293
+msgid "ERRORS:\n"
+msgstr "ERREURS :\n"
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep both at the end of the message.  # noqa
+#: grenml_import/views/api.py:49
+msgid "Use this endpoint to upload a GRENML file. <br> <br> "
+msgstr "Utiliser ce point terminal pour télécharger un fichier GRENML"

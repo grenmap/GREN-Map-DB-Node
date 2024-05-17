@@ -1,0 +1,27 @@
+@startuml
+
+title docker-compose deployments
+
+component "gren1 deployment" {
+  [gren1_app_1\n(django)] as app1
+  [gren1_websp_1\nhost.docker.internal:8443] as websp1
+  [gren1_db_1\n(postgres)] as db1
+  [gren1_task_runner_1] as task_runner1
+
+  [websp1] <--> [app1]
+  [app1] <--> [db1]
+  [app1] <--> [task_runner1]
+}
+
+component "gren2 deployment" {
+  [gren2_app_1\n(django)] as app2
+  [gren2_websp_1\nhost.docker.internal:9002] as websp2
+  [gren2_db_1\n(postgres)] as db2
+  [gren2_task_runner_1] as task_runner2
+
+  [websp2] <--> [app2]
+  [app2] <--> [db2]
+  [app2] <--> [task_runner2]
+}
+
+@enduml

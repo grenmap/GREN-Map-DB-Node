@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  test:
+    build:
+      context: ./functional_test
+    container_name: testbase
+    volumes:
+      - ./functional_test/:/home/grenmap_functional_test/
+    env_file:
+      - ./env/.env.test
+      - .env
+    environment:
+      - TEST_DOCKER_NAME=websp
+      - TEST_DOCKER_PORT=8443
+    command: pytest --disable-warnings /home/grenmap_functional_test/
+    image: grenmap-django

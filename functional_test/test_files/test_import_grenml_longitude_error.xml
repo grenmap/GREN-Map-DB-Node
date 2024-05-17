@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<grenml:Topology xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation=" http://schemas.ogf.org/nml/2020/01/grenml grenml.xsd nmlbase.xsd"
+                 id="urn:ogf:network:global:1">
+    <grenml:name>Topology-1</grenml:name>
+    <grenml:owner>urn:ogf:network:myisp:owner</grenml:owner>
+    <grenml:Institution id="urn:ogf:network:myisp:owner">
+        <grenml:name>Test Institution Import</grenml:name>
+        <grenml:Location>
+            <grenml:long>-300</grenml:long>
+            <grenml:lat>45</grenml:lat>
+            <grenml:alt>50</grenml:alt>
+            <grenml:address>Ottawa, Canada, Canada</grenml:address>
+            <grenml:unlocode>CAON</grenml:unlocode>
+        </grenml:Location>
+    </grenml:Institution>
+</grenml:Topology>

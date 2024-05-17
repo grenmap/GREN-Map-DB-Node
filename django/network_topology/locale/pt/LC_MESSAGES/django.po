@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-12 17:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: network_topology/apps.py:25
+msgid "Network Topology"
+msgstr ""
+
+#: network_topology/models/grenml.py:40
+msgid "Latitude"
+msgstr ""
+
+#: network_topology/models/grenml.py:45
+msgid "Longitude"
+msgstr ""
+
+#: network_topology/models/grenml.py:49
+msgid "Altitude"
+msgstr ""
+
+#: network_topology/models/grenml.py:50
+msgid "The height of the location from sea level, in metres"
+msgstr ""
+
+#: network_topology/models/grenml.py:54
+msgid "UN/LOCODE"
+msgstr ""
+
+#: network_topology/models/grenml.py:59
+msgid "Address Line"
+msgstr ""
+
+#: network_topology/models/grenml.py:65
+msgid "Full Province/State Name"
+msgstr ""
+
+#: network_topology/models/grenml.py:69
+msgid "Postcode/Zipcode"
+msgstr ""
+
+#: network_topology/models/grenml.py:73
+msgid "Country"
+msgstr ""
+
+#: network_topology/models/grenml.py:74
+msgid "ISO 3166-1 two-letter country code"
+msgstr ""
+
+#: network_topology/models/grenml.py:79
+msgid "Location"
+msgstr ""
+
+#: network_topology/models/grenml.py:80
+msgid "Locations"
+msgstr ""
+
+#: network_topology/models/grenml.py:124
+msgid "Lifetime"
+msgstr ""
+
+#: network_topology/models/grenml.py:125
+msgid "Lifetimes"
+msgstr ""
+
+#: network_topology/models/grenml.py:135
+msgid "ID"
+msgstr ""
+
+#: network_topology/models/grenml.py:140 network_topology/models/grenml.py:281
+msgid "Name"
+msgstr ""
+
+#: network_topology/models/grenml.py:145
+msgid "Short Name"
+msgstr ""
+
+#: network_topology/models/grenml.py:150
+msgid "Version"
+msgstr ""
+
+#: network_topology/models/grenml.py:169
+msgid "Institution"
+msgstr ""
+
+#: network_topology/models/grenml.py:170
+msgid "Institutions"
+msgstr ""
+
+#: network_topology/models/grenml.py:185
+msgid "Network Element"
+msgstr ""
+
+#: network_topology/models/grenml.py:186
+msgid "Network Elements"
+msgstr ""
+
+#: network_topology/models/grenml.py:200
+msgid "Network Node"
+msgstr ""
+
+#: network_topology/models/grenml.py:201
+msgid "Network Nodes"
+msgstr ""
+
+#: network_topology/models/grenml.py:224
+msgid "Link Node A"
+msgstr ""
+
+#: network_topology/models/grenml.py:230
+msgid "Link Node B"
+msgstr ""
+
+#: network_topology/models/grenml.py:239
+msgid "Network Link"
+msgstr ""
+
+#: network_topology/models/grenml.py:240
+msgid "Network Links"
+msgstr ""
+
+#: network_topology/models/grenml.py:263
+msgid "The nodes of a link cannot be null"
+msgstr ""
+
+#: network_topology/models/grenml.py:264 network_topology/models/grenml.py:269
+msgid "Invalid node configuration"
+msgstr ""
+
+#: network_topology/models/grenml.py:268
+msgid "The nodes of a link cannot be the same"
+msgstr ""
+
+#: network_topology/models/grenml.py:282
+msgid "Will be converted to all lower case when saved"
+msgstr ""
+
+#: network_topology/models/grenml.py:287
+msgid "Value"
+msgstr ""
+
+#: network_topology/models/grenml.py:302
+msgid "Property"
+msgstr ""
+
+#: network_topology/models/grenml.py:303
+msgid "Properties"
+msgstr ""

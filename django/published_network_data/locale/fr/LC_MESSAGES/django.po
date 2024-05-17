@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 14:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: published_network_data/admin.py:61 published_network_data/admin.py:67
+msgid "Download"
+msgstr "Télécharger"
+
+#: published_network_data/admin.py:70
+msgid "Actions"
+msgstr ""
+
+#: published_network_data/apps.py:25 published_network_data/models/models.py:65
+msgid "Published Database Snapshot"
+msgstr "Instantané de la base de données publiée"
+
+#: published_network_data/apps.py:26 published_network_data/models/models.py:66
+msgid "Published Database Snapshots"
+msgstr "Instantanés de la base de données publiée"
+
+#: published_network_data/models/models.py:37
+msgid "version"
+msgstr "version"
+
+#: published_network_data/models/models.py:38
+msgid "file contents"
+msgstr "contenu du fichier"
+
+#: published_network_data/models/models.py:39
+msgid "name"
+msgstr "nom"
+
+#: published_network_data/models/models.py:40
+msgid "file date"
+msgstr "date du fichier"
+
+#: published_network_data/models/models.py:44
+msgid "published status"
+msgstr "état de la publication"
+
+#: published_network_data/models/models.py:48
+msgid "GRENML export description"
+msgstr "description de l'exportation de GRENML"
+
+#: published_network_data/models/models.py:54
+msgid "published state"
+msgstr "état publié"
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep both at the end of the message.  # noqa
+#: published_network_data/views/api.py:59
+msgid "Returns the snapshot of the server's data, as a GRENML file. <br> <br> "
+msgstr ""
+"Fournit un instantané des données du serveur sous forme de fichier GRENML. "
+"<br> <br>"

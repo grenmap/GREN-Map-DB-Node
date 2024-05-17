@@ -1,0 +1,6 @@
+requests~=2.31.0
+pytest~=5.2.1
+gql~=0.4.0
+flake8~=3.9.2
+pep8-naming~=0.12.1
+selenium

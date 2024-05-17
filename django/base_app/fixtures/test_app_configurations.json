@@ -1,0 +1,58 @@
+[
+    {
+        "model": "base_app.appconfiguration",
+        "pk": "GRENML_POLLING_ENABLED",
+        "fields": {
+            "display_name": "GRENML Polling Enabled",
+            "value": "True"
+        }
+    },
+    {
+        "model": "base_app.appconfiguration",
+        "pk": "GRENML_POLLING_INTERVAL",
+        "fields": {
+            "display_name": "GRENML Polling Interval",
+            "value": "R */4 * * *"
+        }
+    },
+    {
+        "model": "base_app.appconfiguration",
+        "pk": "GRENML_TOPOLOGY_OWNER",
+        "fields": {
+            "display_name": "GRENML Topology Owner",
+            "value": "GREN"
+        }
+    },
+    {
+        "model": "base_app.appconfiguration",
+        "pk": "GREN_MAP_VISUALIZATION_ENABLED",
+        "fields": {
+            "display_name": "GREN Map Visualization Enabled",
+            "value": "True"
+        }
+    },
+    {
+        "model": "base_app.appconfiguration",
+        "pk": "GRENML_POLLING_DATA_SUPPLY_TYPE",
+        "fields": {
+            "display_name": "GRENML Polling Data Supply Type",
+            "value": "Live"
+        }
+    },
+    {
+        "model": "base_app.appconfiguration",
+        "pk": "GREN_MAP_INITIAL_ZOOM",
+        "fields": {
+            "display_name": "GREN Map Initial Zoom",
+            "value": "3"
+        }
+    },
+    {
+        "model": "base_app.appconfiguration",
+        "pk": "GREN_MAP_VISUALIZATION_CACHED",
+        "fields": {
+            "display_name": "GREN Map Visualization Data Caching Enabled",
+            "value": "False"
+        }
+    }
+]

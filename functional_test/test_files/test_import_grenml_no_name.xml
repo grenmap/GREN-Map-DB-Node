@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="parent-topology" version="2022-12-20T16:24:48+00:00" xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+    <grenml:name>parent-topology</grenml:name>
+    <grenml:owner>inst-1</grenml:owner>
+    <grenml:Institution id="inst-2" version="2022-12-20T16:33:55+00:00">
+        <grenml:Property name="url">https://ex-inst-2.ca/</grenml:Property>
+        <grenml:Property name="tag">example tag 2</grenml:Property>
+    </grenml:Institution>
+</grenml:Topology>

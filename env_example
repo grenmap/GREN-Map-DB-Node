@@ -1,0 +1,32 @@
+# Root Environment File
+# Copy this file to '.env' and configure for your deployment.
+# See README.md for more information.
+
+
+# Environment variable for docker build
+DOCKER_DEFAULT_PLATFORM=linux/amd64
+# DOCKER_DEFAULT_PLATFORM=linux/arm64  # use this version for Apple Silicon ARM-based systems
+
+# Environment variables for GREN Map DB Node
+MAP1_HOST_NAME=map1.example.com
+MAP1_HOST_PORT=8443
+
+# Environment variables for extra DB Nodes if needed for development
+# MAP2_HOST_NAME=map2.example.com
+# MAP2_HOST_PORT=9002
+# MAP3_HOST_NAME=map3.example.com
+# MAP3_HOST_PORT=9003
+
+
+# Environment variables for Shibboleth SSO IDP & LDAP
+IDP_HOST_NAME=idp.example.org
+LDAPPWD=ChangePassword
+
+# Environment variables for Shibboleth template file at "websp/templates/shib/shibboleth2.xml"
+# Only uncomment and make changes when needed
+# For development, their default values are as the followed:
+# METADATA_PROVIDERS='<MetadataProvider type="XML" validate="true" path="/etc/shibboleth/idp-metadata.xml"/>'
+# IDP_SSO='<SSO discoveryProtocol="SAMLDS" discoveryURL="https://__MAP_HOST_NAME__:__MAP_HOST_PORT__/shibboleth-ds/index.html">SAML2 SAML1</SSO>'
+
+# To run without the Embedded Discovery Service(EDS)
+# IDP_SSO='<SSO entityID="https://__IDP_HOST_NAME__/idp/shibboleth">SAML2 SAML1</SSO>'

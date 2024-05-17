@@ -1,0 +1,73 @@
+# example.org
+dn: dc=example,dc=org
+objectClass: dcObject
+objectClass: organization
+dc: example
+o: example
+
+dn: ou=People,dc=example,dc=org
+ou: People
+description: All people in example.org
+objectClass: top
+objectClass: organizationalUnit
+
+dn: uid=testuser1,ou=People,dc=example,dc=org
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+surname: Test
+givenName: User1
+displayName: Test User1
+cn: Test User1
+uid: testuser1
+mail: testuser1@example.org
+userPassword: ChangePassword
+eduPersonAffiliation: member
+eduPersonAffiliation: student
+eduPersonPrincipalName: testuser1@example.org
+
+dn: uid=testuser2,ou=People,dc=example,dc=org
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+surname: Test
+givenName: User2
+cn: Test User2
+uid: testuser2
+mail: testuser2@example.org
+userPassword: ChangePassword
+eduPersonAffiliation: community
+eduPersonPrincipalName: testuser2@example.org
+
+dn: uid=testuser3,ou=People,dc=example,dc=org
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+surname: Test
+givenName: User3
+cn: Test User3
+uid: testuser3
+mail: testuser3@example.org
+userPassword: ChangePassword
+eduPersonPrincipalName: testuser3@example.org
+
+# user without EPPN
+dn: uid=testuser4,ou=People,dc=example,dc=org
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+surname: Test
+givenName: User4
+cn: Test User4
+uid: testuser4
+mail: testuser4@example.org
+userPassword: ChangePassword
+eduPersonAffiliation: community

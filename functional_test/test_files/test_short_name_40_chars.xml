@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<grenml:Topology
+  xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml"
+  xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation=" http://schemas.ogf.org/nml/2020/01/grenml grenml.xsd http://schemas.ogf.org/nml/2013/05/base# nmlbase.xsd"
+  id="urn:ogf:network:global">
+  <grenml:name>Topology-1</grenml:name>
+  <grenml:owner>Inst_1</grenml:owner>
+  <grenml:Property name="description">This file contains multiple institutions</grenml:Property>
+  <grenml:Property name='description'>This file contains multiple nodes</grenml:Property>
+  <grenml:Property name='description'>This file contains multiple links</grenml:Property>
+  <grenml:Property name='description1'>This file contains each element equal to or above hundred</grenml:Property>
+  <grenml:Institution id="Inst_1" version="2020-04-08T08:20:15+00:00">
+    <grenml:name>Institution 1</grenml:name>
+    <grenml:short-name>short_name_10_short_name_25_short_name_38</grenml:short-name>
+    <grenml:Location>
+      <grenml:long>-75.86</grenml:long>
+      <grenml:lat>45.421467</grenml:lat>
+      <grenml:alt>5</grenml:alt>
+      <grenml:unlocode>CA</grenml:unlocode>
+      <grenml:address>45 O'Connor St., Suite 500, Ottawa, ON, Canada, K1P 1A4</grenml:address>
+    </grenml:Location>
+    <grenml:Property name="url">https://www.myisp.com/</grenml:Property>
+    <grenml:Property name="city">Ottawa</grenml:Property>
+    <grenml:Property name="province">Ontario</grenml:Property>
+    <grenml:Property name="postal_code">K1P 5E1</grenml:Property>
+    <grenml:Property name="country">Ca</grenml:Property>
+    <grenml:Property name="institution_types">other</grenml:Property>
+    <grenml:Property name="institution_types">NREN</grenml:Property>
+    <grenml:Property name="random"></grenml:Property>
+    <grenml:Property name="short-name">short_name_10_short_name_25_short_name_38</grenml:Property>
+  </grenml:Institution>
+  <grenml:Institution id="Inst_2">
+    <grenml:name>Institution 2</grenml:name>
+    <grenml:Location>
+      <grenml:long>-15.698096</grenml:long>
+      <grenml:lat>-45.421467</grenml:lat>
+      <grenml:alt>999</grenml:alt>
+      <grenml:address>45 O'Connor St., Suite 500, Ottawa, ON, Canada</grenml:address>
+    </grenml:Location>
+    <grenml:Property name="url">https://www.myisp.com/</grenml:Property>
+    <grenml:Property name="short-name">RGNA1RTR1</grenml:Property>
+  </grenml:Institution>
+</grenml:Topology>

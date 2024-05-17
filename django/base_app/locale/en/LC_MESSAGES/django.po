@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-23 20:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: base_app/admin.py:48
+msgid "The setting has been reset to its default value successfully"
+msgstr ""
+
+#: base_app/apps.py:13
+msgid "Base App"
+msgstr ""
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep it between the two sentences.  # noqa
+#: base_app/constants.py:31
+msgid ""
+"Requires a \"polling\" token. <br>Navigate to Home > Base App > Tokens in "
+"the admin site to obtain one."
+msgstr ""
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep it between the two sentences.  # noqa
+#: base_app/constants.py:38
+msgid ""
+"Requires an \"import\" token. <br>Navigate to Home > Base App > Tokens in "
+"the admin site to obtain one."
+msgstr ""
+
+#. Translators: <br> is an HTML tag that inserts a new line. Please keep both tags at the end of the message.  # noqa
+#: base_app/constants.py:45
+msgid ""
+"To create a snapshot, open the admin site and navigate to Home > Published "
+"Network Data. <br> <br>"
+msgstr ""
+
+#: base_app/management/commands/initialisesettings.py:14
+msgid ""
+"Creates default values for custom app defined settings and cleans unused "
+"settings"
+msgstr ""
+
+#: base_app/models/app_configurations.py:56
+msgid "name"
+msgstr ""
+
+#: base_app/models/app_configurations.py:61
+msgid "display name"
+msgstr ""
+
+#: base_app/models/app_configurations.py:66
+msgid "value"
+msgstr ""
+
+#: base_app/models/app_configurations.py:71
+msgid "description"
+msgstr ""
+
+#: base_app/models/app_configurations.py:78
+msgid "App Configuration Setting"
+msgstr ""
+
+#: base_app/models/app_configurations.py:79
+msgid "App Configuration Settings"
+msgstr ""
+
+#: base_app/models/app_configurations.py:100
+msgid "This identifies the client which will be using this token."
+msgstr ""
+
+#: base_app/models/app_configurations.py:101
+msgid "client name"
+msgstr ""
+
+#: base_app/models/app_configurations.py:109
+msgid ""
+"The access token, a random string. Use the regenerate button to populate "
+"this field in case it is empty. Send it to the peer's administrator to have "
+"this node accept the peer's requests."
+msgstr ""
+
+#: base_app/models/app_configurations.py:114
+#: base_app/models/app_configurations.py:142
+msgid "Token"
+msgstr ""
+
+#: base_app/models/app_configurations.py:123
+msgid "token type"
+msgstr ""
+
+#: base_app/models/app_configurations.py:143
+msgid "Tokens"
+msgstr ""
+
+#: base_app/serializers.py:68
+msgid "ID of an existing topology."
+msgstr ""
+
+#: base_app/serializers.py:73
+msgid ""
+"Name to be given to the file's root topology once the server imports it."
+msgstr ""
+
+#: base_app/serializers.py:85
+msgid "Source server does not have a root topology."
+msgstr ""
+
+#: base_app/serializers.py:89
+msgid ""
+"Root topology in source server does not have an owner.\n"
+"On the source server, go to Home › Network Topology › Network Topologies, "
+"then click on the root topology to see an edit page.\n"
+"Click on the plus button in the \"Owner\" row to add an owner institution."
+msgstr ""
+
+#: base_app/serializers.py:99
+msgid "Internal server error."
+msgstr ""
+
+#: base_app/settings.py:88
+msgid "Import"
+msgstr ""
+
+#: base_app/settings.py:89
+msgid "Polling"
+msgstr ""
+
+#: base_app/settings.py:175
+msgid "French"
+msgstr ""
+
+#: base_app/settings.py:176
+msgid "English"
+msgstr ""
+
+#: base_app/settings.py:177
+msgid "Spanish"
+msgstr ""
+
+#: base_app/settings.py:178
+msgid "Portuguese"
+msgstr ""
+
+#: base_app/templates/admin/base.html:27
+msgid "Documentation"
+msgstr ""
+
+#: base_app/templates/admin/base.html:31
+msgid "Change password"
+msgstr ""
+
+#: base_app/templates/admin/base.html:33 base_app/templates/admin/base.html:96
+#: base_app/templates/admin/base.html:99
+msgid "Log out"
+msgstr ""
+
+#: base_app/templates/admin/base.html:35
+msgid "View map"
+msgstr ""
+
+#: base_app/templates/admin/base.html:37
+msgid "API docs"
+msgstr ""
+
+#. Translators: 'build' here is a noun. It indicates the date the software component was built and the version of the source code used.
+#: base_app/templates/admin/base.html:40
+msgid "build:"
+msgstr ""
+
+#: base_app/templates/admin/base.html:50
+msgid "build information"
+msgstr ""
+
+#: base_app/templates/admin/base.html:58
+msgid "build date"
+msgstr ""
+
+#: base_app/templates/admin/base.html:62
+msgid "GRENMap DB Node commit hash"
+msgstr ""
+
+#: base_app/templates/admin/base.html:66
+msgid "GRENMap DB Node git tag"
+msgstr ""
+
+#: base_app/templates/admin/base.html:70
+msgid "GRENML library"
+msgstr ""
+
+#: base_app/templates/admin/base.html:74
+msgid "GRENMap visualization"
+msgstr ""
+
+#: base_app/templates/admin/base.html:81
+msgid "Close"
+msgstr ""
+
+#: base_app/templates/admin/base.html:95
+msgid "Admin"
+msgstr ""
+
+#: base_app/templates/admin/base.html:102
+msgid "Login"
+msgstr ""
+
+#: base_app/templates/admin/base_site.html:16
+msgid "Map administration"
+msgstr ""
+
+#: base_app/templates/entities/app_configuration_changeform.html:5
+msgid "Save"
+msgstr ""
+
+#: base_app/templates/entities/app_configuration_changeform.html:6
+msgid "Reset to default value"
+msgstr ""
+
+#: base_app/urls.py:65
+msgid "Administration"
+msgstr ""

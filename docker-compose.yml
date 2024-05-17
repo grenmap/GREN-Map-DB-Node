@@ -1,0 +1,79 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: ./django
+      target: deployment
+    command: gunicorn base_app.wsgi:application --bind 0.0.0.0:8080 --log-level=info --threads 4
+    volumes:
+      - static_volume:/home/grenmapadmin/web/staticfiles
+    expose:
+      - 8080
+    healthcheck:
+      test: curl --fail http://localhost:8080 || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    depends_on:
+      - db
+      - redis
+    image: grenmap-django
+
+  task_runner:
+    command: python manage.py qcluster
+    entrypoint: ./task_runner.sh
+    depends_on:
+      - db
+      - app
+      - redis
+    image: grenmap-django
+
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  websp:
+    build:
+      context: ./websp
+    environment:
+      - IDP_HOST_NAME=${IDP_HOST_NAME:-}
+      - IDP_SSO=${IDP_SSO:-}
+      - METADATA_PROVIDERS=${METADATA_PROVIDERS:-}
+    secrets:
+      - websp-host-key
+      - websp-host-cert
+      - websp-sp-key
+      - websp-sp-cert
+    volumes:
+      - static_volume:/home/grenmapadmin/web/staticfiles
+    # To overwrite the default EDS logo with CAFLogo.png
+    # - ./websp/templates/shibboleth-ds/CAFLogo.png:/var/www/html/shibboleth-ds/eds_logo.png
+    # When deploying the second node,
+    # include the -p command line option
+    # to assign a name to the deployment:
+    #
+    # docker-compose -f docker-compose.yml -f docker-compose.dev2.yml -p gren2 up
+    depends_on:
+      - app
+    image: grenmap-websp
+
+  redis:
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    image: bitnami/redis:7.0
+
+volumes:
+  postgres_data:
+  static_volume:
+
+secrets:
+  websp-host-key:
+    file: ./websp/configs_and_secrets/host-key.pem
+  websp-host-cert:
+    file: ./websp/configs_and_secrets/host-cert.pem
+  websp-sp-key:
+    file: ./websp/configs_and_secrets/sp-key.pem
+  websp-sp-cert:
+    file: ./websp/configs_and_secrets/sp-cert.pem

@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 14:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Translators: 'True' and 'False' should remain in English, do not translate  # noqa
+#: visualization/app_configurations.py:33
+#: visualization/app_configurations.py:139
+msgid "Value must be 'True' or 'False'"
+msgstr "La valeur doit être 'True' (vrai) ou 'False' (faux)."
+
+#: visualization/app_configurations.py:46
+msgid ""
+"Please enter latitude and longitude between parentheses: (latitude, "
+"longitude)."
+msgstr ""
+"Veuillez inscrire la latitude et la longitude entre parenthèses : (latitude, "
+"longitude)."
+
+#: visualization/app_configurations.py:50
+msgid ""
+"The valid range for latitude is from -90 (South Pole) to 90 (North Pole)."
+msgstr ""
+"La plage pour la latitude doit être de -90 (pôle sud) à 90 (pôle nord)."
+
+#: visualization/app_configurations.py:54
+msgid "The valid range for longitude is from -180 to 180."
+msgstr "La plage pour la longitude doit être de -180 à 180."
+
+#: visualization/app_configurations.py:119
+msgid "The zoom setting must be a positive number"
+msgstr "La valeur du grossissement doit être positive."
+
+#: visualization/apps.py:27
+msgid "GREN Map Visualization"
+msgstr "Visualisation de la carte du RMRE"
+
+#: visualization/management/commands/build_map_cache.py:31
+msgid "Build Redis Cache For Visualization"
+msgstr "Créer l'antémémoire Redis pour la visualisation"
+
+#: visualization/models/visualization_allowed_origin.py:36
+msgid "name"
+msgstr ""
+
+#: visualization/models/visualization_allowed_origin.py:37
+msgid ""
+"An easy to remember name for this hostname. i.e. The organization this is "
+"for."
+msgstr ""
+"Un nom facile à retenir pour cet hôte, par exemple celui de l'organisation "
+"concernée."
+
+#: visualization/models/visualization_allowed_origin.py:43
+msgid "origin"
+msgstr "origine"
+
+#: visualization/models/visualization_allowed_origin.py:48
+msgid "active"
+msgstr ""
+
+#: visualization/models/visualization_allowed_origin.py:55
+msgid "Visualization Allowed Origin"
+msgstr "Origine autorisée de la visualisation"
+
+#: visualization/models/visualization_allowed_origin.py:56
+msgid "Visualization Map Allowed Origins"
+msgstr "Origines autorisées de la carte de visualisation"
+
+#: visualization/views/api.py:95
+msgid "Visualization is disabled"
+msgstr "La visualisation a été désactivée."

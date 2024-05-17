@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="test-topology-1" version="2022-12-16T19:28:53+00:00" xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+	<grenml:name>test topology</grenml:name>
+	<grenml:owner>Inst_1</grenml:owner>
+	<grenml:Institution id="urn:ogf:networking:global">
+		<grenml:name>GREN</grenml:name>
+		<grenml:Property name="tag">global</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="Inst_1" version="2022-12-16T19:29:48+00:00">
+		<grenml:name>Institution name</grenml:name>
+		<grenml:short-name>short name</grenml:short-name>
+		<grenml:Location>
+			<grenml:long>179.123313</grenml:long>
+			<grenml:lat>89.123133</grenml:lat>
+			<grenml:alt>1000.000000</grenml:alt>
+			<grenml:unlocode>CA123</grenml:unlocode>
+			<grenml:address>123 addressline first, ottawa, ON, Canada</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="Inst_2" version="2022-12-16T19:32:31+00:00">
+		<grenml:name>Institution 2</grenml:name>
+		<grenml:Location>
+			<grenml:long>-179.698096</grenml:long>
+			<grenml:lat>-89.421467</grenml:lat>
+			<grenml:alt>9999.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Institution>
+</grenml:Topology>

@@ -1,0 +1,33 @@
+{
+    "rulesets": [
+        {
+        "name": "Disabled ruleset",
+        "rules": [
+            {
+                "name": "confirm non execution",
+                "actions": [
+                    {
+                        "action_type": "Delete Node",
+                        "actioninfo_set": []
+                    }
+                ],
+                "match_criteria": [
+                    {
+                        "match_type": "Match Nodes by ID",
+                        "matchinfo_set": [
+                            {
+                                "key": "ID",
+                                "value": "6"
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "priority": -1
+            }
+        ],
+        "enabled": false,
+        "priority": -5
+    }
+    ]
+}

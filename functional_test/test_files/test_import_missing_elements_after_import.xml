@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="test-topology-missing-elements" version="2023-05-16T14:28:52+00:00" xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+	<grenml:name>test-topology-missing-elements</grenml:name>
+	<grenml:owner>inst-1</grenml:owner>
+	<grenml:Institution id="urn:ogf:networking:global">
+		<grenml:name>GREN</grenml:name>
+		<grenml:Property name="tag">global</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="inst-1" version="2023-05-16T14:29:49+00:00">
+		<grenml:name>inst-1</grenml:name>
+	</grenml:Institution>
+	<grenml:Link id="link-4" version="2023-05-16T14:51:25+00:00">
+		<grenml:name>link-4</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:node>node-4</grenml:node>
+		<grenml:node>node-1</grenml:node>
+	</grenml:Link>
+	<grenml:Node id="node-4" version="2023-05-16T14:30:29+00:00">
+		<grenml:name>node-4</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-79.41</grenml:long>
+			<grenml:lat>43.7</grenml:lat>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="node-1" version="2023-05-16T14:49:59+00:00">
+		<grenml:name>node-1</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-69.41</grenml:long>
+			<grenml:lat>53.7</grenml:lat>
+		</grenml:Location>
+	</grenml:Node>
+</grenml:Topology>

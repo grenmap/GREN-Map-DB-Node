@@ -1,0 +1,41 @@
+# Dont include local python environment
+gren-env
+
+# Filtering out IDE specific folders
+.idea
+.vscode/settings.json
+.env
+
+# Don't include the env files
+**/.env.*
+
+# Ignore compiled python bytecode
+__pycache__
+
+# Ignore test coverages and results
+htmlcov/
+junit/
+coverage.xml
+.coverage
+
+# Translation binaries can always be rebuilt during deployment
+*.mo
+
+# Ignore the staticfiles folder
+django/staticfiles/
+
+# Ignore custom settings for IDE
+tox.ini
+
+# Ignore mac files
+.DS_Store
+
+# Ignore local test result
+functional_test/test_result/
+
+# Uploaded files should be ignored
+django/media/uploads/
+django/package-lock.json
+
+# Ingore idp metadata file
+websp/container_files/shib/idp-metadata.xml

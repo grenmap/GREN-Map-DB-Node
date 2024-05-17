@@ -1,0 +1,13 @@
+
+/* Styles for the import button in the rulesets admin page. */
+#import-ruleset {
+    background-color: #2a2d7c;
+    border-radius: 15px;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 3px 12px;
+    text-transform: uppercase;
+}

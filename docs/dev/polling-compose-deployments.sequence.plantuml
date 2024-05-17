@@ -1,0 +1,21 @@
+@startuml
+
+title polling on docker-compose deployments
+
+box "gren1 deployment"
+participant gren1_task_runner_1 as task_runner1
+participant gren1_app_1 as app1
+end box
+
+box "gren2 deployment"
+participant gren2_websp_1 as websp2
+participant gren2_app_1 as app2
+end box
+
+task_runner1 -> app1 : POST /polling/trigger/
+app1 -> websp2 : POST host.docker.internal:9002/grenml_export/
+websp2 -> app2 : POST app:8080/grenml_export/
+websp2 <-- app2 : network topology as xml
+app1 <-- websp2 : network topology as xml
+
+@enduml

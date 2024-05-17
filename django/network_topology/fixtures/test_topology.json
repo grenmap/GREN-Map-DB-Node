@@ -1,0 +1,41 @@
+[
+{
+    "model": "network_topology.basemodel",
+    "pk": "9b6d8d62-5b80-442d-b0b8-37f2bbc96b03",
+    "fields": {
+        "name": "Root Topology",
+        "version": "2022-04-20T18:48:35Z"
+    }
+},
+{
+    "model": "network_topology.basemodel",
+    "pk": "e774ee45-d223-4c5a-bfd2-70fea9e8fea7",
+    "fields": {
+        "name": "Root Institution",
+        "version": "2022-04-20T18:48:53Z"
+    }
+},
+{
+    "model": "network_topology.institution",
+    "pk": "e774ee45-d223-4c5a-bfd2-70fea9e8fea7",
+    "fields": {
+        "latitude": "12.000000",
+        "longitude": "13.000000",
+        "altitude": null,
+        "unlocode": null,
+        "address": null,
+        "short_name": null,
+        "topologies": [
+            "9b6d8d62-5b80-442d-b0b8-37f2bbc96b03"
+        ]
+    }
+},
+{
+    "model": "network_topology.topology",
+    "pk": "9b6d8d62-5b80-442d-b0b8-37f2bbc96b03",
+    "fields": {
+        "parent": null,
+        "owner": "e774ee45-d223-4c5a-bfd2-70fea9e8fea7"
+    }
+}
+]

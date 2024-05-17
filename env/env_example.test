@@ -1,0 +1,8 @@
+PYTHONPATH=/home/grenmap_functional_test/
+SELENIUM_HUB_ADDRESS=http://seleniumhub:4444
+# Please copy and paste the Django admin user name and password
+TEST_USER_NAME=
+TEST_USER_PASSWORD=
+# Please copy and paste the IdP login user name and password
+IDP_TEST_USER_NAME=
+IDP_TEST_USER_PASSWORD=

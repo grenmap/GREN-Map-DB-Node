@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="test-topology-1" version="2022-12-19T16:07:45+00:00" xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+	<grenml:name>test topology 1</grenml:name>
+	<grenml:owner>Test-Institution-1</grenml:owner>
+	<grenml:Institution id="Test-Institution-1" version="2022-12-19T16:09:57+00:00">
+		<grenml:name>Test Institution 1</grenml:name>
+		<grenml:Location>
+			<grenml:long>-75.0</grenml:long>
+			<grenml:lat>45.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Ottawa, Canada, Canada</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="Test-Institution-2" version="2022-12-19T16:11:44+00:00">
+		<grenml:name>Test Institution 2</grenml:name>
+		<grenml:Location>
+			<grenml:long>-75.0</grenml:long>
+			<grenml:lat>45.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Ottawa, Canada, Canada</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="urn:ogf:networking:global">
+		<grenml:name>GREN</grenml:name>
+		<grenml:Property name="tag">global</grenml:Property>
+	</grenml:Institution>
+	<grenml:Link id="link:1" version="2022-12-19T16:18:09+00:00">
+		<grenml:name>LINK-TEST-1</grenml:name>
+		<grenml:owner>Test-Institution-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">Core link</grenml:Property>
+		<grenml:Property name="throughput">100</grenml:Property>
+		<grenml:node>node:1</grenml:node>
+		<grenml:node>node:2</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="link:2" version="2022-12-19T16:19:35+00:00">
+		<grenml:name>LINK-TEST-2</grenml:name>
+		<grenml:owner>Test-Institution-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">Core network link</grenml:Property>
+		<grenml:Property name="type">test property 1</grenml:Property>
+		<grenml:Property name="throughput">200</grenml:Property>
+		<grenml:node>node:2</grenml:node>
+		<grenml:node>node:3</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="link:3" version="2022-12-19T16:21:12+00:00">
+		<grenml:name>LINK-TEST-3</grenml:name>
+		<grenml:owner>Test-Institution-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">Core link</grenml:Property>
+		<grenml:Property name="type">test property 1</grenml:Property>
+		<grenml:Property name="throughput">500</grenml:Property>
+		<grenml:node>node:1</grenml:node>
+		<grenml:node>node:3</grenml:node>
+	</grenml:Link>
+	<grenml:Node id="node:1" version="2022-12-19T16:12:55+00:00">
+		<grenml:name>Test Router 1</grenml:name>
+		<grenml:short-name>Router 1</grenml:short-name>
+		<grenml:owner>Test-Institution-2</grenml:owner>
+		<grenml:owner>Test-Institution-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-63.13</grenml:long>
+			<grenml:lat>46.24</grenml:lat>
+			<grenml:alt>4215.000000</grenml:alt>
+			<grenml:address>test address to be deleted Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="node:2" version="2022-12-19T16:14:56+00:00">
+		<grenml:name>Test Router 2</grenml:name>
+		<grenml:short-name>Router 2</grenml:short-name>
+		<grenml:owner>Test-Institution-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-75.0</grenml:long>
+			<grenml:lat>10.0</grenml:lat>
+			<grenml:alt>1000.000000</grenml:alt>
+			<grenml:address>Charlottetown, PEI, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">Virtual</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="node:3" version="2022-12-19T16:16:36+00:00">
+		<grenml:name>Test Router 3</grenml:name>
+		<grenml:short-name>Router 3</grenml:short-name>
+		<grenml:owner>Test-Institution-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-85.0</grenml:long>
+			<grenml:lat>20.0</grenml:lat>
+			<grenml:alt>2000.000000</grenml:alt>
+			<grenml:address>Test address, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">Virtual</grenml:Property>
+	</grenml:Node>
+</grenml:Topology>

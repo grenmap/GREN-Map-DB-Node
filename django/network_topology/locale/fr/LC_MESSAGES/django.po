@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 14:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: network_topology/admin.py:34
+msgid "GREN Administration Portal"
+msgstr "Portail de l'administration du RMRE"
+
+#: network_topology/admin.py:35
+msgid ""
+"Applying Collation rules. Please note:     this could result in this Element "
+"being modified post add or edit."
+msgstr ""
+"Application des règles de collationnement. Attention : ceci pourrait "
+"entraîner la modification de l'Élément après qu'il a été ajouté ou modifié."
+
+#: network_topology/admin.py:69
+msgid "AutoIDForm does not have required GRENML_OBJECT_TYPE."
+msgstr "AutoIDForm n'a pas le GRENML_OBJECT_TYPE requis."
+
+#: network_topology/admin.py:92
+msgid "The element ID provided already exists."
+msgstr "L'ID fourni pour l'élément existe déjà."
+
+#: network_topology/admin.py:96
+msgid ""
+"There is a conflict with the auto-generated element ID. An object with the "
+"same name and short name may already exist."
+msgstr ""
+"L'ID de l'élément créé automatiquement suscite un conflit. Peut-être existe-"
+"t-il déjà un objet portant le même nom ou nom abrégé."
+
+#: network_topology/admin.py:255
+msgid "is main"
+msgstr "est le (la) principal(e)"
+
+#: network_topology/admin.py:331
+msgid "Mark one Topology as the main Topology for export."
+msgstr "Indiquer la topologie qui deviendra la Topologie principale à exporter"
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: network_topology/admin.py:339
+msgid "Topology {} set as root for export and distributed database polling."
+msgstr ""
+"La Topologie {} servira de racine pour l'exportation et l'interrogation de "
+"la base de données répartie."
+
+#: network_topology/apps.py:25 network_topology/models/topology.py:261
+msgid "Network Topology"
+msgstr "Topologie du réseau"
+
+#: network_topology/exceptions.py:34
+msgid ""
+"More than one main Topology has been set.  Cannot export.  Select only one."
+msgstr ""
+"Plusieurs Topologies principales établies. Exportation impossible. Veuillez "
+"n'en choisir qu'une."
+
+#: network_topology/management/commands/testfixture.py:83
+msgid "Creates a Topology containing randomized Institutions, Nodes, and Links"
+msgstr ""
+
+#: network_topology/models/base_model.py:142
+msgid "GRENML ID"
+msgstr "ID GRENML"
+
+#: network_topology/models/base_model.py:144
+msgid ""
+"Supply a unique ID for this item.<br />Minimum: UUID or hash.<br />Good: ID "
+"consistent with your REN records, (beware publishing sensitive data).<br /"
+">Best: namespace-prefix the above somehow to avoid collisions.<br />Example: "
+"\"myren-sunlighttransatlantic47\"<br />Ideally co-ordinate with other RENs "
+"for common IDs of shared infrastructure.<br />If omitted, an ID will be auto-"
+"generated for this object."
+msgstr ""
+"Attribuer un ID unique à l'élément. <br /> Strict minimum : UUID ou "
+"identifiant de hachage. <br /> Bien : ID cohérent avec les dossiers du RER "
+"(prenez garde à ne pas publier de données sensibles) <br /> Mieux : "
+"espacedenommage-préfixe quelconque pour éviter les collisions. <br /> "
+"Exemple : \"monrer-sunlighttransatlantic47\" <br /> Idéalement, se "
+"coordonner avec les autres RER pour choisir des ID qui  auront la même "
+"infrastructure. <br />Si on omet cette opération, l'objet recevra un ID "
+"automatiquement. "
+
+#: network_topology/models/base_model.py:158
+#: network_topology/models/base_model.py:288
+msgid "Name"
+msgstr "Nom"
+
+#: network_topology/models/base_model.py:164
+msgid "Version"
+msgstr "Version"
+
+#: network_topology/models/base_model.py:171
+msgid "dirty"
+msgstr "corrompu"
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: network_topology/models/base_model.py:213
+#: network_topology/models/base_model.py:216
+msgid "This ID already exists in {}"
+msgstr "Cet ID existe déjà dans {}."
+
+#: network_topology/models/base_model.py:289
+msgid "Will be converted to all lower case when saved"
+msgstr "Sera converti en minuscules à l'enregistrement"
+
+#: network_topology/models/base_model.py:294
+msgid "Value"
+msgstr "Valeur"
+
+#: network_topology/models/base_model.py:302
+msgid "property for"
+msgstr "propriété pour"
+
+#: network_topology/models/base_model.py:323
+msgid "Property"
+msgstr "Propriété"
+
+#: network_topology/models/base_model.py:324
+msgid "Properties"
+msgstr "Propriétés"
+
+#: network_topology/models/grenml.py:106
+msgid "WGS84 Latitude, in decimal degrees"
+msgstr "Latitude WGS84 en degrés décimaux"
+
+#: network_topology/models/grenml.py:110
+msgid "WGS84 Longitude, in decimal degrees"
+msgstr "Longitude WGS84 en degrés décimaux"
+
+#: network_topology/models/grenml.py:114
+msgid "Altitude"
+msgstr "Altitude"
+
+#: network_topology/models/grenml.py:115
+msgid "The height of the location from sea level, in metres"
+msgstr "Élévation du lieu par rapport au niveau de la mer, en mètres"
+
+#: network_topology/models/grenml.py:120
+msgid "UN/LOCODE"
+msgstr "UN/LOCODE"
+
+#: network_topology/models/grenml.py:125
+msgid "Address Line"
+msgstr "Ligne d'adresse"
+
+#: network_topology/models/grenml.py:130
+msgid "Location"
+msgstr "Emplacement"
+
+#: network_topology/models/grenml.py:131
+msgid "Locations"
+msgstr "Emplacements"
+
+#: network_topology/models/grenml.py:269
+msgid "start time and date"
+msgstr "début (date et heure)"
+
+#: network_topology/models/grenml.py:271
+msgid "end time and date"
+msgstr "fin (date et heure)"
+
+#: network_topology/models/grenml.py:278
+msgid "Lifetime"
+msgstr "Durée de vie"
+
+#: network_topology/models/grenml.py:279
+msgid "Lifetimes"
+msgstr "Durées de vie"
+
+#: network_topology/models/grenml.py:290
+msgid "Short Name"
+msgstr "Nom abrégé"
+
+#: network_topology/models/institution.py:46 network_topology/models/link.py:61
+#: network_topology/models/node.py:70
+msgid "topologies"
+msgstr "topologies"
+
+#: network_topology/models/institution.py:96
+#, fuzzy
+#| msgid "Institutions"
+msgid "Institution"
+msgstr "Institutions"
+
+#: network_topology/models/institution.py:97
+msgid "Institutions"
+msgstr "Institutions"
+
+#: network_topology/models/link.py:68
+msgid "Link Node A"
+msgstr "Nœud de liens A"
+
+#: network_topology/models/link.py:74
+msgid "Link Node B"
+msgstr "Nœud de liens B"
+
+#: network_topology/models/link.py:108
+msgid "The nodes of a link cannot be null"
+msgstr "Les nœuds d'un lien ne peuvent être nuls."
+
+#: network_topology/models/link.py:109 network_topology/models/link.py:114
+msgid "Invalid node configuration"
+msgstr "Configuration du nœud invalide"
+
+#: network_topology/models/link.py:113
+msgid "The nodes of a link cannot be the same"
+msgstr "Les nœuds d'un lien ne peuvent être identiques."
+
+#: network_topology/models/link.py:157
+msgid "Network Link"
+msgstr "Lien du réseau"
+
+#: network_topology/models/link.py:158
+msgid "Network Links"
+msgstr "Liens du réseau"
+
+#: network_topology/models/network_element.py:36
+msgid "owners"
+msgstr "propriétaires"
+
+#: network_topology/models/network_element.py:44
+msgid "Network Element"
+msgstr "Élément du réseau"
+
+#: network_topology/models/network_element.py:45
+msgid "Network Elements"
+msgstr "Éléments du réseau"
+
+#: network_topology/models/node.py:153
+msgid "Network Node"
+msgstr "Nœud du réseau"
+
+#: network_topology/models/node.py:154
+msgid "Network Nodes"
+msgstr "Nœuds du réseau"
+
+#: network_topology/models/topology.py:75
+msgid "parent"
+msgstr "parent"
+
+#: network_topology/models/topology.py:84
+msgid "owner"
+msgstr "propriétaire"
+
+#: network_topology/models/topology.py:90
+msgid ""
+"The root Topology to use for GRENML exports and distributed DB polling.  "
+"Only one Topology may be set as main."
+msgstr ""
+"Topologie racine à utiliser pour les exportations GRENML et l'interrogation "
+"de la BD répartie. Il ne peut y avoir qu'une seule  Topologie principale."
+
+#: network_topology/models/topology.py:93
+msgid "main"
+msgstr "principal(e)"
+
+#: network_topology/models/topology.py:174
+msgid "Cannot create circular Topology reference"
+msgstr "Impossible de créer une référence en boucle pour la Topologie"
+
+#: network_topology/models/topology.py:175
+#: network_topology/models/topology.py:180
+msgid "Invalid Topology Configuration"
+msgstr "Configuration invalide de la Topologie"
+
+#: network_topology/models/topology.py:179
+msgid ""
+"Topology tree contains circular Topology reference that caused a fatal error"
+msgstr ""
+"Une référence en boucle dans l'arborescence de la Topologie a engendré une "
+"erreur fatale."
+
+#: network_topology/models/topology.py:198
+msgid "Topology GRENML ID must be supplied and unique."
+msgstr "Vous devez fournir un ID unique pour la Topologie GRENML."
+
+#: network_topology/models/topology.py:262
+msgid "Network Topologies"
+msgstr "Topologies du réseau"

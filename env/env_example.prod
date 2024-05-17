@@ -1,0 +1,36 @@
+# Indicates to Django to collect more logs and produce helpful debug messages
+# Strongly recommended to avoid running production instances in DEBUG mode
+DEBUG=0
+
+# To enable Sandbox mode, set this value to 1. It will disable the polling app.
+# Otherwise, leave it blank or 0.
+SANDBOX=0
+
+# A unique string of characters for an instance used by Django for cryptographic signing
+# Strongly recommended to ensure this is unique for every production instance
+SECRET_KEY=change_me_please
+
+# The domain name or IP address or host name at which this instance will be accessed
+# The default values below are suitable for a local installation for development
+# Add to or replace these for a public installation, such as with "gren-map.example.org"
+DJANGO_ALLOWED_HOSTS=localhost app 127.0.0.1 [::1] host.docker.internal map1.example.com
+
+# Database settings
+SQL_ENGINE=django.db.backends.postgresql
+DATABASE=postgres
+SQL_HOST=db
+SQL_PORT=5432
+REDIS_HOST=redis://redis:6379/1
+POSTGRES_DB=gren_map
+POSTGRES_USER=gren_map
+POSTGRES_PASSWORD=change_me_please
+
+# The eppn list for the admin users
+ADMIN_EPPNS=testuser1@example.org testuser2@example.org
+
+# https://django-q.readthedocs.io/en/latest/brokers.html
+# The Redis broker does not support message receipts.This means
+# that in case of worker timeouts, tasks that were being executed
+# get lost. Therefore, configure a large value for the timeout.
+# The default values is 3600 seconds
+# DJANGO_Q_TIMEOUT=3600

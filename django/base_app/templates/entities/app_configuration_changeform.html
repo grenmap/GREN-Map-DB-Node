@@ -1,0 +1,8 @@
+{% extends 'admin/change_form.html' %}
+{% load i18n %}
+{% block submit_buttons_bottom %}
+<div class="submit-row">
+    <input type="submit" value="{% trans 'Save' %}" class="default" name="_save">
+    <input type="submit" value="{% trans 'Reset to default value' %}" name="_reset-default">
+</div>
+{% endblock %}

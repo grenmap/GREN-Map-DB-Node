@@ -1,0 +1,133 @@
+name: build image
+on:
+  - release
+  - workflow_dispatch
+permissions:
+  packages: write
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  build_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull code
+        uses: actions/checkout@v4
+
+      - name: set up docker buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: set up environment variables
+        run: |
+          echo "REGISTRY=ghcr.io" >> $GITHUB_ENV
+          echo "APP_IMAGE_NAME=grenmap/grenmap-django" >> $GITHUB_ENV
+          echo "WEBSP_IMAGE_NAME=grenmap/grenmap-websp" >> $GITHUB_ENV
+          echo "LABEL_TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
+          echo "TAG_TIMESTAMP=$(date -u '+%Y%m%dT%H%M%SZ')" >> $GITHUB_ENV
+          echo "GIT_COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
+          echo "GIT_TAG=$(git describe --tags || echo initial)" >> $GITHUB_ENV
+
+      - name: set up environment variables
+        run: |
+          echo "APP_IMAGE_TAG=$GIT_TAG-$TAG_TIMESTAMP" >> $GITHUB_ENV
+          echo "WEBSP_IMAGE_TAG=$GIT_TAG-$TAG_TIMESTAMP" >> $GITHUB_ENV
+
+      - name: set up environment variables
+        run: |
+          echo "APP_IMAGE_NAME_WITH_TAG=$APP_IMAGE_NAME:$APP_IMAGE_TAG" >> $GITHUB_ENV
+          echo "WEBSP_IMAGE_NAME_WITH_TAG=$WEBSP_IMAGE_NAME:$WEBSP_IMAGE_TAG" >> $GITHUB_ENV
+
+      - name: registry login
+        uses: docker/login-action@v1
+        env:
+          GITHUB_USER: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: $GITHUB_USER
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: build and push django
+        uses: docker/build-push-action@v5
+        with:
+          context: django
+          platforms: linux/amd64,linux/arm64
+          target: deployment
+          build-args: |
+            BUILD_TIMESTAMP=${{ env.LABEL_TIMESTAMP }}
+            GIT_COMMIT=${{ env.GIT_COMMIT_SHA }}
+            GIT_TAG=${{ env.GIT_TAG }}
+            AUTHORS="GRENMap Authors"
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME_WITH_TAG }}
+          push: true
+
+      - name: build and push websp
+        uses: docker/build-push-action@v5
+        with:
+          context: websp
+          platforms: linux/amd64,linux/arm64
+          build-args: |
+            BUILD_TIMESTAMP=${{ env.LABEL_TIMESTAMP }}
+            GIT_COMMIT=${{ env.GIT_COMMIT_SHA }}
+            GIT_TAG=${{ env.GIT_TAG }}
+            AUTHORS="GRENMap Authors"
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.WEBSP_IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.WEBSP_IMAGE_NAME_WITH_TAG }}
+          push: true
+
+      - name: get latest trivy version
+        run: echo "TRIVY_VERSION=$(curl -sL https://api.github.com/repos/aquasecurity/trivy/releases/latest | jq -r '.tag_name' | tr -d 'v')" >> $GITHUB_ENV
+
+      - name: install trivy
+        run: |
+          wget https://github.com/aquasecurity/trivy/releases/download/v${{ env.TRIVY_VERSION }}/trivy_${{ env.TRIVY_VERSION }}_Linux-64bit.deb
+          sudo dpkg -i trivy_${{ env.TRIVY_VERSION }}_Linux-64bit.deb
+
+      - name: scan django, remove image if any vulns are found
+        run: |
+          if ! trivy -q image \
+          --exit-code 1 \
+          --severity ${{ vars.TRIVY_SEVERITY }} \
+          ${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME }}:latest ; then
+
+          export DJANGO_PACKAGE_ID=$(gh api \
+          -H "Accept: application/vnd.github+json" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          /orgs/grenmap/packages/container/grenmap-django/versions | \
+          jq 'map(select(.metadata.container.tags|contains(["latest"])))[0].id') ;
+
+          gh api \
+          --method DELETE \
+          -H "Accept: application/vnd.github+json" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          /orgs/grenmap/packages/container/grenmap-django/versions/$DJANGO_PACKAGE_ID ;
+
+          echo "DJANGO_SCAN=1" >> $GITHUB_ENV
+          fi
+
+      - name: scan websp, remove image if any vulns are found
+        run: |
+          if ! trivy -q image \
+          --exit-code 1 \
+          --severity ${{ vars.TRIVY_SEVERITY }} \
+          ${{ env.REGISTRY }}/${{ env.WEBSP_IMAGE_NAME }}:latest ; then
+
+          export WEBSP_PACKAGE_ID=$(gh api \
+          -H "Accept: application/vnd.github+json" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          /orgs/grenmap/packages/container/grenmap-websp/versions | \
+          jq 'map(select(.metadata.container.tags|contains(["latest"])))[0].id') ;
+
+          gh api \
+          --method DELETE \
+          -H "Accept: application/vnd.github+json" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          /orgs/grenmap/packages/container/grenmap-websp/versions/$WEBSP_PACKAGE_ID ;
+
+          echo "WEBSP_SCAN=1" >> $GITHUB_ENV
+          fi
+
+      - name: set exit status
+        run: test -z ${{ env.DJANGO_SCAN }} && test -z ${{ env.WEBSP_SCAN }}

@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="/staticfiles/admin/css/base_site_override.css">
+<link rel="stylesheet" type="text/css" href="/staticfiles/admin/css/gren_icon.css">
+{% endblock %}
+
+{% block branding %}
+<div style="display: flex;margin-left:16px;">
+    <a href="/">
+        <img id="gren_icon" src="/staticfiles/admin/img/gren-icon.png" alt="GREN Icon">
+    </a>
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            {{ site_header|default:_('Map administration') }}
+        </a>
+    </h1>
+</div>
+
+{% endblock %}

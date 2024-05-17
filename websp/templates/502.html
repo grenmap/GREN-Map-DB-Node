@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GREN Map Loading</title>
+        <script>
+            window.addEventListener('load', function(event) {
+                setInterval(function(){
+                    var request = new XMLHttpRequest();
+                    request.open("GET", "");
+                    request.onreadystatechange = function() {
+                        // Check if the request is compete and was successful
+                        if(this.readyState === 4 && this.status !== 502) {
+                            window.location.reload();
+                        }
+                    };
+
+                    // Sending the request to the server
+                    request.send();
+                }, 5000);
+            });
+        </script>
+        <style>
+            .lds-ring {
+                display: inline-block;
+                position: relative;
+                width: 80px;
+                height: 80px;
+            }
+            .lds-ring div {
+                box-sizing: border-box;
+                display: block;
+                position: absolute;
+                width: 64px;
+                height: 64px;
+                margin: 8px;
+                border: 8px solid #2779be;
+                border-radius: 50%;
+                animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+                border-color: #2779be transparent transparent transparent;
+            }
+            .lds-ring div:nth-child(1) {
+                animation-delay: -0.45s;
+            }
+            .lds-ring div:nth-child(2) {
+                animation-delay: -0.3s;
+            }
+            .lds-ring div:nth-child(3) {
+                animation-delay: -0.15s;
+            }
+            @keyframes lds-ring {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .center-div{
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                background-color: white;
+                border: 1px solid #dadada;
+                padding: 50px 50px;
+                left: calc(25% - 50px);
+                top: calc(25% - 50px);
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body style="background-color: #F2F2F2">
+        <div class="center-div">
+            <img src="/gren-icon.png" style="width: 78%;display: block;margin: auto;">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <p>The application is either still loading or having issues starting. Please wait and the webpage will refresh if the page becomes accessible</p>
+        </div>
+    </body>
+</html>

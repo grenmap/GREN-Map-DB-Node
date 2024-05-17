@@ -1,0 +1,24 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" href="/staticfiles/gren-map-visualization/styles.css"/>
+{{ block.super }}
+{% get_current_language as LANGUAGE_CODE %}
+<script nonce="{{ request.csp_nonce }}" src="/staticfiles/gren-map-visualization/gren-map.{{ LANGUAGE_CODE }}.js"></script> <!-- nosemgrep : var-in-href -->
+{% endblock %}
+{% block content %}
+{{ block.super }}
+{% if request.path == "/admin/" %}
+<div class="extra-content">
+    <div id="map-container" style="border: 1px solid grey"></div>
+</div>
+<script nonce="{{ request.csp_nonce }}">
+    var element = document.createElement("div");
+    element.id = 'map-container';
+    element.style = 'border: 1px solid grey; height: 100vh';
+    document.getElementById('content-main').appendChild(element);
+    window.G.map({ selector: '#map-container'} );
+</script>
+{% endif %}
+{% endblock %}

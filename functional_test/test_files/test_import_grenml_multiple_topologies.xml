@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="5a7372bc-1312-4c78-bd08-1d399b7a8e30" version="2022-06-30T17:52:42+00:00"
+                 xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml"
+                 xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+    <grenml:name>Root Topology</grenml:name>
+    <grenml:owner>f457f699-a8bd-4162-a445-76ef4b1188d3</grenml:owner>
+    <grenml:Institution id="f457f699-a8bd-4162-a445-76ef4b1188d3" version="2022-06-30T18:08:31+00:00">
+        <grenml:name>rooot owner</grenml:name>
+        <grenml:short-name>rooot owner</grenml:short-name>
+    </grenml:Institution>
+    <grenml:Institution id="urn:ogf:networking:global">
+        <grenml:name>GREN</grenml:name>
+        <grenml:Property name="tag">global</grenml:Property>
+    </grenml:Institution>
+    <grenml:Topology id="58398eaec62b00735d1dcdbc142cf5125fca42890545341b14263ae926c20a54">
+        <grenml:name>Test topology 2</grenml:name>
+        <grenml:owner>978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4</grenml:owner>
+        <grenml:Institution id="8e35e679e96a1a6622cac4139f678d6c0e6530201f1e256b095dec2e5315fffc">
+            <grenml:name>Test inst 12</grenml:name>
+            <grenml:Location>
+                <grenml:long>-75.78</grenml:long>
+                <grenml:lat>75.38</grenml:lat>
+                <grenml:alt>7.000000</grenml:alt>
+                <grenml:address>Address 2</grenml:address>
+            </grenml:Location>
+            <grenml:Property name="url">https://www.test-inst-12.com/</grenml:Property>
+        </grenml:Institution>
+        <grenml:Institution id="978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4">
+            <grenml:name>Test inst 11</grenml:name>
+            <grenml:Location>
+                <grenml:long>-85.698096</grenml:long>
+                <grenml:lat>60.421467</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>address 1</grenml:address>
+            </grenml:Location>
+            <grenml:Property name="url">https://www.test-inst-11.ca/</grenml:Property>
+        </grenml:Institution>
+        <grenml:Institution id="urn:ogf:networking:global">
+            <grenml:name>GREN</grenml:name>
+            <grenml:Property name="tag">global</grenml:Property>
+        </grenml:Institution>
+        <grenml:Link id="771b468e1fd48ad1c158da2c49cc51f76d90fe43491bcd9e0f5d75102c43a281">
+            <grenml:name>Test link 13</grenml:name>
+            <grenml:owner>8e35e679e96a1a6622cac4139f678d6c0e6530201f1e256b095dec2e5315fffc</grenml:owner>
+            <grenml:owner>978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Property name="throughput">1</grenml:Property>
+            <grenml:node>TN11</grenml:node>
+            <grenml:node>TN13</grenml:node>
+        </grenml:Link>
+        <grenml:Link id="c61f83add3de27fd7452eb9359eb5fdc4ec043728de082d2e43bb02e60bb1bd0">
+            <grenml:name>test link 12</grenml:name>
+            <grenml:owner>978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Property name="throughput">1</grenml:Property>
+            <grenml:node>TN13</grenml:node>
+            <grenml:node>TN12</grenml:node>
+        </grenml:Link>
+        <grenml:Link id="e3764f6a1046a737fb46eb5176defcb2ceb55c22e24908fd06b71a05f9eca252">
+            <grenml:name>Test link 11</grenml:name>
+            <grenml:owner>978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Property name="throughput">10</grenml:Property>
+            <grenml:node>TN11</grenml:node>
+            <grenml:node>TN12</grenml:node>
+        </grenml:Link>
+        <grenml:Node id="TN11">
+            <grenml:name>Test node 11</grenml:name>
+            <grenml:short-name>TN11</grenml:short-name>
+            <grenml:owner>978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Location>
+                <grenml:long>-65.14</grenml:long>
+                <grenml:lat>47.25</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>test address 11</grenml:address>
+            </grenml:Location>
+        </grenml:Node>
+        <grenml:Node id="TN13">
+            <grenml:name>Test node 13</grenml:name>
+            <grenml:short-name>TN13</grenml:short-name>
+            <grenml:owner>8e35e679e96a1a6622cac4139f678d6c0e6530201f1e256b095dec2e5315fffc</grenml:owner>
+            <grenml:owner>978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Location>
+                <grenml:long>-65.19</grenml:long>
+                <grenml:lat>47.23</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>test address 13</grenml:address>
+            </grenml:Location>
+        </grenml:Node>
+        <grenml:Node id="TN12">
+            <grenml:name>Test node 12</grenml:name>
+            <grenml:short-name>TN12</grenml:short-name>
+            <grenml:owner>8e35e679e96a1a6622cac4139f678d6c0e6530201f1e256b095dec2e5315fffc</grenml:owner>
+            <grenml:owner>978d0c000b239e946bc801d1d123bd5f889377f99d42d1cbdb5fe00465008cf4</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Location>
+                <grenml:long>-65.78</grenml:long>
+                <grenml:lat>47.38</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>test address 12</grenml:address>
+            </grenml:Location>
+        </grenml:Node>
+    </grenml:Topology>
+    <grenml:Topology id="53c525ea9b1cc16be1d305c366fa53faa1201640d156bca041178c3dc8bd3d12">
+        <grenml:name>Test topology 1</grenml:name>
+        <grenml:owner>c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e</grenml:owner>
+        <grenml:Institution id="495866698b0f39615b4c665153217c49509827d4a2164cc5b67250980d3d5b8d">
+            <grenml:name>Test inst 2</grenml:name>
+            <grenml:Location>
+                <grenml:long>-63.78</grenml:long>
+                <grenml:lat>46.38</grenml:lat>
+                <grenml:alt>7.000000</grenml:alt>
+                <grenml:address>Address 2</grenml:address>
+            </grenml:Location>
+            <grenml:Property name="url">https://www.test-inst-2.com/</grenml:Property>
+        </grenml:Institution>
+        <grenml:Institution id="urn:ogf:networking:global">
+            <grenml:name>GREN</grenml:name>
+            <grenml:Property name="tag">global</grenml:Property>
+        </grenml:Institution>
+        <grenml:Institution id="c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e">
+            <grenml:name>Test inst 1</grenml:name>
+            <grenml:Location>
+                <grenml:long>-75.698096</grenml:long>
+                <grenml:lat>45.421467</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>address 1</grenml:address>
+            </grenml:Location>
+            <grenml:Property name="url">https://www.test-inst-1.ca/</grenml:Property>
+        </grenml:Institution>
+        <grenml:Link id="99af5cec9137a37202a973c04ac2dadaa7e07744709c5d804f72a3e57f16213e">
+            <grenml:name>Test link 3</grenml:name>
+            <grenml:owner>495866698b0f39615b4c665153217c49509827d4a2164cc5b67250980d3d5b8d</grenml:owner>
+            <grenml:owner>c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Property name="throughput">1</grenml:Property>
+            <grenml:node>TN1</grenml:node>
+            <grenml:node>TN3</grenml:node>
+        </grenml:Link>
+        <grenml:Link id="c8a0e9e3b79f9ac9bb1ea0ecd383327548306fe7e8245cd6f32c2e6f98d712aa">
+            <grenml:name>Test link 1</grenml:name>
+            <grenml:owner>c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Property name="throughput">10</grenml:Property>
+            <grenml:node>TN2</grenml:node>
+            <grenml:node>TN1</grenml:node>
+        </grenml:Link>
+        <grenml:Link id="088d6635b08e2f7b1e6fe9ff542f373816a601965155925c37b1d5b9e36ba97c">
+            <grenml:name>test link 2</grenml:name>
+            <grenml:owner>c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Property name="throughput">1</grenml:Property>
+            <grenml:node>TN2</grenml:node>
+            <grenml:node>TN3</grenml:node>
+        </grenml:Link>
+        <grenml:Node id="TN2">
+            <grenml:name>Test node 2</grenml:name>
+            <grenml:short-name>TN2</grenml:short-name>
+            <grenml:owner>495866698b0f39615b4c665153217c49509827d4a2164cc5b67250980d3d5b8d</grenml:owner>
+            <grenml:owner>c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Location>
+                <grenml:long>-63.78</grenml:long>
+                <grenml:lat>46.38</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>test address 2</grenml:address>
+            </grenml:Location>
+        </grenml:Node>
+        <grenml:Node id="TN1">
+            <grenml:name>Test node 1</grenml:name>
+            <grenml:short-name>TN1</grenml:short-name>
+            <grenml:owner>c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Location>
+                <grenml:long>-63.14</grenml:long>
+                <grenml:lat>46.25</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>test address 1</grenml:address>
+            </grenml:Location>
+        </grenml:Node>
+        <grenml:Node id="TN3">
+            <grenml:name>Test node 3</grenml:name>
+            <grenml:short-name>TN3</grenml:short-name>
+            <grenml:owner>c0a4b59083df02bf75eb1408b4ce5714c9eb4813864a732ba2fffc83b72d034e</grenml:owner>
+            <grenml:Lifetime></grenml:Lifetime>
+            <grenml:Location>
+                <grenml:long>-63.12</grenml:long>
+                <grenml:lat>46.23</grenml:lat>
+                <grenml:alt>0.000000</grenml:alt>
+                <grenml:address>test address 3</grenml:address>
+            </grenml:Location>
+        </grenml:Node>
+    </grenml:Topology>
+</grenml:Topology>

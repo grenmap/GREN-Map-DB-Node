@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="Topology Test 2" xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+	<grenml:name>Topology Test 2</grenml:name>
+	<grenml:owner>urn:ogf:networking:global</grenml:owner>
+	<grenml:Institution id="df777906-622c-432d-b2ae-ad42b08cc65b" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Institution test 7</grenml:name>
+		<grenml:Location>
+			<grenml:long>-73.0</grenml:long>
+			<grenml:lat>45.5</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Test Address, Montreal, QC, TST, CA</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="de00a1cd-d0a9-4b02-ad95-d7495ddc4959" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Institution test 6</grenml:name>
+		<grenml:Location>
+			<grenml:long>-123.0</grenml:long>
+			<grenml:lat>48.1</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Test Address, Victoria, B.C., CA</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="4d88927b-c3ac-4637-85ed-711c6c50be73" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Institution test 2</grenml:name>
+		<grenml:Location>
+			<grenml:long>-60.0</grenml:long>
+			<grenml:lat>46.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Vancouver, B.C., CA</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="urn:ogf:networking:global">
+		<grenml:name>GREN</grenml:name>
+		<grenml:Property name="tag">global</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="36bd28d2-b882-479b-a98b-d884aacb9712" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Institution test 1</grenml:name>
+		<grenml:short-name>inst test 1</grenml:short-name>
+		<grenml:Location>
+			<grenml:long>-79.0</grenml:long>
+			<grenml:lat>43.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Toronto, Onatrio, CA</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="description">Institution Description</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="597c764d-a955-4b3d-b4f0-1dd95fd9f50d" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Institution test 3</grenml:name>
+		<grenml:Location>
+			<grenml:long>-75.6</grenml:long>
+			<grenml:lat>45.4</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Test Address, Ottawa, Onatrio, CA</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="68e41179-695e-4fce-b0db-ecaaf9819c24">
+		<grenml:name>Institution test 4</grenml:name>
+		<grenml:Location>
+			<grenml:long>-79.0</grenml:long>
+			<grenml:lat>43.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>TST, Toronto, ON, CA,</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Institution id="bf833723-c9d1-43bf-b3c7-5e8f646dc9e0" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Institution test 5</grenml:name>
+		<grenml:Location>
+			<grenml:long>52.133031</grenml:long>
+			<grenml:lat>-86.633922</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Test Address, Saskatchewan, SK, TST, CA</grenml:address>
+		</grenml:Location>
+	</grenml:Institution>
+	<grenml:Link id="3b2a4b82-5f6b-41f4-a361-l123456c0002">
+		<grenml:name>Link 3</grenml:name>
+		<grenml:short-name>LNK 3</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>597c764d-a955-4b3d-b4f0-1dd95fd9f50d</grenml:owner>
+		<grenml:Lifetime>
+			<nml:start>2020-02-07T00:00:01+00:00</nml:start>
+			<nml:end>2020-07-07T00:00:01+00:00</nml:end>
+		</grenml:Lifetime>
+		<grenml:node>3b2a4b82-5f6b-41f4-a361-f608234c03cc</grenml:node>
+		<grenml:node>c3182ad1-f3c5-44d4-b073-0dfcbfdc19d6</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="3b2a4b82-5f6b-41f4-a361-l123456c0003">
+		<grenml:name>Link 4</grenml:name>
+		<grenml:short-name>LNK 4</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>597c764d-a955-4b3d-b4f0-1dd95fd9f50d</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:node>cdf346f4-45c1-4b5b-9942-95d418aaf1f8</grenml:node>
+		<grenml:node>3b2a4b82-5f6b-41f4-a361-f608234c03cc</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="3b2a4b82-5f6b-41f4-a361-l123456c0000">
+		<grenml:name>Link 1</grenml:name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>36bd28d2-b882-479b-a98b-d884aacb9712</grenml:owner>
+		<grenml:owner>4d88927b-c3ac-4637-85ed-711c6c50be73</grenml:owner>
+		<grenml:owner>597c764d-a955-4b3d-b4f0-1dd95fd9f50d</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:node>3b2a4b82-5f6b-41f4-a361-f608234c03cc</grenml:node>
+		<grenml:node>245382d3-2a5a-43a8-b10c-a80431d18b50</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="3b2a4b82-5f6b-41f4-a361-l123456c0001">
+		<grenml:name>Link 2</grenml:name>
+		<grenml:short-name>LNK2</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>597c764d-a955-4b3d-b4f0-1dd95fd9f50d</grenml:owner>
+		<grenml:Lifetime>
+			<nml:start>2020-02-07T00:00:01+00:00</nml:start>
+			<nml:end>2020-07-07T00:00:01+00:00</nml:end>
+		</grenml:Lifetime>
+		<grenml:Property name="desc">link description</grenml:Property>
+		<grenml:Property name="linkspeed">100000</grenml:Property>
+		<grenml:node>5e491083-3a75-4316-a228-f021185659b0</grenml:node>
+		<grenml:node>3b2a4b82-5f6b-41f4-a361-f608234c03cc</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="3b2a4b82-5f6b-41f4-a361-l123456c0004" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Link 5</grenml:name>
+		<grenml:short-name>LNK 5</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>597c764d-a955-4b3d-b4f0-1dd95fd9f50d</grenml:owner>
+		<grenml:Lifetime>
+			<nml:start>2020-01-01T10:10:00+00:00</nml:start>
+			<nml:end>2030-01-01T10:10:00+00:00</nml:end>
+		</grenml:Lifetime>
+		<grenml:node>bcb593f5-402f-4c72-afdc-0840dc26b43c</grenml:node>
+		<grenml:node>3b2a4b82-5f6b-41f4-a361-f608234c03cc</grenml:node>
+	</grenml:Link>
+	<grenml:Node id="578d5f1c-4b58-4462-84e4-031b8cadb552">
+		<grenml:name>Node 3</grenml:name>
+		<grenml:short-name>NDE3</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>597c764d-a955-4b3d-b4f0-1dd95fd9f50d</grenml:owner>
+		<grenml:owner>68e41179-695e-4fce-b0db-ecaaf9819c24</grenml:owner>
+		<grenml:Lifetime>
+			<nml:start>2020-05-07T15:07:36+00:00</nml:start>
+			<nml:end>2022-05-01T15:07:38+00:00</nml:end>
+		</grenml:Lifetime>
+		<grenml:Location>
+			<grenml:long>-75.699003</grenml:long>
+			<grenml:lat>45.421591</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="cdf346f4-45c1-4b5b-9942-95d418aaf1f8">
+		<grenml:name>Node 9</grenml:name>
+		<grenml:short-name>NDE 9</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>4d88927b-c3ac-4637-85ed-711c6c50be73</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-123.115217</grenml:long>
+			<grenml:lat>49.283694</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="3b2a4b82-5f6b-41f4-a361-f608234c03cc">
+		<grenml:name>Node 2</grenml:name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>68e41179-695e-4fce-b0db-ecaaf9819c24</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-78.87702</grenml:long>
+			<grenml:lat>43.89951</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="ac770ef7-27d3-4203-afef-92ac86b9c1ce">
+		<grenml:name>Node 6</grenml:name>
+		<grenml:short-name>NDE 6</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>68e41179-695e-4fce-b0db-ecaaf9819c24</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-77.383182</grenml:long>
+			<grenml:lat>44.163357</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="d13a9ec9-e3db-4715-85f8-32d352b2d448">
+		<grenml:name>Node 10</grenml:name>
+		<grenml:short-name>NDE 10</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>df777906-622c-432d-b2ae-ad42b08cc65b</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-73.707472</grenml:long>
+			<grenml:lat>45.604632</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="fcb714fe-56e8-436c-a07c-3dc3c10991d0">
+		<grenml:name>Node 11</grenml:name>
+		<grenml:short-name>NDE 11</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>68e41179-695e-4fce-b0db-ecaaf9819c24</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-76.487346</grenml:long>
+			<grenml:lat>44.252304</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="5e491083-3a75-4316-a228-f021185659b0">
+		<grenml:name>Node 4</grenml:name>
+		<grenml:short-name>NDE 4</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>df777906-622c-432d-b2ae-ad42b08cc65b</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-73.580382</grenml:long>
+			<grenml:lat>45.504669</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="779b5571-0f68-4a61-b92d-6fed6777058e">
+		<grenml:name>Node 5</grenml:name>
+		<grenml:short-name>NDE 5</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>36bd28d2-b882-479b-a98b-d884aacb9712</grenml:owner>
+		<grenml:owner>68e41179-695e-4fce-b0db-ecaaf9819c24</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-79.498907</grenml:long>
+			<grenml:lat>43.773887</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="bcb593f5-402f-4c72-afdc-0840dc26b43c">
+		<grenml:name>Node 7</grenml:name>
+		<grenml:short-name>NDE 7</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>df777906-622c-432d-b2ae-ad42b08cc65b</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-71.205746</grenml:long>
+			<grenml:lat>46.827163</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+	<grenml:Node id="245382d3-2a5a-43a8-b10c-a80431d18b50" version="2020-01-01T10:10:00+00:00">
+		<grenml:name>Node 1</grenml:name>
+		<grenml:short-name>NDE1</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>de00a1cd-d0a9-4b02-ad95-d7495ddc4959</grenml:owner>
+		<grenml:Lifetime>
+			<nml:start>2020-05-07T00:00:01+00:00</nml:start>
+			<nml:end>2022-05-01T23:59:59+00:00</nml:end>
+		</grenml:Lifetime>
+		<grenml:Location>
+			<grenml:long>-123.311801</grenml:long>
+			<grenml:lat>48.463378</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Victoria Island, B.C, CA</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="description">This is Test University Node</grenml:Property>
+		<grenml:Property name="note">This is a test node</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="c3182ad1-f3c5-44d4-b073-0dfcbfdc19d6">
+		<grenml:name>Node 8</grenml:name>
+		<grenml:short-name>NDE 8</grenml:short-name>
+		<grenml:owner>urn:ogf:networking:global</grenml:owner>
+		<grenml:owner>bf833723-c9d1-43bf-b3c7-5e8f646dc9e0</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-106.631691</grenml:long>
+			<grenml:lat>52.133485</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+		</grenml:Location>
+	</grenml:Node>
+</grenml:Topology>

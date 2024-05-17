@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="topology-1" xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+	<grenml:name>topology 1</grenml:name>
+	<grenml:owner>inst-1</grenml:owner>
+	<grenml:Institution id="5dc6fb60-995d-412a-ae12-578cc99ca9e9">
+		<grenml:name>Test institution 2</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Nova Scotia, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://ex-inst-2.ca/</grenml:Property>
+		<grenml:Property name="tag">tag2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="urn:ogf:networking:global">
+		<grenml:name>GREN</grenml:name>
+		<grenml:Property name="tag">global</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="f38355e0-2c2d-4ce2-a5f6-1d927f0d2e5b">
+		<grenml:name>Test institution 3</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>625 test address line 2</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://www.example-inst3/</grenml:Property>
+		<grenml:Property name="tag">tag2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="013cc50d-a327-420a-ac9d-cea10d8da113">
+		<grenml:name>Test institution 7</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Calgary, Alberta, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://www.ex-inst-7.ca/</grenml:Property>
+		<grenml:Property name="tag">tag2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="6de002e1-8022-4601-9e34-10d85b621369">
+		<grenml:name>Test institution 4</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Toronto, ON, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://www.example-4.ca/</grenml:Property>
+		<grenml:Property name="tag">tag2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="58e551d3-0eca-48f5-8e6a-c312e2fdb747">
+		<grenml:name>Test institution 6</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Saskatoon, SK, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">http://ex-net-6.ca/</grenml:Property>
+		<grenml:Property name="tag">tag2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="inst-1">
+		<grenml:name>Test institution 1</grenml:name>
+		<grenml:Location>
+			<grenml:long>-75.698096</grenml:long>
+			<grenml:lat>45.421467</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>45 test address line 1</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://www.example.ca/</grenml:Property>
+		<grenml:Property name="tag">tag1</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="12cb0123-ae49-4930-bbd2-9cc2d49172f2">
+		<grenml:name>Test institution 5</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Manitoba, ON, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://www.example-inst5.ca/</grenml:Property>
+		<grenml:Property name="tag">tag2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="eb95342a-180d-47be-bb5f-c40782e86657">
+		<grenml:name>Test institution 8</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Vancouver, BC, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://www.ex-inst-8.net/</grenml:Property>
+		<grenml:Property name="tag">tag2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Link id="fb64579f-818f-4994-bc9c-f0fa8c6b5e1c">
+		<grenml:name>Link 2</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core link</grenml:Property>
+		<grenml:Property name="throughput">200</grenml:Property>
+		<grenml:node>ab7ec39d-37de-4c0a-9034-040af42d5b79</grenml:node>
+		<grenml:node>node-4</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="link-4">
+		<grenml:name>Link 4</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core link</grenml:Property>
+		<grenml:Property name="throughput">100</grenml:Property>
+		<grenml:node>14daea23-b5fe-4d83-84ba-ea048690d571</grenml:node>
+		<grenml:node>66668e85-5a67-4e48-930f-21096a1c04b7</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="88f0675c-add1-42a4-b19a-98820e622b36">
+		<grenml:name>Link 1</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core link</grenml:Property>
+		<grenml:Property name="throughput">30</grenml:Property>
+		<grenml:node>ab7ec39d-37de-4c0a-9034-040af42d5b79</grenml:node>
+		<grenml:node>dc2c9642-0ab7-466d-80a1-d8ba024f5901</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="b0df62f7-035f-480e-8b56-4a070035edcd">
+		<grenml:name>Link 3</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core link</grenml:Property>
+		<grenml:Property name="throughput">100</grenml:Property>
+		<grenml:node>14daea23-b5fe-4d83-84ba-ea048690d571</grenml:node>
+		<grenml:node>node-4</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="fa5cb3ce-7f98-433c-87e3-35c4f9abfa0b">
+		<grenml:name>Link 6</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core link</grenml:Property>
+		<grenml:Property name="throughput">100</grenml:Property>
+		<grenml:node>fd3ba7fa-cc1f-45a5-a20b-71347e15493b</grenml:node>
+		<grenml:node>a40abf2e-bc76-423f-9234-34c0b583a869</grenml:node>
+	</grenml:Link>
+	<grenml:Link id="e5a8ea82-6e8d-49dc-8e7e-116634a5d15b">
+		<grenml:name>Link 5</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core link</grenml:Property>
+		<grenml:Property name="throughput">100</grenml:Property>
+		<grenml:node>a40abf2e-bc76-423f-9234-34c0b583a869</grenml:node>
+		<grenml:node>66668e85-5a67-4e48-930f-21096a1c04b7</grenml:node>
+	</grenml:Link>
+	<grenml:Node id="b3db25c6-6959-403e-ad86-b3608cbdc587">
+		<grenml:name>Node 2</grenml:name>
+		<grenml:short-name>Node 2</grenml:short-name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-73.56</grenml:long>
+			<grenml:lat>45.5</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Montreal, Quebec, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Switch</grenml:Property>
+		<grenml:Property name="tag">International Peer</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="fd3ba7fa-cc1f-45a5-a20b-71347e15493b">
+		<grenml:name>Node 8</grenml:name>
+		<grenml:short-name>Node 8</grenml:short-name>
+		<grenml:owner>eb95342a-180d-47be-bb5f-c40782e86657</grenml:owner>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-123.1</grenml:long>
+			<grenml:lat>49.25</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Vancouver, British Columbia, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="a40abf2e-bc76-423f-9234-34c0b583a869">
+		<grenml:name>Node 7</grenml:name>
+		<grenml:short-name>Node 7</grenml:short-name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:owner>013cc50d-a327-420a-ac9d-cea10d8da113</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-113.49</grenml:long>
+			<grenml:lat>53.53</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Edmonton, Alberta, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="dc2c9642-0ab7-466d-80a1-d8ba024f5901">
+		<grenml:name>Node 1</grenml:name>
+		<grenml:short-name>Node 1</grenml:short-name>
+		<grenml:owner>5dc6fb60-995d-412a-ae12-578cc99ca9e9</grenml:owner>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-63.59</grenml:long>
+			<grenml:lat>44.64</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Halifax, Nova Scotia, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="ab7ec39d-37de-4c0a-9034-040af42d5b79">
+		<grenml:name>Node 3</grenml:name>
+		<grenml:short-name>Node 3</grenml:short-name>
+		<grenml:owner>f38355e0-2c2d-4ce2-a5f6-1d927f0d2e5b</grenml:owner>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-73.56</grenml:long>
+			<grenml:lat>45.5</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Montreal, Quebec, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="14daea23-b5fe-4d83-84ba-ea048690d571">
+		<grenml:name>Node 5</grenml:name>
+		<grenml:short-name>Node 5</grenml:short-name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:owner>12cb0123-ae49-4930-bbd2-9cc2d49172f2</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-97.14</grenml:long>
+			<grenml:lat>49.88</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Winnipeg, Manitoba, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="66668e85-5a67-4e48-930f-21096a1c04b7">
+		<grenml:name>Node 6</grenml:name>
+		<grenml:short-name>Node 6</grenml:short-name>
+		<grenml:owner>58e551d3-0eca-48f5-8e6a-c312e2fdb747</grenml:owner>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-106.68</grenml:long>
+			<grenml:lat>52.13</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Saskatoon, Saskatchewan, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="node-4">
+		<grenml:name>Node 4</grenml:name>
+		<grenml:short-name>Node 4</grenml:short-name>
+		<grenml:owner>6de002e1-8022-4601-9e34-10d85b621369</grenml:owner>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-79.41</grenml:long>
+			<grenml:lat>43.7</grenml:lat>
+			<grenml:alt>0.000000</grenml:alt>
+			<grenml:address>Toronto, Ontatio, Canada</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+</grenml:Topology>

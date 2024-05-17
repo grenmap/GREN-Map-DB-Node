@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grenml:Topology id="child-topology" version="2022-12-20T16:24:48+00:00" xmlns:grenml="http://schemas.ogf.org/nml/2020/01/grenml" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ogf.org/nml/2020/01/grenml validation/grenml.xsd http://schemas.ogf.org/nml/2013/05/base# validation/nmlbase.xsd">
+	<grenml:name>child-topology</grenml:name>
+	<grenml:owner>inst-1</grenml:owner>
+	<grenml:Institution id="inst-2" version="2022-12-20T16:33:55+00:00">
+		<grenml:name>inst 2</grenml:name>
+		<grenml:Property name="url">https://ex-inst-2.ca/</grenml:Property>
+		<grenml:Property name="tag">example tag 2</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="inst-1" version="2022-12-20T16:25:20+00:00">
+		<grenml:name>inst 1</grenml:name>
+		<grenml:Location>
+			<grenml:long>0.0</grenml:long>
+			<grenml:lat>0.0</grenml:lat>
+			<grenml:address>address line 1, institution, province, country</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="url">https://ex-inst-1.ca/</grenml:Property>
+		<grenml:Property name="tag">example-tag-1</grenml:Property>
+	</grenml:Institution>
+	<grenml:Institution id="urn:ogf:networking:global">
+		<grenml:name>GREN</grenml:name>
+		<grenml:Property name="tag">global</grenml:Property>
+	</grenml:Institution>
+	<grenml:Link id="node-1" version="2022-12-20T16:37:46+00:00">
+		<grenml:name>link 1</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core link</grenml:Property>
+		<grenml:Property name="throughput">100</grenml:Property>
+		<grenml:node>node-3</grenml:node>
+		<grenml:node>node-2</grenml:node>
+	</grenml:Link>
+	<grenml:Node id="node-3" version="2022-12-20T16:34:37+00:00">
+		<grenml:name>node 1</grenml:name>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-63.59</grenml:long>
+			<grenml:lat>44.64</grenml:lat>
+			<grenml:address>city, province, country</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Core Router</grenml:Property>
+	</grenml:Node>
+	<grenml:Node id="node-2" version="2022-12-20T16:36:16+00:00">
+		<grenml:name>node 2</grenml:name>
+		<grenml:owner>inst-2</grenml:owner>
+		<grenml:owner>inst-1</grenml:owner>
+		<grenml:Lifetime/>
+		<grenml:Location>
+			<grenml:long>-73.56</grenml:long>
+			<grenml:lat>45.5</grenml:lat>
+			<grenml:address>address 1, address line 2, country</grenml:address>
+		</grenml:Location>
+		<grenml:Property name="type">other</grenml:Property>
+		<grenml:Property name="tag">Router</grenml:Property>
+	</grenml:Node>
+</grenml:Topology>

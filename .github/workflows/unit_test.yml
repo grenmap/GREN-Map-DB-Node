@@ -1,0 +1,10 @@
+name: run python tests
+on: [push]
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose -f docker-compose.test.sqlite.yml up --build --exit-code-from app
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

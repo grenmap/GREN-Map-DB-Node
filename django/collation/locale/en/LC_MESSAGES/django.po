@@ -1,0 +1,679 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-19 21:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: collation/action_types/delete_institution.py:36
+msgid ""
+"\n"
+"    Permanently deletes matched Institutions.\n"
+"    Removes these Institutions as owners of Nodes and Links.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/delete_institution.py:42
+msgid "Delete Institution"
+msgstr ""
+
+#: collation/action_types/delete_link.py:34
+msgid ""
+"\n"
+"    Permanently deletes matched Links.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/delete_link.py:39
+msgid "Delete Link"
+msgstr ""
+
+#: collation/action_types/delete_node.py:34
+msgid ""
+"\n"
+"    Permanently deletes matched Nodes and their attached Links.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/delete_node.py:39
+msgid "Delete Node"
+msgstr ""
+
+#: collation/action_types/keep_newest_institution.py:38
+msgid ""
+"\n"
+"    Replaces all matched Institutions with the Institution added to\n"
+"    the DB most recently (inferred by autoincrement primary key).\n"
+"    Ownership of Nodes and Links and Topologies by all deleted\n"
+"    Institutions will be transferred to the remaining Institution.\n"
+"    The kept Institution will NOT belong to the union of all\n"
+"    Topologies from discarded Institutions; this can be altered\n"
+"    with the UNION_TOPOLOGIES class constant.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/keep_newest_institution.py:49
+msgid "Keep Newest Institution"
+msgstr ""
+
+#: collation/action_types/keep_newest_link.py:38
+msgid ""
+"\n"
+"    Replaces all matched Links with the Link added to\n"
+"    the DB most recently (inferred by autoincrement primary key).\n"
+"    The kept Link will NOT belong to the union of all Topologies from\n"
+"    discarded Links; this can be altered with the UNION_TOPOLOGIES\n"
+"    class constant.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/keep_newest_link.py:47
+msgid "Keep Newest Link"
+msgstr ""
+
+#: collation/action_types/keep_newest_node.py:39
+msgid ""
+"\n"
+"    Replaces all matched Nodes with the Node added to\n"
+"    the DB most recently (inferred by autoincrement primary key).\n"
+"    Link endpoints represented by all deleted Nodes will be updated to\n"
+"    refer to the remaining Node.  The kept Node will NOT belong to the\n"
+"    union of all Topologies from discarded Institutions; this can be\n"
+"    altered with the UNION_TOPOLOGIES class constant.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/keep_newest_node.py:49
+msgid "Keep Newest Node"
+msgstr ""
+
+#: collation/action_types/merge_institution.py:34
+msgid ""
+"\n"
+"    Merges the matched Institution (A) into the Institution specified\n"
+"    by ID on the Action (B).  A merge target Institution may be further\n"
+"    identified by Topology.  Fields in A will be transferred to B if\n"
+"    they don't already exist in B.  All properties of and tag on A\n"
+"    will be added to B.  Ownership of Nodes and Link by A will be\n"
+"    transferred to B.  B will inherit all Topology memberships from A.\n"
+"    A will be permanently deleted.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/merge_institution.py:45
+msgid "Merge into Institution"
+msgstr ""
+
+#: collation/action_types/merge_link.py:34
+msgid ""
+"\n"
+"    Merges the matched Link (A) into the Link specified by ID on the\n"
+"    Action (B).  A merge target Link may be further identified by\n"
+"    Topology.  Fields in A will be transferred to B if they don't\n"
+"    already exist in B.  All properties of and tag on A will be added\n"
+"    to B.  B will inherit all Topology memberships from A.\n"
+"    A will be permanently deleted.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/merge_link.py:44
+msgid "Merge into Link"
+msgstr ""
+
+#: collation/action_types/merge_node.py:33
+msgid ""
+"\n"
+"    Merges the matched Node (A) into the Node specified by ID on the\n"
+"    Action (B).  A merge target Node may be further identified by\n"
+"    Topology.  Fields in A will be transferred to B if they don't\n"
+"    already exist in B.  All properties of and tag on A will be added\n"
+"    to B.  Link endpoints of A will be updated to B.\n"
+"    B will inherit all Topology memberships from A.\n"
+"    A will be permanently deleted.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/merge_node.py:44
+msgid "Merge into Node"
+msgstr ""
+
+#: collation/action_types/replace_institution.py:34
+msgid ""
+"\n"
+"    Replaces the matched Institution (A) with the Institution specified\n"
+"    by ID on the Action (B).  A replacement Institution may be further\n"
+"    identified by Topology.  Ownership of Nodes and Links by A will be\n"
+"    transferred to B.  A, and all of A's fields, properties, and tag,\n"
+"    will be permanently deleted.  The target Institution will inherit\n"
+"    Topology membership from the discarded Institution.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/replace_institution.py:44
+msgid "Replace with Institution"
+msgstr ""
+
+#: collation/action_types/replace_link.py:34
+msgid ""
+"\n"
+"    Replaces the matched Link (A) with the Link specified by ID on the\n"
+"    Action (B).  A replacement Link may be further identified by\n"
+"    Topology.  A, and all of A's fields, properties, and tag, will be\n"
+"    permanently deleted.  B inherits A's Topology memberships.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/replace_link.py:42
+msgid "Replace with Link"
+msgstr ""
+
+#: collation/action_types/replace_node.py:33
+msgid ""
+"\n"
+"    Replaces the matched Node (A) with the Node specified by ID on the\n"
+"    Action (B).  A replacement Node may be further identified by\n"
+"    Topology.  Link endpoints of A will be updated to B.  A, and all\n"
+"    of A's fields, properties, and tag, will be permanently deleted.\n"
+"    "
+msgstr ""
+
+#: collation/action_types/replace_node.py:41
+msgid "Replace with Node"
+msgstr ""
+
+#: collation/admin.py:71
+msgid "match description"
+msgstr ""
+
+#: collation/admin.py:84
+msgid ""
+"Once a match type has been selected and this Rule is saved, a description of "
+"the match and its required fields will appear here."
+msgstr ""
+
+#: collation/admin.py:91
+msgid "required match info keys"
+msgstr ""
+
+#: collation/admin.py:114
+msgid "optional match info keys"
+msgstr ""
+
+#: collation/admin.py:165
+msgid "action description"
+msgstr ""
+
+#: collation/admin.py:178
+msgid ""
+"Once an action type has been selected and this Rule is saved, a description "
+"of the action and its required fields will appear here."
+msgstr ""
+
+#: collation/admin.py:185
+msgid "required action info keys"
+msgstr ""
+
+#: collation/admin.py:208
+msgid "optional action info keys"
+msgstr ""
+
+#: collation/admin.py:255 collation/admin.py:334
+msgid "health check"
+msgstr ""
+
+#: collation/admin.py:265 collation/admin.py:343
+msgid "Rule misconfiguration detected"
+msgstr ""
+
+#: collation/admin.py:266 collation/admin.py:329 collation/admin.py:341
+msgid "Ready"
+msgstr ""
+
+#: collation/admin.py:291
+msgid "Failed to export rulesets."
+msgstr ""
+
+#: collation/admin.py:321
+msgid "health warning"
+msgstr ""
+
+#: collation/admin.py:345
+msgid "rule actions"
+msgstr ""
+
+#: collation/admin.py:355
+msgid "Apply Rule"
+msgstr ""
+
+#: collation/admin.py:357
+msgid "Clone Rule"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/admin.py:391
+msgid "Cloned rule {} successfully"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/admin.py:397
+msgid "Failed to clone rule {}"
+msgstr ""
+
+#: collation/apps.py:30
+msgid "Data Collation"
+msgstr ""
+
+#: collation/constants.py:29
+msgid "Institution"
+msgstr ""
+
+#: collation/constants.py:30
+msgid "Node"
+msgstr ""
+
+#: collation/constants.py:31
+msgid "Link"
+msgstr ""
+
+#: collation/exceptions.py:56
+msgid "MatchCriteria and Actions with different element types"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/exceptions.py:70
+msgid "Rule {} has MatchCriteria and Actions with different element_types"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/exceptions.py:86
+msgid "Incompatible Match Info for Rule {}"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/exceptions.py:101
+msgid "Incompatible Action Info for Rule {}"
+msgstr ""
+
+#. Translators: {}'s are the names of database records created by the user  # noqa
+#: collation/exceptions.py:116
+msgid ""
+"This Rule's {} Match Criterion must include exactly one Match Info for each "
+"of these keys: {}"
+msgstr ""
+
+#. Translators: {}'s are the names of database records created by the user  # noqa
+#: collation/exceptions.py:133
+msgid ""
+"This Rule's {} Action must include exactly one Action Info for each of these "
+"keys: {}"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/exceptions.py:151
+msgid "No MatchCriteria associated to Rule {}."
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/exceptions.py:164
+msgid "No Actions associated to Rule {}."
+msgstr ""
+
+#. Translators: {}'s are the names of database records created by the user  # noqa
+#: collation/exceptions.py:177
+msgid "MatchCriterion {} has unsupported MatchType with name \"{}\""
+msgstr ""
+
+#. Translators: {}'s are the names of database records created by the user  # noqa
+#: collation/exceptions.py:193
+msgid "Action {} has unsupported ActionType with name \"{}\""
+msgstr ""
+
+#: collation/match_types/by_id.py:70
+msgid ""
+"\n"
+"    Filters input elements to just the Institutions with a specified\n"
+"    GRENML ID.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/by_id.py:76
+msgid "Match Institutions by ID"
+msgstr ""
+
+#: collation/match_types/by_id.py:82
+msgid ""
+"\n"
+"    Filters input elements to just the Nodes with a specified GRENML\n"
+"    ID.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/by_id.py:88
+msgid "Match Nodes by ID"
+msgstr ""
+
+#: collation/match_types/by_id.py:94
+msgid ""
+"\n"
+"    Filters input elements to just the Links with a specified GRENML\n"
+"    ID.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/by_id.py:100
+msgid "Match Links by ID"
+msgstr ""
+
+#: collation/match_types/by_topology.py:77
+msgid ""
+"\n"
+"    Filters input elements to just the Institutions within a\n"
+"    specified Topology (by its ID).\n"
+"\n"
+"    Often likely combined with other MatchType filters in Rules.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/by_topology.py:85
+msgid "Match Institutions by Topology"
+msgstr ""
+
+#: collation/match_types/by_topology.py:91
+msgid ""
+"\n"
+"    Filters input elements to just the Nodes within a specified\n"
+"    Topology (by its ID).\n"
+"\n"
+"    Often likely combined with other MatchType filters in Rules.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/by_topology.py:99
+msgid "Match Nodes by Topology"
+msgstr ""
+
+#: collation/match_types/by_topology.py:105
+msgid ""
+"\n"
+"    Filters input elements to just the Links within a specified\n"
+"    Topology (by its ID).\n"
+"\n"
+"    Often likely combined with other MatchType filters in Rules.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/by_topology.py:113
+msgid "Match Links by Topology"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/match_types/exceptions.py:35
+msgid "Rule {} Match by ID expects exactly one MatchInfo"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/match_types/exceptions.py:51
+msgid "Rule {} Match by ID expects MatchInfo with key 'ID'"
+msgstr ""
+
+#: collation/match_types/id_duplicates.py:71
+msgid ""
+"\n"
+"    Filters input elements to just the Institution with a specified ID.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/id_duplicates.py:76
+msgid "Match Duplicate Institutions"
+msgstr ""
+
+#: collation/match_types/id_duplicates.py:82
+msgid ""
+"\n"
+"    Filters input elements to just the Node with a specified ID.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/id_duplicates.py:87
+msgid "Match Duplicate Nodes"
+msgstr ""
+
+#: collation/match_types/id_duplicates.py:93
+msgid ""
+"\n"
+"    Filters input elements to just the Link with a specified ID.\n"
+"    "
+msgstr ""
+
+#: collation/match_types/id_duplicates.py:98
+msgid "Match Duplicate Links"
+msgstr ""
+
+#: collation/models.py:79 collation/models.py:188 collation/models.py:401
+#: collation/models.py:568
+msgid "name"
+msgstr ""
+
+#: collation/models.py:85 collation/models.py:194
+msgid "enabled"
+msgstr ""
+
+#: collation/models.py:92
+msgid ""
+"Rulesets are run in ascending order of priority. Ties are broken arbitrarily."
+msgstr ""
+
+#: collation/models.py:95 collation/models.py:204
+msgid "priority"
+msgstr ""
+
+#: collation/models.py:126
+msgid "Ruleset"
+msgstr ""
+
+#: collation/models.py:127
+msgid "Rulesets"
+msgstr ""
+
+#: collation/models.py:180
+msgid "ruleset"
+msgstr ""
+
+#: collation/models.py:201
+msgid ""
+"Rules within a Ruleset are run in ascending order of priority. Ties are "
+"broken arbitrarily."
+msgstr ""
+
+#: collation/models.py:381
+msgid "Rule"
+msgstr ""
+
+#: collation/models.py:382
+msgid "Rules"
+msgstr ""
+
+#: collation/models.py:394 collation/models.py:561
+msgid "class name"
+msgstr ""
+
+#: collation/models.py:408 collation/models.py:575
+msgid "element type"
+msgstr ""
+
+#: collation/models.py:414 collation/models.py:581
+msgid "JSON array of required ActionInfo keys"
+msgstr ""
+
+#: collation/models.py:415 collation/models.py:582
+msgid "required info"
+msgstr ""
+
+#: collation/models.py:422 collation/models.py:589
+msgid "JSON array of optional ActionInfo keys"
+msgstr ""
+
+#: collation/models.py:423 collation/models.py:590
+msgid "optional info"
+msgstr ""
+
+#: collation/models.py:443
+msgid "Match Type"
+msgstr ""
+
+#: collation/models.py:444
+msgid "Match Types"
+msgstr ""
+
+#: collation/models.py:467 collation/models.py:632
+msgid "rule"
+msgstr ""
+
+#: collation/models.py:474
+msgid "match type"
+msgstr ""
+
+#: collation/models.py:512
+msgid "Match Criterion"
+msgstr ""
+
+#: collation/models.py:513
+msgid "Match Criteria"
+msgstr ""
+
+#: collation/models.py:528
+msgid "match criterion"
+msgstr ""
+
+#: collation/models.py:534 collation/models.py:693
+msgid "key"
+msgstr ""
+
+#: collation/models.py:540 collation/models.py:699
+msgid "value"
+msgstr ""
+
+#: collation/models.py:547
+msgid "Match Info"
+msgstr ""
+
+#: collation/models.py:548
+msgid "Match Infos"
+msgstr ""
+
+#: collation/models.py:617
+msgid "Action Type"
+msgstr ""
+
+#: collation/models.py:618
+msgid "Action Types"
+msgstr ""
+
+#: collation/models.py:639
+msgid "action type"
+msgstr ""
+
+#: collation/models.py:673
+msgid "Action"
+msgstr ""
+
+#: collation/models.py:674
+msgid "Actions"
+msgstr ""
+
+#: collation/models.py:687
+msgid "action"
+msgstr ""
+
+#: collation/models.py:706
+msgid "Action Info"
+msgstr ""
+
+#: collation/models.py:707
+msgid "Action Infos"
+msgstr ""
+
+#. Translators: {} is the name of a database record created by the user  # noqa
+#: collation/rule_log.py:108
+msgid "Applied Rule {} successfully. "
+msgstr ""
+
+#. Translators: {}'s are numbers of links, nodes and institutions  # noqa
+#: collation/rule_log.py:113
+msgid "Elements affected: {} Link(s), {} Node(s), {} Institution(s)."
+msgstr ""
+
+#: collation/templates/admin/change_list.html:45
+msgid "Home"
+msgstr ""
+
+#: collation/templates/admin/change_list.html:65
+msgid "Please correct the error below."
+msgstr ""
+
+#: collation/templates/admin/change_list.html:65
+msgid "Please correct the errors below."
+msgstr ""
+
+#: collation/templates/admin/change_list.html:76
+msgid "Filter"
+msgstr ""
+
+#: collation/templates/admin/change_list_object_tools.html:10
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: collation/templates/admin/change_list_object_tools.html:16
+msgid "Import rulesets"
+msgstr ""
+
+#: collation/templates/admin/submit_line.html:10
+msgid "Done"
+msgstr ""
+
+#: collation/templates/admin/submit_line.html:13
+msgid "Delete"
+msgstr ""
+
+#: collation/templates/admin/submit_line.html:15
+msgid "Save as new"
+msgstr ""
+
+#: collation/templates/admin/submit_line.html:16
+msgid "Save and add another"
+msgstr ""
+
+#: collation/templates/admin/submit_line.html:17
+msgid "Save and continue editing"
+msgstr ""
+
+#: collation/templates/admin/submit_line.html:17
+msgid "Save and view"
+msgstr ""
+
+#: collation/templates/admin/submit_line.html:18
+msgid "Close"
+msgstr ""
+
+#. Translators: {}'s are numbers of rulesets (database entities)  # noqa
+#: collation/views.py:284
+msgid "Imported {} Ruleset(s) successfully. Discarded {} invalid ruleset(s)."
+msgstr ""
+
+#: collation/views.py:295
+msgid "Import failed. Malformed file"
+msgstr ""
