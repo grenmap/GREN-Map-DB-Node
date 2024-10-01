@@ -112,6 +112,9 @@ class Topology(BaseModel):
         Will cause this method to raise a RecursionError
         """
         objs = Topology.objects.none()
+        if self.pk is None:
+            return objs
+
         children = self.children.all()
         # If this topology has no children, then this is the base case
         if children is None:

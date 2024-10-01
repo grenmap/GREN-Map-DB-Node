@@ -12,6 +12,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - SE_NODE_SESSION_TIMEOUT=500
+      - SE_ENABLE_TRACING=false
     healthcheck:
       test: curl --fail http://localhost:5555/status || exit 1
       interval: 10s
@@ -26,6 +27,7 @@ services:
     environment:
       - SE_SESSION_REQUEST_TIMEOUT=500
       - SE_SESSION_RETRY_INTERVAL=2
+      - SE_ENABLE_TRACING=false
     healthcheck:
       test: curl --fail http://localhost:4444/status || exit 1
       interval: 10s
