@@ -1,7 +1,8 @@
 name: build image
 on:
-  - published
-  - workflow_dispatch
+  release:
+    types: [published]
+  workflow_dispatch:
 permissions:
   packages: write
 env:
