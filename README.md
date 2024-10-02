@@ -38,6 +38,7 @@ and replace/insert values for the keys listed below with your own.
       python3 -c "import secrets; print(secrets.token_urlsafe(50))"
       ```
 - **DJANGO_ALLOWED_HOSTS** - The list of names to which this server will respond (defaults sufficient for local/dev installations; add/replace for public access)
+- **CSRF_TRUSTED_ORIGINS** - The list of URLs to which this server will respond; each URL should have a scheme (https for example) and a port number if applicable
 - **POSTGRES_DB** - The preferred name of the created database
 - **POSTGRES_USER** - The username for the database
 - **POSTGRES_PASSWORD** - The password for the database

@@ -92,7 +92,8 @@ LABEL org.opencontainers.image.description="GREN Map Database Node - django imag
 
 # Write a file containing the build attributes.
 # Django will read it to populate the home admin page.
-RUN SECRET_KEY=None python manage.py buildinfo ${GIT_COMMIT:-""} ${GIT_TAG:-""}
+RUN SECRET_KEY=None CSRF_TRUSTED_ORIGINS="https://map1.example.com" \
+python manage.py buildinfo ${GIT_COMMIT:-""} ${GIT_TAG:-""}
 
 # run entrypoint.sh
 ENTRYPOINT ["/home/grenmapadmin/web/entrypoint.sh"]
