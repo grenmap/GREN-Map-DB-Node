@@ -60,6 +60,8 @@ TEST_MODE = DEBUG
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', default='').split(' ')
 
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', default='').split(' ')
+
 DJANGO_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',

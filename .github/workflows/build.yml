@@ -1,6 +1,6 @@
 name: build image
 on:
-  - release
+  - published
   - workflow_dispatch
 permissions:
   packages: write
