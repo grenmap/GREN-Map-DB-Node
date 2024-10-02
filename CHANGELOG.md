@@ -12,7 +12,7 @@ TBD
 
 ### Added
 
-#3 fix for dependabot alerts
+fix for dependabot alerts
 
 # 1.0.0 2024-06-04
 
