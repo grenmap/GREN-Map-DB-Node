@@ -1,7 +1,7 @@
-FROM i2incommon/shibboleth_sp:latest
+FROM i2incommon/shibboleth_sp:3.5.0_10212024_rocky9_multiarch
 LABEL ImageType="Shibboleth SP" \
       ImageName=$imagename \
-      ImageOS=centos7
+      ImageOS="Rocky Linux 9"
 
 LABEL org.opencontainers.image.authors=$AUTHORS
 LABEL org.opencontainers.image.created=$BUILD_TIMESTAMP
