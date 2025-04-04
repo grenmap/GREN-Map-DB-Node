@@ -1,4 +1,4 @@
-FROM i2incommon/shibboleth_sp:3.5.0_10212024_rocky9_multiarch
+FROM i2incommon/shibboleth_sp:latest
 LABEL ImageType="Shibboleth SP" \
       ImageName=$imagename \
       ImageOS="Rocky Linux 9"
