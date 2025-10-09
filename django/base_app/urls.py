@@ -34,6 +34,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+import os
 from django.contrib import admin
 from django.urls import path
 from .views.api import (
@@ -64,9 +65,12 @@ if not settings.SANDBOX:
 
 admin.site.site_header = _('Administration')
 
-# Redirect the admin login/logout to use FIM
-admin.site.login = fim_login
-admin.site.logout = fim_logout
+DISABLE_SSO_REDIRECT = os.getenv("DISABLE_SSO_REDIRECT", "false").lower() == "true"
+
+if not DISABLE_SSO_REDIRECT:
+    # Redirect the admin login/logout to use FIM
+    admin.site.login = fim_login
+    admin.site.logout = fim_logout
 
 urlpatterns = [
     path('admin/', admin.site.urls),
