@@ -37,6 +37,23 @@ fi
 python manage.py compilemessages || fail_deploy "Compile Messages Failed"
 python manage.py makemigrations || fail_deploy "Make Migration Failed"
 python manage.py migrate || fail_deploy "Migrate Failed"
+
+if [ ${DEVELOPMENT:-0} == 1 ]; then
+  echo "Creating default superuser..."
+  python manage.py shell -c "
+import os
+from django.contrib.auth import get_user_model
+User = get_user_model()
+username = os.getenv('DJANGO_SUPERUSER_USERNAME', 'admin')
+password = os.getenv('DJANGO_SUPERUSER_PASSWORD', 'admin123')
+if not User.objects.filter(username=username).exists():
+    User.objects.create_superuser(username=username, email='', password=password)
+    print(f'Superuser created: {username} / {password}')
+else:
+    print(f'Superuser {username} already exists')
+" || fail_deploy "Superuser creation failed"
+fi
+
 echo "Loading collation rule model types"
 python manage.py ruletypes
 echo "Completed loading collation rule model types"
