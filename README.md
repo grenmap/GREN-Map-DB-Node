@@ -149,6 +149,18 @@ DOCKER_DEFAULT_PLATFORM=linux/arm64
 ```
 2. Check "Use Rosetta for x86/amd64 emulation" option in Docker Desktop Preferences
 
+### Run Without Shibboleth (Local Development Mode)
+
+For local development without Single Sign-On (SSO), you can disable Shibboleth authentication by setting the following environment variables in your `.env.dev` file:
+
+```bash
+DEVELOPMENT=1
+DISABLE_SSO_REDIRECT=true
+```
+
+When this flag is enabled, the application will automatically create a default Django superuser (using the credentials defined in `DJANGO_SUPERUSER_USERNAME` and `DJANGO_SUPERUSER_PASSWORD`, or defaulting to `admin` / `admin123`) on startup.
+This allows direct access to the Django admin panel and the application without requiring the Shibboleth IdP containers.
+
 ### Access the GREN Map DB Node(s)
 
 URLs for the first DB Node server:
