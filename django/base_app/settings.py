@@ -235,6 +235,7 @@ CSP_IMG_SRC = [
     'https://*.tile.openstreetmap.org/',
 ]
 CSP_BASE_URI = ["'self'"]
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
 
 LOGGING = {
     'version': 1,
