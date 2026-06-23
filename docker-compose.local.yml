@@ -1,0 +1,75 @@
+services:
+  db:
+    image: postgres:13-alpine
+    env_file:
+      - ./env/.env.dev
+    ports:
+      - "54320:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  redis:
+    image: bitnamilegacy/redis:7.0
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+  app:
+    build:
+      context: ./django
+      target: development
+    image: grenmap-django
+    volumes:
+      - ./django/:/home/grenmapadmin/web/
+      - static_volume:/home/grenmapadmin/web/staticfiles
+      - media_volume:/home/grenmapadmin/web/media
+    env_file:
+      - ./env/.env.dev
+    environment:
+      DEVELOPMENT: "1"
+      DISABLE_SSO_REDIRECT: "true"
+    command: gunicorn base_app.wsgi:application --bind 0.0.0.0:8080 --reload --log-level=debug --threads 4
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+    expose:
+      - "8080"
+
+  app_static_collector:
+    volumes:
+      - ./django/:/home/grenmapadmin/web/
+      - static_volume:/home/grenmapadmin/web/staticfiles
+    entrypoint: ./collect_static.sh
+    env_file:
+      - ./env/.env.dev
+    image: grenmap-django
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    depends_on:
+      - app
+    volumes:
+      - ./nginx/local.conf:/etc/nginx/conf.d/default.conf
+      - static_volume:/staticfiles
+
+  task_runner:
+    command: nodemon -e py --exec "python manage.py qcluster"
+    volumes:
+      - ./django/:/home/grenmapadmin/web/
+    env_file:
+      - ./env/.env.dev
+    entrypoint: ./task_runner.sh
+    depends_on:
+      - db
+      - app
+      - redis
+    image: grenmap-django
+
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:
