@@ -161,6 +161,97 @@ DISABLE_SSO_REDIRECT=true
 When this flag is enabled, the application will automatically create a default Django superuser (using the credentials defined in `DJANGO_SUPERUSER_USERNAME` and `DJANGO_SUPERUSER_PASSWORD`, or defaulting to `admin` / `admin123`) on startup.
 This allows direct access to the Django admin panel and the application without requiring the Shibboleth IdP containers.
 
+## Local Development Environment (Without SSO)
+
+For local development, it is possible to run the application without Shibboleth, LDAP, or the IdP services. This setup uses NGINX as a reverse proxy and static file server, while Django runs behind Gunicorn.
+
+### Environment Variables
+
+Ensure the following variables are present in `env/.env.dev`:
+
+```bash
+DEVELOPMENT=1
+DISABLE_SSO_REDIRECT=true
+```
+
+These settings disable SSO redirection and allow direct access to the application using Django authentication.
+
+### Architecture
+### Local Development Architecture
+
+```mermaid
+flowchart LR
+    Browser --> NGINX
+
+    subgraph Local Docker Environment
+        NGINX -->|Proxy| Django[Gunicorn / Django]
+
+        Django --> Postgres[(PostgreSQL)]
+        Django --> Redis[(Redis)]
+
+        Django --> Media[media/]
+
+        Collector[app_static_collector]
+        Collector --> Static[static_volume]
+
+        NGINX -->|Serve Static Files| Static
+    end
+
+    Note["SSO Components Not Required:
+    - websp
+    - openldap
+    - idp"]
+```
+
+### Required Services
+
+The local development environment consists of:
+
+* PostgreSQL
+* Redis
+* Django (Gunicorn)
+* Static File Collector
+* NGINX
+
+The following services are **not required**:
+
+* Shibboleth SP (websp)
+* LDAP
+* IdP
+
+### Media Directory
+
+Before starting the application, create the media directory used for uploaded files:
+
+```bash
+mkdir -p django/media
+```
+
+### Start the Local Environment
+
+Build and start all containers:
+
+```bash
+docker compose -f docker-compose.local.yml up --build
+```
+
+Once the containers are running, access the application at:
+
+```text
+http://localhost:8000
+```
+
+### Static Files
+
+Static files are collected automatically by the `app_static_collector` service and stored in a shared Docker volume. NGINX serves these files directly from `/staticfiles`, reproducing the behavior of the production deployment without requiring Shibboleth.
+
+### Uploaded Files
+
+Uploaded files are stored under the Django media directory. Ensure that the `django/media` directory exists before starting the containers.
+
+```
+```
+
 ### Access the GREN Map DB Node(s)
 
 URLs for the first DB Node server:
