@@ -123,7 +123,7 @@ Once the application has started, an admin user can add more admin users to a DB
 
 Run two commands to start the DB Node and IdP separately:
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 docker-compose -f docker-compose.idp.yml up -d --build
 ```
 Or run in one command to start them together:

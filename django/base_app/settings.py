@@ -89,6 +89,7 @@ GRENMAP_APPS = [
     'network_topology',
     'published_network_data',
     'visualization',
+    'chameleon_api'
 ]
 
 # Add polling app if not in sandbox mode.

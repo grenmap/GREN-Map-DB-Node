@@ -57,6 +57,7 @@ from fim.urls import urlpatterns as fim_urls
 from fim.views.auth import fim_login, fim_logout
 from network_topology.urls import urlpatterns as network_urls
 from drf_spectacular.views import SpectacularSwaggerView
+from chameleon_api.urls import urlpatterns as chameleon_urls
 
 polling_urls = []
 if not settings.SANDBOX:
@@ -99,6 +100,7 @@ urlpatterns += collation_urls
 urlpatterns += published_data_urls
 urlpatterns += fim_urls
 urlpatterns += network_urls
+urlpatterns += chameleon_urls
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
