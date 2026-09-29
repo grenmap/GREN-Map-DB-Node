@@ -33,6 +33,23 @@ INITIAL_UI_STRINGS = [
     # text, where a placeholder could get mistranslated or reordered.
     ('owned_by', 'Owned by'),
     ('institutions_plural', 'institutions'),
+    # Sidebar, filter and REN panel vocabulary (see TranslationService
+    # in GREN-Map-Visualization). Values are shown next to these labels,
+    # never inside them -- e.g. "Filter" + element + "by" + property.
+    ('node_details', 'Node Details'),
+    ('owners_directly_connected', 'Owners of nodes directly connected:'),
+    ('dismiss', 'Dismiss'),
+    ('ren', 'REN'),
+    ('connected_institution', 'Connected Institution'),
+    ('research_education_networks', 'Research & Education Networks'),
+    ('short_name', 'Short name'),
+    ('latitude', 'Latitude'),
+    ('longitude', 'Longitude'),
+    ('filter', 'Filter'),
+    ('filter_by', 'by'),
+    ('remove_all_filters', 'Remove all filters'),
+    ('nodes', 'nodes'),
+    ('links', 'links'),
 ]
 
 
