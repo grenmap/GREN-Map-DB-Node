@@ -70,7 +70,7 @@ def ensure_institution_popup_translations(institution, source='en'):
     """
     translations = []
 
-    for language_code, _label in settings.LANGUAGES:
+    for language_code, _label in settings.MAP_TRANSLATION_LANGUAGES:
         if language_code == source:
             continue
 
@@ -103,7 +103,7 @@ def ensure_ui_string_translations(ui_string, source='en'):
     """
     translations = []
 
-    for language_code, _label in settings.LANGUAGES:
+    for language_code, _label in settings.MAP_TRANSLATION_LANGUAGES:
         if language_code == source:
             continue
 

@@ -54,7 +54,7 @@ class UIStringTranslation(models.Model):
         verbose_name=_('UI string'),
     )
     language_code = models.CharField(
-        max_length=10, choices=settings.LANGUAGES,
+        max_length=10, choices=settings.MAP_TRANSLATION_LANGUAGES,
         verbose_name=_('language code'),
     )
     text = models.CharField(max_length=256, blank=True, default='', verbose_name=_('text'))

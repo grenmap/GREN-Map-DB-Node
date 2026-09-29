@@ -190,6 +190,19 @@ LANGUAGES = [
     (LANG_PT, _('Portuguese')),
 ]
 
+# Languages the public map (its interface text and institution popup
+# content) is machine-translated into via LibreTranslate. Independent
+# of LANGUAGES above, which drives the Django admin's own gettext
+# translations, so a deployment can trim the admin's languages without
+# losing map translations. Also the language_code choices of the
+# visualization translation models: keep in sync with their migrations.
+MAP_TRANSLATION_LANGUAGES = [
+    (LANG_FR, _('French')),
+    (LANG_EN, _('English')),
+    (LANG_ES, _('Spanish')),
+    (LANG_PT, _('Portuguese')),
+]
+
 # Default language
 LANGUAGE_CODE = LANG_EN
 

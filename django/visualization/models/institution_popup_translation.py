@@ -40,7 +40,7 @@ class InstitutionPopupTranslation(models.Model):
         verbose_name=_('institution'),
     )
     language_code = models.CharField(
-        max_length=10, choices=settings.LANGUAGES,
+        max_length=10, choices=settings.MAP_TRANSLATION_LANGUAGES,
         verbose_name=_('language code'),
     )
     summary = models.TextField(blank=True, default='', verbose_name=_('summary'))
