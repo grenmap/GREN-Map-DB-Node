@@ -16,7 +16,7 @@ INITIAL_UI_STRINGS = [
     # name and a "?" -- names are never sent to machine translation.
     ('report_correction_prompt', 'Something wrong or outdated in the information about'),
     ('report_correction', 'Report a correction'),
-    ('report_correction_hint', 'Opens your email app with the node and institution pre-filled'),
+    ('report_correction_hint', 'Opens your email app with the institution pre-filled'),
 ]
 
 
