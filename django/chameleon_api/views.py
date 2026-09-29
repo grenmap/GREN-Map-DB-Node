@@ -1,8 +1,12 @@
 import hashlib
+from typing import List
+from django.conf import settings as django_settings
 from django.http import JsonResponse
 from .services import build_location_payload
 from network_topology.models import Node, Link
 from network_topology.models import Institution
+from .models import UIString
+from .translation import ensure_institution_popup_translations, ensure_ui_string_translations
 
 
 PREDEFINED_COLORS = {
@@ -87,22 +91,79 @@ def menu(request):
 
     return JsonResponse(data, safe=False)
 
+def get_popup_institutions(node: Node) -> List[Institution]:
+    """
+    Returns the Institutions from the node's "networks" property that
+    have popup content registered. "networks" is the same
+    semicolon-separated, curated list of networks a node actually
+    belongs to that already drives the map's tag sidebar -- unlike
+    node.owners, which GRENML import also populates with the whole
+    topology's declared owner on every node regardless of relevance
+    (e.g. it put RedCLARA on every single node, including ones with
+    no real connection to it).
+
+    A node may belong to more than one network; each gets its own tab
+    in the map popup rather than only the first one winning -- the
+    frontend is responsible for picking which of them to show based
+    on the active PREN/NREN menu (see build_popup_fields'
+    "parent_menu" field on each entry).
+    """
+    network_names = set()
+    for p in node.properties.all():
+        if p.name == "networks" and p.value:
+            network_names.update(n.strip() for n in p.value.split(';') if n.strip())
+
+    if not network_names:
+        return []
+
+    return [
+        institution for institution in Institution.objects.filter(name__in=network_names)
+        if institution.popup_summary or institution.popup_content
+    ]
+
+
+def build_popup_fields(node: Node) -> dict:
+    return {
+        "popup_institutions": [
+            {
+                "name": institution.name,
+                "description": institution.popup_summary,
+                "overlayed_popup_content": institution.popup_content,
+                # Same PREN(1)/NREN(2) menu id used by the map's own
+                # PREN/NREN filter (see get_parent_menu) -- lets the
+                # frontend show only the institution(s) matching
+                # whichever menu is currently selected, instead of
+                # every owner regardless of the active filter.
+                "parent_menu": get_parent_menu(institution.name),
+                "translations": [
+                    {
+                        "language_code": t.language_code,
+                        "description": t.summary,
+                        "overlayed_popup_content": t.full_content,
+                    }
+                    for t in ensure_institution_popup_translations(institution)
+                ],
+            }
+            for institution in get_popup_institutions(node)
+        ],
+    }
+
+
 def location(request):
     nodes = Node.objects.all()
 
     locations = []
-    
+
     for n in nodes:
         locations.append({
             "id": n.id,
             "name": n.name,
-            "description": "",
             "latitude": str(n.latitude),
             "longitude": str(n.longitude),
-            "overlayed_popup_content": "",
-            "active": True
+            "active": True,
+            **build_popup_fields(n),
         })
-        
+
     return JsonResponse(locations, safe=False)
 
 def tag(request):
@@ -155,7 +216,8 @@ def settings(request):
             "initial_longitude":"-55.92525392265913808387",
             "link_feature":True,
             "hide_menu_group_when_unique":True,
-            "footer_file": None
+            "footer_file": None,
+            "correction_email": django_settings.MAP_CORRECTION_EMAIL,
         }], safe=False)
 
 def link(request):
@@ -221,3 +283,23 @@ def links_group(request):
 
 def kml_shape(request):
     return JsonResponse([], safe=False)
+
+def uistrings(request):
+    result = []
+
+    for ui_string in UIString.objects.all():
+        translations = ensure_ui_string_translations(ui_string)
+
+        result.append({
+            "key": ui_string.key,
+            "text": ui_string.text,
+            "translations": [
+                {
+                    "language_code": t.language_code,
+                    "text": t.text,
+                }
+                for t in translations
+            ],
+        })
+
+    return JsonResponse(result, safe=False)

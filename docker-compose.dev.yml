@@ -43,6 +43,10 @@ services:
     ports:
       - "54320:5432"
 
+  translator:
+    ports:
+      - "5000:5000"
+
   websp:
     hostname: ${MAP1_HOST_NAME}
     environment:

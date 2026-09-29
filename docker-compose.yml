@@ -64,9 +64,20 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     image: bitnamilegacy/redis:7.0
 
+  translator:
+    image: libretranslate/libretranslate:latest
+    restart: unless-stopped
+    environment:
+      - LT_LOAD_ONLY=en,fr,es,pt
+      - LT_THREADS=4
+      - LT_CHAR_LIMIT=5000
+    volumes:
+      - lt_models:/home/libretranslate/.local
+
 volumes:
   postgres_data:
   static_volume:
+  lt_models:
 
 secrets:
   websp-host-key:

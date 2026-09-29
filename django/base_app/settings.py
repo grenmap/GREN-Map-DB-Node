@@ -234,6 +234,9 @@ CSP_IMG_SRC = [
     "'self' data:",
     'https://tiles.stadiamaps.com/tiles/',
     'https://*.tile.openstreetmap.org/',
+    # Allows institution logos (admin-entered, in Institution.popup_content)
+    # to be hotlinked from their own sites rather than embedded as data URIs.
+    'https:',
 ]
 CSP_BASE_URI = ["'self'"]
 SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
@@ -367,6 +370,15 @@ Q_CLUSTER = {
 
 # Default timeout value for http request
 REQUEST_TIMEOUT = 300
+
+# LibreTranslate endpoint used by chameleon_api to translate map
+# interface vocabulary and institution popup content
+LIBRETRANSLATE_URL = os.environ.get('LIBRETRANSLATE_URL', 'http://translator:5000/translate')
+
+# Address the Chameleon map's popup modal "Report a correction" link
+# sends to (a mailto: pre-filled with the node and institution).
+# Set it to an empty string to hide that footer.
+MAP_CORRECTION_EMAIL = os.environ.get('MAP_CORRECTION_EMAIL', 'contact@grenmap.org')
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 SESSION_CACHE_ALIAS = 'default'

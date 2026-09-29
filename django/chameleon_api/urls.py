@@ -13,4 +13,5 @@ urlpatterns = [
     path('link/', views.link),
     path('linksgroup/', views.links_group),
     path('kmlshape/', views.kml_shape),
+    path('uistrings/', views.uistrings),
 ]

@@ -46,6 +46,24 @@ class Institution(BaseModel, Location, ShortNamed):
         verbose_name=_('topologies'),
     )
 
+    popup_summary = models.TextField(
+        null=False, blank=True, default='',
+        verbose_name=_('Popup Summary'),
+        help_text=_(
+            'Short text shown in the map popup for this institution\'s nodes. '
+            'Also used as the source text for automatic translation.'
+        ),
+    )
+    popup_content = models.TextField(
+        null=False, blank=True, default='',
+        verbose_name=_('Popup Content'),
+        help_text=_(
+            'Full HTML content shown in the expanded map popup for this '
+            'institution\'s nodes. Also used as the source text for '
+            'automatic translation.'
+        ),
+    )
+
     def replace_with(self, replacement_institution, union_topologies=True):
         """
         Deletes this Institution in favour of another.

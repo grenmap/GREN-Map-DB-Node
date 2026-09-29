@@ -34,3 +34,12 @@ ADMIN_EPPNS=testuser1@example.org testuser2@example.org
 # get lost. Therefore, configure a large value for the timeout.
 # The default values is 3600 seconds
 # DJANGO_Q_TIMEOUT=3600
+
+# LibreTranslate endpoint used by chameleon_api to translate map
+# interface vocabulary and institution popup content.
+# Defaults to the bundled "translator" service if left unset.
+# LIBRETRANSLATE_URL=http://translator:5000/translate
+
+# Address the map popup's "Report a correction" link sends to.
+# Leave it empty to hide that footer.
+# MAP_CORRECTION_EMAIL=contact@grenmap.org
