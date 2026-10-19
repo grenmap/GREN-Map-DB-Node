@@ -4,3 +4,5 @@ pytest-django ~= 3.8.0
 pytest-cov ~= 2.8.1
 flake8 ~= 3.9.2
 pep8-naming ~= 0.12.1
+# pytest-django 3.8 imports pkg_resources, which setuptools 81+ no longer ships
+setuptools < 81
