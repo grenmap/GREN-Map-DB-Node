@@ -90,8 +90,51 @@ class Institution(BaseModel, Location, ShortNamed):
                 # Django's ManyToManyField auto-deduplicates
                 replacement_institution.topologies.add(topology)
 
+        self.carry_popup_over(replacement_institution)
+
         # Now delete this Institution; it has been replaced
         self.delete()
+
+    # Reverse accessors of the cached popup translation tables
+    # (visualization and chameleon_api apps). Looked up by name so this
+    # model doesn't import those apps, which import it.
+    POPUP_FIELDS = ('popup_summary', 'popup_content')
+    POPUP_TRANSLATION_ACCESSORS = ('visualization_popup_translations', 'popup_translations')
+
+    def carry_popup_over(self, replacement_institution):
+        """
+        Popup texts are entered by hand in the admin and are not part
+        of GRENML, so a re-import creates the replacement Institution
+        without them. Copy them over when the replacement has none,
+        and move the cached translations along when the texts match,
+        so deleting this Institution doesn't lose either.
+        """
+        copied = []
+        for field in self.POPUP_FIELDS:
+            if getattr(self, field) and not getattr(replacement_institution, field):
+                setattr(replacement_institution, field, getattr(self, field))
+                copied.append(field)
+        if copied:
+            replacement_institution.save(update_fields=copied)
+
+        same_texts = all(
+            getattr(self, field) == getattr(replacement_institution, field)
+            for field in self.POPUP_FIELDS
+        )
+        if not same_texts:
+            # The replacement has its own popup; these translations
+            # don't belong to it.
+            return
+        for accessor in self.POPUP_TRANSLATION_ACCESSORS:
+            translations = getattr(self, accessor, None)
+            if translations is None:
+                continue
+            existing_languages = list(
+                getattr(replacement_institution, accessor).values_list('language_code', flat=True)
+            )
+            translations.exclude(language_code__in=existing_languages).update(
+                institution=replacement_institution,
+            )
 
     def replace_with_newest(self, **kwargs):
         """

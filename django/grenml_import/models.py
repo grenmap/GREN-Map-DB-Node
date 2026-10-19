@@ -178,6 +178,8 @@ class ImportData(GRENMLImport):
         """
         if not self.grenml_data:
             raise ImportAborted(_('No GRENML data to import.'))
+        # Stays None if parsing fails before the importer returns a log
+        import_log = None
         try:
             stream = BytesIO(self.grenml_data.encode())
             importer = GRENMLImporter()
@@ -199,7 +201,7 @@ class ImportData(GRENMLImport):
                 ImportLog.IMPORT_STATUS_ABORTED,
                 _(ImportLog.IMPORT_STATUS_PHRASES[ImportLog.IMPORT_STATUS_ABORTED]),
             )
-            self.import_message = str(import_log)
+            self.import_message = str(import_log) if import_log is not None else str(e)
             self.save()
             raise ImportAborted(str(e))
 
