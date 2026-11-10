@@ -8,6 +8,9 @@ from .models import InstitutionPopupTranslation, UIStringTranslation
 
 log = logging.getLogger('chameleon_api')
 
+# Longer machine translations can't be stored (see UIStringTranslation)
+UI_STRING_TRANSLATION_MAX_LENGTH = UIStringTranslation._meta.get_field('text').max_length
+
 
 def translate(text, target, source='en', fmt='text'):
     """
@@ -96,6 +99,15 @@ def ensure_ui_string_translations(ui_string, source='en'):
 
         if created or not translation.text:
             text = translate(ui_string.text, language_code, source, fmt='text')
+            if text is not None and len(text) > UI_STRING_TRANSLATION_MAX_LENGTH:
+                # Doesn't fit the column: leave it untranslated (the map
+                # shows the English text) rather than fail the request.
+                log.warning(
+                    f'Translation of UI string "{ui_string.key}" into {language_code} '
+                    f'is {len(text)} characters, over {UI_STRING_TRANSLATION_MAX_LENGTH}; '
+                    'skipped'
+                )
+                text = None
             if text is not None:
                 translation.text = text
                 translation.save()

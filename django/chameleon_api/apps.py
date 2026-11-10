@@ -60,8 +60,9 @@ INITIAL_UI_STRINGS = [
 
 # Hand-written translations that replace LibreTranslate's for these
 # keys: its Portuguese comes out European ("Percebeste", "correcção")
-# and some popup labels came out wrong ("pré-cheia"). REN Map's
-# audience reads Brazilian Portuguese.
+# and some popup labels came out wrong ("pré-cheia"); REN Map's
+# audience reads Brazilian Portuguese. Each must fit the 256-character
+# UIStringTranslation.text column.
 CURATED_TRANSLATIONS = {
     'pt': {
         'connected_to': 'Conectado a:',
@@ -92,6 +93,36 @@ CURATED_TRANSLATIONS = {
             'revisados por uma pessoa.'
         ),
         'trust_verified_hint': 'revisado por um membro de uma instituição participante',
+    },
+    # The notice's body runs past the 256-character column when
+    # LibreTranslate translates it into these two languages, and it
+    # mistranslated "AI-extracted" ("extraites de l'IA", "por AI").
+    'es': {
+        'data_notice_body': (
+            'Las topologías de REN Map vienen de distintas fuentes: algunas enviadas por '
+            'las instituciones, otras extraídas de forma semiautomática o con IA. Parte de '
+            'la información puede ser errónea, estar desactualizada o diferir de las '
+            'fuentes oficiales.'
+        ),
+        'trust_ai_generated': 'Generado por IA',
+        'data_notice_reminder': 'Datos extraídos en parte con IA',
+        'data_notice_reminder_hint': (
+            'Algunas topologías se extrajeron de forma semiautomática o con IA. '
+            'Haga clic para leer el aviso completo.'
+        ),
+    },
+    'fr': {
+        'data_notice_body': (
+            'Les topologies du REN Map viennent de sources différentes : certaines fournies '
+            "par les institutions, d'autres extraites de façon semi-automatique ou par IA. "
+            'Certaines informations peuvent être erronées, obsolètes ou différer des '
+            'sources officielles.'
+        ),
+        'data_notice_reminder': 'Données extraites en partie par IA',
+        'data_notice_reminder_hint': (
+            'Certaines topologies ont été extraites de façon semi-automatique ou par IA. '
+            "Cliquez pour lire l'avis complet."
+        ),
     },
 }
 

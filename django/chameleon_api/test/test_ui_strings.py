@@ -43,20 +43,20 @@ def test_every_string_is_seeded_with_curated_portuguese():
 @pytest.mark.django_db
 def test_changed_english_text_replaces_the_old_one_and_its_translations():
     seed_ui_strings(None)
-    reminder = UIString.objects.get(key='data_notice_reminder')
-    reminder.text = 'Unofficial data · partly AI-extracted'
-    reminder.save()
+    hint = UIString.objects.get(key='trust_verified_hint')
+    hint.text = 'reviewed by a member of the community'
+    hint.save()
     UIStringTranslation.objects.create(
-        ui_string=reminder, language_code='fr', text='Données non officielles',
+        ui_string=hint, language_code='fr', text='examiné par un membre de la communauté',
     )
 
     seed_ui_strings(None)
 
-    reminder.refresh_from_db()
-    assert reminder.text == TEXTS['data_notice_reminder']
-    assert not reminder.translations.filter(language_code='fr').exists()
-    curated = CURATED_TRANSLATIONS['pt']['data_notice_reminder']
-    assert reminder.translations.get(language_code='pt').text == curated
+    hint.refresh_from_db()
+    assert hint.text == TEXTS['trust_verified_hint']
+    assert not hint.translations.filter(language_code='fr').exists()
+    curated = CURATED_TRANSLATIONS['pt']['trust_verified_hint']
+    assert hint.translations.get(language_code='pt').text == curated
 
 
 @pytest.mark.django_db
@@ -79,3 +79,24 @@ def test_curated_translation_overwrites_a_machine_one():
     seed_ui_strings(None)
 
     assert report.translations.get(language_code='pt').text == 'Sugerir uma correção'
+
+
+@pytest.mark.django_db
+def test_curated_translations_fit_the_column():
+    limit = UIStringTranslation._meta.get_field('text').max_length
+    for texts in CURATED_TRANSLATIONS.values():
+        for key, text in texts.items():
+            assert len(text) <= limit, key
+
+
+@pytest.mark.django_db
+def test_too_long_machine_translation_is_skipped_not_an_error(monkeypatch):
+    from chameleon_api import translation
+
+    seed_ui_strings(None)
+    close = UIString.objects.get(key='close')
+    monkeypatch.setattr(translation, 'translate', lambda *args, **kwargs: 'x' * 300)
+
+    rows = translation.ensure_ui_string_translations(close)
+
+    assert rows and all(row.text == '' for row in rows if row.language_code == 'fr')
