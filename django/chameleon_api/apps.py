@@ -41,17 +41,16 @@ INITIAL_UI_STRINGS = [
         'semi-automatically or with AI. Click to read the full notice.'
     )),
     # Per-network badge: whether a representative of the institution has
-    # confirmed its topology. It says nothing about where the data came
-    # from (AI extraction or the institution itself): the notice covers
-    # that, and a confirmed topology may still have been AI-extracted.
-    # The repository's maintainers review all data either way. Keys
-    # keep their old names (trust_ai_generated / trust_verified),
-    # matching the trust_level values in the data. "Confirmed by" is
-    # followed by who confirmed it and the date -- neither goes through
-    # machine translation.
+    # confirmed its content (topology and description). It says nothing
+    # about where the data came from (AI extraction or the institution
+    # itself): the notice covers that, and confirmed content may still
+    # have been AI-extracted. The repository's maintainers review all
+    # data either way. Keys keep their old names (trust_ai_generated /
+    # trust_verified), matching the trust_level values in the data.
+    # "Content confirmed by" is followed by who confirmed it and the
+    # date -- neither goes through machine translation.
     ('trust_ai_generated', 'Unconfirmed'),
-    # The notice's legend completes each badge on one line and says it
-    # is about the topology (not the institution's description).
+    # The notice's legend completes each badge on one line.
     ('trust_ai_generated_hint', 'content reviewed by the maintainers'),
     ('trust_ai_generated_tooltip', (
         "The topology and the institution's description were reviewed by the "
@@ -59,8 +58,8 @@ INITIAL_UI_STRINGS = [
         'institution.'
     )),
     ('trust_verified', 'Confirmed'),
-    ('trust_verified_hint', 'topology confirmed by the institution'),
-    ('verified_by', 'Topology confirmed by'),
+    ('trust_verified_hint', 'content confirmed by the institution'),
+    ('verified_by', 'Content confirmed by'),
     # When the network's topology last changed; followed by the date.
     ('updated_on', 'Updated'),
     ('topology_updated_on', 'Topology updated'),
@@ -106,9 +105,9 @@ CURATED_TRANSLATIONS = {
             'instituição.'
         ),
         'trust_verified': 'Confirmado',
-        'trust_verified_hint': 'topologia confirmada pela instituição',
+        'trust_verified_hint': 'conteúdo confirmado pela instituição',
         'topology_updated_on': 'Topologia atualizada em',
-        'verified_by': 'Topologia confirmada por',
+        'verified_by': 'Conteúdo confirmado por',
     },
     # The notice's body runs past the 256-character column when
     # LibreTranslate translates it into these two languages, and it
@@ -128,9 +127,9 @@ CURATED_TRANSLATIONS = {
             'representante de la institución.'
         ),
         'trust_verified': 'Confirmado',
-        'trust_verified_hint': 'topología confirmada por la institución',
+        'trust_verified_hint': 'contenido confirmado por la institución',
         'topology_updated_on': 'Topología actualizada el',
-        'verified_by': 'Topología confirmada por',
+        'verified_by': 'Contenido confirmado por',
         'data_notice_reminder': 'Datos extraídos en parte con IA',
         'data_notice_reminder_hint': (
             'Algunas topologías y descripciones de las instituciones se extrajeron de '
@@ -153,9 +152,9 @@ CURATED_TRANSLATIONS = {
             "de l'institution."
         ),
         'trust_verified': 'Confirmé',
-        'trust_verified_hint': "topologie confirmée par l'institution",
+        'trust_verified_hint': "contenu confirmé par l'institution",
         'topology_updated_on': 'Topologie mise à jour le',
-        'verified_by': 'Topologie confirmée par',
+        'verified_by': 'Contenu confirmé par',
         'data_notice_reminder_hint': (
             'Certaines topologies et descriptions des institutions ont été extraites de '
             "façon semi-automatique ou par IA. Cliquez pour lire l'avis complet."
