@@ -218,6 +218,9 @@ def settings(request):
             "hide_menu_group_when_unique":True,
             "footer_file": None,
             "correction_email": django_settings.MAP_CORRECTION_EMAIL,
+            # ChameleonMap's first-visit tutorial is Portuguese-only;
+            # REN Map's audience is international, so it's turned off.
+            "onboarding_enabled": False,
         }], safe=False)
 
 def link(request):
