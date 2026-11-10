@@ -8,6 +8,9 @@ from .models import InstitutionPopupTranslation, UIStringTranslation
 
 log = logging.getLogger('chameleon_api')
 
+# Longer machine translations can't be stored (see UIStringTranslation)
+UI_STRING_TRANSLATION_MAX_LENGTH = UIStringTranslation._meta.get_field('text').max_length
+
 
 def translate(text, target, source='en', fmt='text'):
     """
@@ -44,8 +47,12 @@ def ensure_institution_popup_translations(institution, source='en'):
     other than the source language, of the given Institution's
     popup_summary/popup_content. Missing translations are generated
     via LibreTranslate and cached. Returns the list of
-    InstitutionPopupTranslation rows for this institution.
+    InstitutionPopupTranslation rows for this institution (none when
+    it has no popup text: nothing to translate).
     """
+    if not institution.popup_summary and not institution.popup_content:
+        return []
+
     translations = []
 
     for language_code, _label in settings.LANGUAGES:
@@ -92,6 +99,15 @@ def ensure_ui_string_translations(ui_string, source='en'):
 
         if created or not translation.text:
             text = translate(ui_string.text, language_code, source, fmt='text')
+            if text is not None and len(text) > UI_STRING_TRANSLATION_MAX_LENGTH:
+                # Doesn't fit the column: leave it untranslated (the map
+                # shows the English text) rather than fail the request.
+                log.warning(
+                    f'Translation of UI string "{ui_string.key}" into {language_code} '
+                    f'is {len(text)} characters, over {UI_STRING_TRANSLATION_MAX_LENGTH}; '
+                    'skipped'
+                )
+                text = None
             if text is not None:
                 translation.text = text
                 translation.save()

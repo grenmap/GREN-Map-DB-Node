@@ -1,5 +1,6 @@
 import hashlib
-from typing import List
+from collections import defaultdict
+from typing import Dict, List, Optional
 from django.conf import settings as django_settings
 from django.http import JsonResponse
 from .services import build_location_payload
@@ -7,6 +8,16 @@ from network_topology.models import Node, Link
 from network_topology.models import Institution
 from .models import UIString
 from .translation import ensure_institution_popup_translations, ensure_ui_string_translations
+
+
+# Values of the "trust_level" property GRENML-Repository publishes
+TRUST_VERIFIED = "verified"
+TRUST_AI_GENERATED = "ai_generated"
+
+# Where the data notice's "How the data is maintained" link points
+DATA_NOTICE_URL = (
+    "https://github.com/grenmap/GRENML-Repository#verified-and-ai-generated-networks"
+)
 
 
 PREDEFINED_COLORS = {
@@ -36,12 +47,8 @@ PREDEFINED_COLORS = {
     "NII 100G": "#455A64"
 }
 
-def get_parent_menu(network_name: str) -> int:
-    institution = Institution.objects.filter(name=network_name).first()
-
-    if not institution:
-        return 1
-
+def parent_menu_of(institution: Institution) -> int:
+    """PREN(1)/NREN(2) menu id from the institution's "tag" property."""
     for p in institution.properties.all():
         if p.name == "tag":
             value = p.value.lower()
@@ -53,6 +60,15 @@ def get_parent_menu(network_name: str) -> int:
                 return 1
 
     return 1
+
+
+def get_parent_menu(network_name: str) -> int:
+    institution = Institution.objects.filter(name=network_name).first()
+
+    if not institution:
+        return 1
+
+    return parent_menu_of(institution)
 
 def generate_color(name: str) -> str:
     if name in PREDEFINED_COLORS:
@@ -91,16 +107,31 @@ def menu(request):
 
     return JsonResponse(data, safe=False)
 
-def get_popup_institutions(node: Node) -> List[Institution]:
+def institutions_by_name() -> Dict[str, List[Institution]]:
     """
-    Returns the Institutions from the node's "networks" property that
-    have popup content registered. "networks" is the same
-    semicolon-separated, curated list of networks a node actually
-    belongs to that already drives the map's tag sidebar -- unlike
-    node.owners, which GRENML import also populates with the whole
-    topology's declared owner on every node regardless of relevance
-    (e.g. it put RedCLARA on every single node, including ones with
-    no real connection to it).
+    Every Institution, with its properties, grouped by name -- loaded
+    once per request instead of once per node.
+    """
+    by_name = defaultdict(list)
+    for institution in Institution.objects.prefetch_related('properties').order_by('pk'):
+        by_name[institution.name].append(institution)
+    return by_name
+
+
+def get_popup_institutions(
+    node: Node, institutions: Dict[str, List[Institution]],
+) -> List[Institution]:
+    """
+    Returns the Institutions from the node's "networks" property.
+    "networks" is the same semicolon-separated, curated list of networks
+    a node actually belongs to that already drives the map's tag
+    sidebar -- unlike node.owners, which GRENML import also populates
+    with the whole topology's declared owner on every node regardless
+    of relevance (e.g. it put RedCLARA on every single node, including
+    ones with no real connection to it).
+
+    Networks without popup text are included too: the popup still shows
+    their name, how far to trust their data and when it last changed.
 
     A node may belong to more than one network; each gets its own tab
     in the map popup rather than only the first one winning -- the
@@ -113,16 +144,39 @@ def get_popup_institutions(node: Node) -> List[Institution]:
         if p.name == "networks" and p.value:
             network_names.update(n.strip() for n in p.value.split(';') if n.strip())
 
-    if not network_names:
-        return []
-
-    return [
-        institution for institution in Institution.objects.filter(name__in=network_names)
-        if institution.popup_summary or institution.popup_content
+    found = [
+        institution
+        for name in network_names
+        for institution in institutions.get(name, [])
     ]
+    return sorted(found, key=lambda institution: institution.pk)
 
 
-def build_popup_fields(node: Node) -> dict:
+def property_value(institution: Institution, name: str) -> Optional[str]:
+    for p in institution.properties.all():
+        if p.name == name and p.value:
+            return p.value
+    return None
+
+
+def provenance_fields(institution: Institution) -> dict:
+    """
+    How far to trust a network's data and when it last changed, from
+    the properties GRENML-Repository's generator publishes. A network
+    without them counts as AI-generated: that's where the data came
+    from until someone verifies it.
+    """
+    verified = property_value(institution, "trust_level") == TRUST_VERIFIED
+    return {
+        "trust_level": TRUST_VERIFIED if verified else TRUST_AI_GENERATED,
+        "verified_by": property_value(institution, "verified_by") if verified else None,
+        "verified_on": property_value(institution, "verified_on") if verified else None,
+        "data_updated_on": property_value(institution, "data_updated_on"),
+        "data_updated_url": property_value(institution, "data_updated_url"),
+    }
+
+
+def build_popup_fields(node: Node, institutions: Dict[str, List[Institution]]) -> dict:
     return {
         "popup_institutions": [
             {
@@ -134,7 +188,8 @@ def build_popup_fields(node: Node) -> dict:
                 # frontend show only the institution(s) matching
                 # whichever menu is currently selected, instead of
                 # every owner regardless of the active filter.
-                "parent_menu": get_parent_menu(institution.name),
+                "parent_menu": parent_menu_of(institution),
+                **provenance_fields(institution),
                 "translations": [
                     {
                         "language_code": t.language_code,
@@ -144,13 +199,14 @@ def build_popup_fields(node: Node) -> dict:
                     for t in ensure_institution_popup_translations(institution)
                 ],
             }
-            for institution in get_popup_institutions(node)
+            for institution in get_popup_institutions(node, institutions)
         ],
     }
 
 
 def location(request):
-    nodes = Node.objects.all()
+    nodes = Node.objects.prefetch_related('properties')
+    institutions = institutions_by_name()
 
     locations = []
 
@@ -161,7 +217,7 @@ def location(request):
             "latitude": str(n.latitude),
             "longitude": str(n.longitude),
             "active": True,
-            **build_popup_fields(n),
+            **build_popup_fields(n, institutions),
         })
 
     return JsonResponse(locations, safe=False)
@@ -221,6 +277,10 @@ def settings(request):
             # ChameleonMap's first-visit tutorial is Portuguese-only;
             # REN Map's audience is international, so it's turned off.
             "onboarding_enabled": False,
+            # Topologies here are semi-automatic/AI-extracted: tell
+            # visitors on their first visit, then keep a reminder.
+            "data_notice_enabled": True,
+            "data_notice_url": DATA_NOTICE_URL,
         }], safe=False)
 
 def link(request):
