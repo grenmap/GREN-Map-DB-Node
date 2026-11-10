@@ -44,8 +44,12 @@ def ensure_institution_popup_translations(institution, source='en'):
     other than the source language, of the given Institution's
     popup_summary/popup_content. Missing translations are generated
     via LibreTranslate and cached. Returns the list of
-    InstitutionPopupTranslation rows for this institution.
+    InstitutionPopupTranslation rows for this institution (none when
+    it has no popup text: nothing to translate).
     """
+    if not institution.popup_summary and not institution.popup_content:
+        return []
+
     translations = []
 
     for language_code, _label in settings.LANGUAGES:

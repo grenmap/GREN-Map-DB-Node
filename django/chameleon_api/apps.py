@@ -17,6 +17,40 @@ INITIAL_UI_STRINGS = [
     ('report_correction_prompt', 'Something wrong or outdated in the information about'),
     ('report_correction', 'Report a correction'),
     ('report_correction_hint', 'Opens your email app with the institution pre-filled'),
+    # Notice on the first visit that the data is unofficial and partly
+    # AI-extracted, and the reminder that reopens it.
+    ('data_notice_title', 'About the data on this map'),
+    ('data_notice_body', (
+        'REN Map is a community project, not an official source. The network '
+        'topologies were compiled semi-automatically and partly extracted with AI, '
+        'so some information may be wrong or out of date.'
+    )),
+    ('data_notice_levels', (
+        'Every network shows its level and when its topology was last updated. '
+        'Spotted a mistake? Use "Report a correction" in any network, or propose '
+        'a fix on GitHub.'
+    )),
+    ('data_notice_learn_more', 'How the data is maintained'),
+    ('data_notice_dismiss', 'Got it'),
+    ('data_notice_reminder', 'Unofficial data · partly AI-extracted'),
+    ('data_notice_reminder_hint', (
+        'Topologies were compiled semi-automatically and partly with AI. '
+        'Click to read the full notice.'
+    )),
+    # Per-network trust badge. "Verified by" is followed by who verified
+    # it and the date -- neither goes through machine translation.
+    ('trust_ai_generated', 'AI-generated'),
+    ('trust_ai_generated_hint', 'extracted automatically, not yet checked'),
+    ('trust_ai_generated_tooltip', (
+        "This data was extracted automatically and hasn't been reviewed by a person yet."
+    )),
+    ('trust_verified', 'Verified'),
+    ('trust_verified_hint', 'reviewed by a member of the community'),
+    ('verified_by', 'Verified by'),
+    # When the network's topology last changed; followed by the date.
+    ('updated_on', 'Updated'),
+    ('topology_updated_on', 'Topology updated'),
+    ('view_latest_change', 'View latest change'),
 ]
 
 
