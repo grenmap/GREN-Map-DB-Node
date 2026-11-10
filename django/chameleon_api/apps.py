@@ -52,7 +52,7 @@ INITIAL_UI_STRINGS = [
     ('trust_ai_generated', 'Unconfirmed'),
     # The notice's legend completes each badge on one line and says it
     # is about the topology (not the institution's description).
-    ('trust_ai_generated_hint', 'topology reviewed by the maintainers'),
+    ('trust_ai_generated_hint', 'content reviewed by the maintainers'),
     ('trust_ai_generated_tooltip', (
         "The topology and the institution's description were reviewed by the "
         'maintainers, but not yet officially confirmed by a representative of the '
@@ -99,7 +99,7 @@ CURATED_TRANSLATIONS = {
             'forma semiautomática ou com IA. Clique para ler o aviso completo.'
         ),
         'trust_ai_generated': 'Não confirmado',
-        'trust_ai_generated_hint': 'topologia revisada pelos mantenedores',
+        'trust_ai_generated_hint': 'conteúdo revisado pelos mantenedores',
         'trust_ai_generated_tooltip': (
             'A topologia e a descrição da instituição foram revisadas pelos mantenedores, '
             'mas ainda não foram confirmadas oficialmente por um representante da '
@@ -121,7 +121,7 @@ CURATED_TRANSLATIONS = {
             'distinta de las fuentes oficiales.'
         ),
         'trust_ai_generated': 'No confirmado',
-        'trust_ai_generated_hint': 'topología revisada por los mantenedores',
+        'trust_ai_generated_hint': 'contenido revisado por los mantenedores',
         'trust_ai_generated_tooltip': (
             'La topología y la descripción de la institución fueron revisadas por los '
             'mantenedores, pero aún no han sido confirmadas oficialmente por un '
@@ -146,7 +146,7 @@ CURATED_TRANSLATIONS = {
         ),
         'data_notice_reminder': 'Données extraites en partie par IA',
         'trust_ai_generated': 'Non confirmé',
-        'trust_ai_generated_hint': 'topologie relue par les mainteneurs',
+        'trust_ai_generated_hint': 'contenu relu par les mainteneurs',
         'trust_ai_generated_tooltip': (
             "La topologie et la description de l'institution ont été relues par les "
             'mainteneurs, mais pas encore confirmées officiellement par un représentant '
