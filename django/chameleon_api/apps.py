@@ -42,17 +42,19 @@ INITIAL_UI_STRINGS = [
     # Per-network trust badge. "Verified by" is followed by who verified
     # it and the date -- neither goes through machine translation.
     ('trust_ai_generated', 'AI-generated'),
-    # People do review this data; what's missing is an official
-    # confirmation from a representative of the institution.
-    ('trust_ai_generated_hint', 'extracted automatically, not yet confirmed by the institution'),
+    # The repository's maintainers review all data; what an AI-generated
+    # network lacks is an official confirmation from a representative of
+    # the institution -- which is exactly what "Verified" means.
+    ('trust_ai_generated_hint', (
+        'extracted automatically and reviewed by the maintainers; '
+        'not yet confirmed by the institution'
+    )),
     ('trust_ai_generated_tooltip', (
-        'This data was extracted automatically and reviewed, but not yet officially '
-        'confirmed by a representative of the institution.'
+        'This data was extracted automatically and reviewed by the maintainers, but not '
+        'yet officially confirmed by a representative of the institution.'
     )),
     ('trust_verified', 'Verified'),
-    # Reviews mostly come from people at the other participating
-    # institutions, not from the network's own.
-    ('trust_verified_hint', 'reviewed by a member of a participating institution'),
+    ('trust_verified_hint', 'confirmed by a representative of the institution'),
     ('verified_by', 'Verified by'),
     # When the network's topology last changed; followed by the date.
     ('updated_on', 'Updated'),
@@ -92,13 +94,14 @@ CURATED_TRANSLATIONS = {
             'Clique para ler o aviso completo.'
         ),
         'trust_ai_generated_hint': (
-            'extraído automaticamente, ainda não confirmado pela instituição'
+            'extraído automaticamente e revisado pelos mantenedores; '
+            'ainda não confirmado pela instituição'
         ),
         'trust_ai_generated_tooltip': (
-            'Estes dados foram extraídos automaticamente e revisados, mas ainda não '
-            'foram confirmados oficialmente por um representante da instituição.'
+            'Estes dados foram extraídos automaticamente e revisados pelos mantenedores, '
+            'mas ainda não foram confirmados oficialmente por um representante da instituição.'
         ),
-        'trust_verified_hint': 'revisado por um membro de uma instituição participante',
+        'trust_verified_hint': 'confirmado por um representante da instituição',
     },
     # The notice's body runs past the 256-character column when
     # LibreTranslate translates it into these two languages, and it
@@ -112,12 +115,15 @@ CURATED_TRANSLATIONS = {
         ),
         'trust_ai_generated': 'Generado por IA',
         'trust_ai_generated_hint': (
-            'extraído automáticamente, aún no confirmado por la institución'
+            'extraído automáticamente y revisado por los mantenedores; '
+            'aún no confirmado por la institución'
         ),
         'trust_ai_generated_tooltip': (
-            'Estos datos se extrajeron automáticamente y fueron revisados, pero aún no han '
-            'sido confirmados oficialmente por un representante de la institución.'
+            'Estos datos se extrajeron automáticamente y fueron revisados por los '
+            'mantenedores, pero aún no han sido confirmados oficialmente por un '
+            'representante de la institución.'
         ),
+        'trust_verified_hint': 'confirmado por un representante de la institución',
         'data_notice_reminder': 'Datos extraídos en parte con IA',
         'data_notice_reminder_hint': (
             'Algunas topologías se extrajeron de forma semiautomática o con IA. '
@@ -133,12 +139,14 @@ CURATED_TRANSLATIONS = {
         ),
         'data_notice_reminder': 'Données extraites en partie par IA',
         'trust_ai_generated_hint': (
-            "extrait automatiquement, pas encore confirmé par l'institution"
+            'extrait automatiquement et relu par les mainteneurs ; '
+            "pas encore confirmé par l'institution"
         ),
         'trust_ai_generated_tooltip': (
-            'Ces données ont été extraites automatiquement et relues, mais pas encore '
-            "confirmées officiellement par un représentant de l'institution."
+            'Ces données ont été extraites automatiquement et relues par les mainteneurs, '
+            "mais pas encore confirmées officiellement par un représentant de l'institution."
         ),
+        'trust_verified_hint': "confirmé par un représentant de l'institution",
         'data_notice_reminder_hint': (
             'Certaines topologies ont été extraites de façon semi-automatique ou par IA. '
             "Cliquez pour lire l'avis complet."

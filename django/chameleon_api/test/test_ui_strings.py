@@ -42,21 +42,20 @@ def test_every_string_is_seeded_with_curated_portuguese():
 
 @pytest.mark.django_db
 def test_changed_english_text_replaces_the_old_one_and_its_translations():
+    # "close" has no hand-written translation in any language, so every
+    # translation left on it would be a stale machine one.
+    assert not any('close' in texts for texts in CURATED_TRANSLATIONS.values())
     seed_ui_strings(None)
-    hint = UIString.objects.get(key='trust_verified_hint')
-    hint.text = 'reviewed by a member of the community'
-    hint.save()
-    UIStringTranslation.objects.create(
-        ui_string=hint, language_code='fr', text='examiné par un membre de la communauté',
-    )
+    label = UIString.objects.get(key='close')
+    label.text = 'Close it (old text)'
+    label.save()
+    UIStringTranslation.objects.create(ui_string=label, language_code='fr', text='Fermez-le')
 
     seed_ui_strings(None)
 
-    hint.refresh_from_db()
-    assert hint.text == TEXTS['trust_verified_hint']
-    assert not hint.translations.filter(language_code='fr').exists()
-    curated = CURATED_TRANSLATIONS['pt']['trust_verified_hint']
-    assert hint.translations.get(language_code='pt').text == curated
+    label.refresh_from_db()
+    assert label.text == TEXTS['close']
+    assert not label.translations.exists()
 
 
 @pytest.mark.django_db
