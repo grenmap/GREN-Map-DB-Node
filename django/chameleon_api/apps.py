@@ -36,8 +36,8 @@ INITIAL_UI_STRINGS = [
     ('data_notice_dismiss', 'Got it'),
     ('data_notice_reminder', 'Partly AI-extracted data'),
     ('data_notice_reminder_hint', (
-        'Some topologies were extracted semi-automatically or with AI. '
-        'Click to read the full notice.'
+        'Some topologies and institution descriptions were extracted '
+        'semi-automatically or with AI. Click to read the full notice.'
     )),
     # Per-network badge: whether a representative of the institution has
     # confirmed its topology. It says nothing about where the data came
@@ -93,8 +93,8 @@ CURATED_TRANSLATIONS = {
         ),
         'data_notice_reminder': 'Dados parcialmente extraídos por IA',
         'data_notice_reminder_hint': (
-            'Parte das topologias foi extraída de forma semiautomática ou com IA. '
-            'Clique para ler o aviso completo.'
+            'Parte das topologias e das descrições das instituições foi extraída de '
+            'forma semiautomática ou com IA. Clique para ler o aviso completo.'
         ),
         'trust_ai_generated': 'Não confirmado',
         'trust_ai_generated_hint': 'revisado pelos mantenedores',
@@ -127,8 +127,8 @@ CURATED_TRANSLATIONS = {
         'verified_by': 'Confirmado por',
         'data_notice_reminder': 'Datos extraídos en parte con IA',
         'data_notice_reminder_hint': (
-            'Algunas topologías se extrajeron de forma semiautomática o con IA. '
-            'Haga clic para leer el aviso completo.'
+            'Algunas topologías y descripciones de las instituciones se extrajeron de '
+            'forma semiautomática o con IA. Haga clic para leer el aviso completo.'
         ),
     },
     'fr': {
@@ -149,8 +149,8 @@ CURATED_TRANSLATIONS = {
         'trust_verified_hint': "par un représentant de l'institution",
         'verified_by': 'Confirmé par',
         'data_notice_reminder_hint': (
-            'Certaines topologies ont été extraites de façon semi-automatique ou par IA. '
-            "Cliquez pour lire l'avis complet."
+            'Certaines topologies et descriptions des institutions ont été extraites de '
+            "façon semi-automatique ou par IA. Cliquez pour lire l'avis complet."
         ),
     },
 }
