@@ -113,4 +113,6 @@ def test_verified_by_is_ignored_without_verified_trust_level(rf):
 def test_settings_turn_on_the_data_notice(rf):
     (map_settings,) = json.loads(views.settings(rf.get('/settings/')).content)
     assert map_settings['data_notice_enabled'] is True
-    assert map_settings['data_notice_url'].startswith('https://github.com/grenmap/GRENML-Repository')
+    assert map_settings['data_notice_url'].startswith(
+        'https://github.com/grenmap/GRENML-Repository'
+    )
