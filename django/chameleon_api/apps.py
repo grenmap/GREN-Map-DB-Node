@@ -54,8 +54,9 @@ INITIAL_UI_STRINGS = [
     # is about the topology (not the institution's description).
     ('trust_ai_generated_hint', 'topology reviewed by the maintainers'),
     ('trust_ai_generated_tooltip', (
-        'The topology was reviewed by the maintainers, but not yet officially '
-        'confirmed by a representative of the institution.'
+        "The topology and the institution's description were reviewed by the "
+        'maintainers, but not yet officially confirmed by a representative of the '
+        'institution.'
     )),
     ('trust_verified', 'Confirmed'),
     ('trust_verified_hint', 'topology confirmed by the institution'),
@@ -100,8 +101,9 @@ CURATED_TRANSLATIONS = {
         'trust_ai_generated': 'Não confirmado',
         'trust_ai_generated_hint': 'topologia revisada pelos mantenedores',
         'trust_ai_generated_tooltip': (
-            'A topologia foi revisada pelos mantenedores, mas ainda não foi confirmada '
-            'oficialmente por um representante da instituição.'
+            'A topologia e a descrição da instituição foram revisadas pelos mantenedores, '
+            'mas ainda não foram confirmadas oficialmente por um representante da '
+            'instituição.'
         ),
         'trust_verified': 'Confirmado',
         'trust_verified_hint': 'topologia confirmada pela instituição',
@@ -121,8 +123,9 @@ CURATED_TRANSLATIONS = {
         'trust_ai_generated': 'No confirmado',
         'trust_ai_generated_hint': 'topología revisada por los mantenedores',
         'trust_ai_generated_tooltip': (
-            'La topología fue revisada por los mantenedores, pero aún no ha sido '
-            'confirmada oficialmente por un representante de la institución.'
+            'La topología y la descripción de la institución fueron revisadas por los '
+            'mantenedores, pero aún no han sido confirmadas oficialmente por un '
+            'representante de la institución.'
         ),
         'trust_verified': 'Confirmado',
         'trust_verified_hint': 'topología confirmada por la institución',
@@ -145,8 +148,9 @@ CURATED_TRANSLATIONS = {
         'trust_ai_generated': 'Non confirmé',
         'trust_ai_generated_hint': 'topologie relue par les mainteneurs',
         'trust_ai_generated_tooltip': (
-            'La topologie a été relue par les mainteneurs, mais pas encore confirmée '
-            "officiellement par un représentant de l'institution."
+            "La topologie et la description de l'institution ont été relues par les "
+            'mainteneurs, mais pas encore confirmées officiellement par un représentant '
+            "de l'institution."
         ),
         'trust_verified': 'Confirmé',
         'trust_verified_hint': "topologie confirmée par l'institution",
