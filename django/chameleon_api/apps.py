@@ -23,9 +23,10 @@ INITIAL_UI_STRINGS = [
     # AI), and the reminder that reopens it.
     ('data_notice_title', 'About the data on this map'),
     ('data_notice_body', (
-        'REN Map topologies come from different sources: some were provided by '
-        'the institutions, others were extracted semi-automatically or with AI. '
-        'Some information may be wrong, out of date or differ from official sources.'
+        'REN Map topologies and institution descriptions come from different sources: '
+        'some were provided by the institutions, others were extracted '
+        'semi-automatically or with AI. Some information may be wrong, out of date '
+        'or differ from official sources.'
     )),
     ('data_notice_levels', (
         'Every network shows its level and when its topology was last updated. '
@@ -49,15 +50,15 @@ INITIAL_UI_STRINGS = [
     # followed by who confirmed it and the date -- neither goes through
     # machine translation.
     ('trust_ai_generated', 'Unconfirmed'),
-    # The notice's legend completes each badge on one line, without
-    # repeating it ("Unconfirmed: reviewed by the maintainers").
-    ('trust_ai_generated_hint', 'reviewed by the maintainers'),
+    # The notice's legend completes each badge on one line and says it
+    # is about the topology (not the institution's description).
+    ('trust_ai_generated_hint', 'topology reviewed by the maintainers'),
     ('trust_ai_generated_tooltip', (
         'The topology was reviewed by the maintainers, but not yet officially '
         'confirmed by a representative of the institution.'
     )),
     ('trust_verified', 'Confirmed'),
-    ('trust_verified_hint', 'by a representative of the institution'),
+    ('trust_verified_hint', 'topology confirmed by the institution'),
     ('verified_by', 'Confirmed by'),
     # When the network's topology last changed; followed by the date.
     ('updated_on', 'Updated'),
@@ -81,10 +82,10 @@ CURATED_TRANSLATIONS = {
         'report_correction_hint': 'Abre seu aplicativo de e-mail com a instituição já preenchida',
         'data_notice_title': 'Sobre os dados deste mapa',
         'data_notice_body': (
-            'As topologias do REN Map vêm de fontes diferentes: algumas foram enviadas '
-            'pelas próprias instituições, outras foram extraídas de forma semiautomática '
-            'ou com IA. Algumas informações podem estar erradas, desatualizadas ou '
-            'diferir das fontes oficiais.'
+            'As topologias e descrições das instituições vêm de fontes diferentes: parte '
+            'foi enviada pelas próprias instituições, parte extraída de forma '
+            'semiautomática ou com IA. Algumas informações podem estar erradas, '
+            'desatualizadas ou diferir das fontes oficiais.'
         ),
         'data_notice_levels': (
             'Cada rede mostra seu nível de confiança e quando sua topologia foi '
@@ -97,13 +98,14 @@ CURATED_TRANSLATIONS = {
             'forma semiautomática ou com IA. Clique para ler o aviso completo.'
         ),
         'trust_ai_generated': 'Não confirmado',
-        'trust_ai_generated_hint': 'revisado pelos mantenedores',
+        'trust_ai_generated_hint': 'topologia revisada pelos mantenedores',
         'trust_ai_generated_tooltip': (
             'A topologia foi revisada pelos mantenedores, mas ainda não foi confirmada '
             'oficialmente por um representante da instituição.'
         ),
         'trust_verified': 'Confirmado',
-        'trust_verified_hint': 'por um representante da instituição',
+        'trust_verified_hint': 'topologia confirmada pela instituição',
+        'topology_updated_on': 'Topologia atualizada em',
         'verified_by': 'Confirmado por',
     },
     # The notice's body runs past the 256-character column when
@@ -111,19 +113,20 @@ CURATED_TRANSLATIONS = {
     # mistranslated "AI-extracted" ("extraites de l'IA", "por AI").
     'es': {
         'data_notice_body': (
-            'Las topologías de REN Map vienen de distintas fuentes: algunas enviadas por '
-            'las instituciones, otras extraídas de forma semiautomática o con IA. Parte de '
-            'la información puede ser errónea, estar desactualizada o diferir de las '
-            'fuentes oficiales.'
+            'Las topologías y las descripciones de las instituciones vienen de distintas '
+            'fuentes: parte enviada por las instituciones, parte extraída de forma '
+            'semiautomática o con IA. Puede haber información errónea, desactualizada o '
+            'distinta de las fuentes oficiales.'
         ),
         'trust_ai_generated': 'No confirmado',
-        'trust_ai_generated_hint': 'revisado por los mantenedores',
+        'trust_ai_generated_hint': 'topología revisada por los mantenedores',
         'trust_ai_generated_tooltip': (
             'La topología fue revisada por los mantenedores, pero aún no ha sido '
             'confirmada oficialmente por un representante de la institución.'
         ),
         'trust_verified': 'Confirmado',
-        'trust_verified_hint': 'por un representante de la institución',
+        'trust_verified_hint': 'topología confirmada por la institución',
+        'topology_updated_on': 'Topología actualizada el',
         'verified_by': 'Confirmado por',
         'data_notice_reminder': 'Datos extraídos en parte con IA',
         'data_notice_reminder_hint': (
@@ -133,20 +136,21 @@ CURATED_TRANSLATIONS = {
     },
     'fr': {
         'data_notice_body': (
-            'Les topologies du REN Map viennent de sources différentes : certaines fournies '
-            "par les institutions, d'autres extraites de façon semi-automatique ou par IA. "
-            'Certaines informations peuvent être erronées, obsolètes ou différer des '
-            'sources officielles.'
+            'Les topologies et descriptions des institutions viennent de sources '
+            'différentes : en partie fournies par les institutions, en partie extraites de '
+            'façon semi-automatique ou par IA. Elles peuvent être erronées, obsolètes ou '
+            'différer des sources officielles.'
         ),
         'data_notice_reminder': 'Données extraites en partie par IA',
         'trust_ai_generated': 'Non confirmé',
-        'trust_ai_generated_hint': 'relu par les mainteneurs',
+        'trust_ai_generated_hint': 'topologie relue par les mainteneurs',
         'trust_ai_generated_tooltip': (
             'La topologie a été relue par les mainteneurs, mais pas encore confirmée '
             "officiellement par un représentant de l'institution."
         ),
         'trust_verified': 'Confirmé',
-        'trust_verified_hint': "par un représentant de l'institution",
+        'trust_verified_hint': "topologie confirmée par l'institution",
+        'topology_updated_on': 'Topologie mise à jour le',
         'verified_by': 'Confirmé par',
         'data_notice_reminder_hint': (
             'Certaines topologies et descriptions des institutions ont été extraites de '
