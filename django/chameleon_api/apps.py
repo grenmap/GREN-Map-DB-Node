@@ -46,8 +46,8 @@ INITIAL_UI_STRINGS = [
     # network lacks is an official confirmation from a representative of
     # the institution -- which is exactly what "Verified" means.
     ('trust_ai_generated_hint', (
-        'extracted automatically and reviewed by the maintainers; '
-        'not yet confirmed by the institution'
+        'extracted automatically and reviewed by the maintainers, '
+        'but not yet confirmed by the institution'
     )),
     ('trust_ai_generated_tooltip', (
         'This data was extracted automatically and reviewed by the maintainers, but not '
@@ -94,8 +94,8 @@ CURATED_TRANSLATIONS = {
             'Clique para ler o aviso completo.'
         ),
         'trust_ai_generated_hint': (
-            'extraído automaticamente e revisado pelos mantenedores; '
-            'ainda não confirmado pela instituição'
+            'extraído automaticamente e revisado pelos mantenedores, '
+            'mas ainda não confirmado pela instituição'
         ),
         'trust_ai_generated_tooltip': (
             'Estes dados foram extraídos automaticamente e revisados pelos mantenedores, '
@@ -115,8 +115,8 @@ CURATED_TRANSLATIONS = {
         ),
         'trust_ai_generated': 'Generado por IA',
         'trust_ai_generated_hint': (
-            'extraído automáticamente y revisado por los mantenedores; '
-            'aún no confirmado por la institución'
+            'extraído automáticamente y revisado por los mantenedores, '
+            'pero aún no confirmado por la institución'
         ),
         'trust_ai_generated_tooltip': (
             'Estos datos se extrajeron automáticamente y fueron revisados por los '
@@ -139,8 +139,8 @@ CURATED_TRANSLATIONS = {
         ),
         'data_notice_reminder': 'Données extraites en partie par IA',
         'trust_ai_generated_hint': (
-            'extrait automatiquement et relu par les mainteneurs ; '
-            "pas encore confirmé par l'institution"
+            'extrait automatiquement et relu par les mainteneurs, '
+            "mais pas encore confirmé par l'institution"
         ),
         'trust_ai_generated_tooltip': (
             'Ces données ont été extraites automatiquement et relues par les mainteneurs, '
