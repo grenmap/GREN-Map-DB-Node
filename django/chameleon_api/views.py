@@ -14,6 +14,11 @@ from .translation import ensure_institution_popup_translations, ensure_ui_string
 TRUST_VERIFIED = "verified"
 TRUST_AI_GENERATED = "ai_generated"
 
+# Where the data notice's "How the data is maintained" link points
+DATA_NOTICE_URL = (
+    "https://github.com/grenmap/GRENML-Repository#verified-and-ai-generated-networks"
+)
+
 
 PREDEFINED_COLORS = {
     # EXISTENTES
@@ -275,6 +280,7 @@ def settings(request):
             # Topologies here are semi-automatic/AI-extracted: tell
             # visitors on their first visit, then keep a reminder.
             "data_notice_enabled": True,
+            "data_notice_url": DATA_NOTICE_URL,
         }], safe=False)
 
 def link(request):
