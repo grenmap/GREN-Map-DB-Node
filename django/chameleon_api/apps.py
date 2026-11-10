@@ -59,7 +59,7 @@ INITIAL_UI_STRINGS = [
     )),
     ('trust_verified', 'Confirmed'),
     ('trust_verified_hint', 'topology confirmed by the institution'),
-    ('verified_by', 'Confirmed by'),
+    ('verified_by', 'Topology confirmed by'),
     # When the network's topology last changed; followed by the date.
     ('updated_on', 'Updated'),
     ('topology_updated_on', 'Topology updated'),
@@ -106,7 +106,7 @@ CURATED_TRANSLATIONS = {
         'trust_verified': 'Confirmado',
         'trust_verified_hint': 'topologia confirmada pela instituição',
         'topology_updated_on': 'Topologia atualizada em',
-        'verified_by': 'Confirmado por',
+        'verified_by': 'Topologia confirmada por',
     },
     # The notice's body runs past the 256-character column when
     # LibreTranslate translates it into these two languages, and it
@@ -127,7 +127,7 @@ CURATED_TRANSLATIONS = {
         'trust_verified': 'Confirmado',
         'trust_verified_hint': 'topología confirmada por la institución',
         'topology_updated_on': 'Topología actualizada el',
-        'verified_by': 'Confirmado por',
+        'verified_by': 'Topología confirmada por',
         'data_notice_reminder': 'Datos extraídos en parte con IA',
         'data_notice_reminder_hint': (
             'Algunas topologías y descripciones de las instituciones se extrajeron de '
@@ -151,7 +151,7 @@ CURATED_TRANSLATIONS = {
         'trust_verified': 'Confirmé',
         'trust_verified_hint': "topologie confirmée par l'institution",
         'topology_updated_on': 'Topologie mise à jour le',
-        'verified_by': 'Confirmé par',
+        'verified_by': 'Topologie confirmée par',
         'data_notice_reminder_hint': (
             'Certaines topologies et descriptions des institutions ont été extraites de '
             "façon semi-automatique ou par IA. Cliquez pour lire l'avis complet."
